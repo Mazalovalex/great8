@@ -541,7 +541,7 @@
   }
 
   .record-section_title {
-    font-size: clamp(2.75rem, 0.0684rem + 13.4078vw, 4.25rem);
+    font-size: clamp(2.5rem, -0.1816rem + 13.4078vw, 4rem);
   }
 
   .record-description-section {
