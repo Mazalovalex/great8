@@ -627,6 +627,12 @@
   .main {
     overflow: visible; /* Скрывает все, что выходит за границы */
   }
+  .video-wrapper {
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    height: auto;
+  }
 }
 
 /* Медиазапросы для уменьшения движения */
@@ -640,4 +646,9 @@
     transition: none;
     transform: none;
   }
+}
+
+/* Видео скрыто изначально */
+.video-wrapper {
+  display: none;
 }

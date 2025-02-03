@@ -97,9 +97,14 @@
         </div>
       </section>
       <section class="top-scorers-section">
-        <div class="video-wrapper">
+        <button id="show-video-btn">Показать видео</button>
+
+
+        <!-- Видео, скрытое изначально -->
+        <div class="video-wrapper" id="video-wrapper" style="display: none">
           <iframe
-            src="https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112"
+            id="video-iframe"
+            src=""
             frameborder="0"
             allow="autoplay; fullscreen"
             allowfullscreen
@@ -244,7 +249,9 @@
       </section>
       <section class="record-progress-section">
         <div class="remaining-to-record">
-          <h2 class="record-progress__title" data-mobile="До рекорда осталось">До рекорда:</h2>
+          <h2 class="record-progress__title" data-mobile="До рекорда осталось">
+            До рекорда:
+          </h2>
           <h3 class="record-difference"></h3>
         </div>
         <ul class="header__theme-menu-list">

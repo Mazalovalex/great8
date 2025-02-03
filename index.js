@@ -26,13 +26,12 @@ function updateGoalRecord() {
   const gretskyRecord = 894;
   remainingGoalsElement.textContent = gretskyRecord - currentGoalCount + 1;
 
-	// Записываем актуальный процент прогресс бара Овечкина
+  // Записываем актуальный процент прогресс бара Овечкина
   const progress = ((currentGoalCount - 894 / 2) * 100) / (894 / 2);
   const progressBar = document.querySelector(".progress-barOvi");
   progressBar.setAttribute("data-progress", progress);
 }
 updateGoalRecord();
-
 
 // Функция для обновления прогресс-баров
 function updateProgressBars() {
@@ -125,4 +124,22 @@ window.addEventListener("load", function () {
       animateText();
     }
   }, 2000);
+});
+
+// Находим элементы
+const videoWrapper = document.getElementById("video-wrapper");
+const showVideoBtn = document.getElementById("show-video-btn");
+const videoIframe = document.getElementById("video-iframe");
+
+// Добавляем обработчик клика на кнопку
+showVideoBtn.addEventListener("click", function () {
+  // Показываем видео
+  videoWrapper.style.display = "block";
+
+  // Устанавливаем источник видео для его запуска
+  videoIframe.src =
+    "https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112";
+
+  // Скрываем кнопку после клика
+  showVideoBtn.style.display = "none";
 });
