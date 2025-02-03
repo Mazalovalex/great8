@@ -154,7 +154,7 @@
   width: 20px;
   height: 20px;
   background-color: #e2323b;
-  top: 8px;
+  top: 0px;
   left: 3px;
   border-radius: 50%;
 }
@@ -640,10 +640,30 @@
   .player-goals {
     font-size: 26px;
   }
+  .player-img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (width < 390px) {
+  .record-progress__title {
+    font-size: 40px;
+    text-align: center;
+    width: 80vw;
+  }
+}
+
+@media (width < 390px) {
+  .record-progress__title {
+    font-size: 36px;
+    text-align: center;
+    width: 80vw;
+  }
 }
 
 #video-wrapper {
-  display: block; /* Изначально видео будет видно */
+  z-index: 2;
 }
 
 #show-video-btn {
