@@ -30,9 +30,6 @@ function updateGoalRecord() {
   const progress = ((currentGoalCount - 894 / 2) * 100) / (894 / 2);
   const progressBar = document.querySelector(".progress-barOvi");
   progressBar.setAttribute("data-progress", progress);
-
-  const seeGoalElement = document.querySelector(".seeGoal");
-  seeGoalElement.textContent = currentGoalCount;
 }
 updateGoalRecord();
 
@@ -131,9 +128,12 @@ window.addEventListener("load", function () {
 
 // Находим элементы
 
+let currentGoalCount = 0;
+
 const videoWrapper = document.getElementById("video-wrapper");
 const showVideoBtn = document.getElementById("show-video-btn");
 const videoIframe = document.getElementById("video-iframe");
+
 function toggleVideo() {
   // Проверяем, скрыто ли видео
   if (videoWrapper.style.display === "none") {
@@ -154,7 +154,7 @@ function toggleVideo() {
     videoIframe.src = "";
 
     // Меняем текст кнопки на "Показать видео"
-    showVideoBtn.textContent = "Показать видео";
+    showVideoBtn.textContent = "Показать гол";
   }
 }
 

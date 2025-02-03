@@ -567,6 +567,40 @@
   .record-difference::after {
     display: none;
   }
+
+  .record-progress-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    min-height:40%;
+    position: relative;
+		outline: 1px solid green;
+  }
+
+  .record-progress__title {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .record-difference {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+		font-size: 150px;
+
+  }
+
+  .video {
+    z-index: 2;
+    width: 90vw;
+    height: 25vh;
+    top: 10vh;
+  }
 }
 
 /* Видео скрыто изначально */
