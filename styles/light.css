@@ -1,0 +1,29 @@
+.page.theme_light {
+  --font-primary: "Russo One", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+
+  --title-color: #22335f;
+  --shum-backgroung: #ffffff;
+  --text-color: #22335f;
+  --font-weight: 300;
+  --font-weight-title: 400;
+
+  --accent-color: #22335f;
+  --btn-color: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --font-primary: "Russo One", sans-serif;
+    --font-secondary: "Montserrat", sans-serif;
+
+    --title-color: #22335f;
+    --shum-backgroung: #ffffff;
+    --text-color: #22335f;
+    --font-weight: 300;
+    --font-weight-title: 400;
+
+    --accent-color: #22335f;
+    --btn-color: #ffffff;
+  }
+}

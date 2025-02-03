@@ -1,0 +1,643 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Обеспечивает, чтобы высота главного контейнера была равна высоте экрана */
+  overflow: hidden; /* Скрывает все, что выходит за границы */
+}
+.page {
+  background-image: url(../image/background.webp);
+  height: 100vh;
+  background-color: #242550;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: -3; /* Нижний слой */
+}
+
+.page::before {
+  background: url("../image/shum.gif");
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.6;
+  mix-blend-mode: soft-light;
+  background-repeat: repeat;
+  z-index: -2; /* Следующий слой */
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--shum-backgroung);
+  opacity: 0.8;
+  z-index: -1; /* Следующий слой */
+}
+
+.record-header-section {
+  white-space: nowrap;
+  text-align: center;
+  margin: 10px;
+}
+
+.record-section_title {
+  font-family: var(--font-primary);
+  font-size: clamp(2.8125rem, 0.2013rem + 13.9266vw, 33.625rem);
+  color: var(--title-color);
+  line-height: 0.8;
+  opacity: 0;
+  transform: translateY(-500px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  z-index: 0; /* Слой для заголовка */
+}
+
+.record-description-section {
+  display: flex;
+  margin: 0 18px;
+  justify-content: space-between;
+}
+
+.record-description {
+  font-size: 12px;
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  opacity: 0.5;
+
+  width: 40%;
+  opacity: 0; /* Элемент изначально скрыт */
+  transition: opacity 2s ease-out; /* Анимация изменений */
+}
+
+.developer {
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: var(--font-weight);
+
+  opacity: 0; /* Элемент изначально скрыт */
+  transition: opacity 2s ease-out; /* Анимация изменений */
+}
+
+.developer_dev {
+  opacity: 0.5;
+}
+
+.top-scorers-section {
+  margin: 10px 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video {
+  width: 30vw;
+  height: 17vw;
+
+  border-radius: 5px;
+  opacity: 0; /* Элемент изначально скрыт */
+  transition: opacity 2s ease-out; /* Анимация изменений */
+}
+
+.top-players {
+  z-index: 1;
+}
+
+.player-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-scorer-item {
+  width: clamp(200px, 50vw, 400px);
+  height: clamp(55px, 5vh, 75px);
+
+  background: #2b2128;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  position: relative;
+}
+
+.progress-bar {
+  position: absolute;
+  width: 0%; /* Начальная ширина */
+  height: 100%;
+  background: linear-gradient(90deg, #161b21 0%, #e2323b 99.99%, #7c1b20 100%);
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  transition: width 2.1s ease-in-out; /* Анимация плавного изменения ширины */
+}
+
+.item-image_circle {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.item-image_rank-circle {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #e2323b;
+  top: 8px;
+  left: 3px;
+  border-radius: 50%;
+}
+.item-image_rank-circle::after {
+  position: absolute;
+  content: "1";
+  top: 3px;
+  left: 7px;
+  line-height: 1;
+  color: #eef1fa;
+  font-size: 14px;
+}
+
+.player-img {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #7c1b20;
+  border-radius: 50%;
+}
+
+.player-info {
+  padding: 0 10px 0 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 0;
+}
+
+.player-name {
+  font-size: 16px;
+  font-weight: var(--font-weight-title);
+}
+
+.player-season {
+  font-size: 12px;
+  color: #949494;
+  opacity: 0.7;
+}
+
+.puck-icon {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 12%;
+  z-index: 2;
+}
+
+.record-progress-section {
+  margin: 0 18px 18px 18px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: auto; /* Это прижмет секцию к низу */
+}
+
+.remaining-to-record {
+  display: flex;
+  align-items: flex-end;
+}
+
+.record-progress__title {
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-size: clamp(0.75rem, 0.4205rem + 1.6477vw, 4.375rem);
+  position: relative; /* Для правильного позиционирования псевдоэлемента */
+}
+
+.record-progress__title::after {
+  content: attr(data-mobile); /* Текст для мобильных устройств */
+  visibility: hidden; /* Псевдоэлемент изначально скрыт */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.record-difference {
+  font-size: clamp(0.75rem, -0.6023rem + 6.7614vw, 15.625rem);
+  color: #fc292e;
+  position: relative;
+  line-height: 0.9;
+}
+
+.record-difference::after {
+  position: absolute;
+  content: "ШАЙБ";
+  font-size: clamp(0.75rem, 0.5511rem + 0.9943vw, 2.9375rem);
+  color: var(--title-color);
+  line-height: 1;
+  rotate: 90deg;
+  top: 36%;
+  left: 75%;
+}
+
+/* Элемент с изображением игрока */
+.player-image-wrapper {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Слой для изображения */
+}
+
+.player-image-wrapper img {
+  width: clamp(
+    300px,
+    75vw,
+    2784px
+  ); /* Минимум 300px, адаптивный 80vw, максимум 1500px */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+  display: block;
+}
+
+/* Прочие элементы, которые должны быть выше */
+.header__theme-menu-list {
+  bottom: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2; /* Слой для меню */
+}
+
+.header__theme-menu-button {
+  min-width: 80px;
+  text-align: center;
+  color: var(--accent-color);
+  padding: 1px 10px;
+  font-size: 14px;
+  background: transparent;
+  text-transform: lowercase;
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+}
+
+.header__theme-menu-button:hover,
+.header__theme-menu-button:focus-visible {
+  background-color: var(--text-color);
+  border-color: var(--accent-color); /* Вместо `border: 1px solid` */
+  color: var(--btn-color);
+}
+
+.record-number {
+  font-family: var(--font-primary);
+  color: #fc292e;
+}
+
+.visible {
+  opacity: 1; /* Элемент становится видимым */
+  transform: translateY(0); /* Элемент возвращается в нормальное положение */
+}
+
+.player-goals {
+  font-size: clamp(1.0625rem, 0.8864rem + 0.8807vw, 3rem);
+  font-family: var(--font-primary);
+  z-index: 2;
+}
+
+.opacity {
+  opacity: 70%;
+}
+
+@media (width < 1400px) {
+  .video {
+    width: 25vw;
+    height: 14vw;
+  }
+
+  .top-scorer-item {
+    width: clamp(200px, 50vw, 350px);
+    height: clamp(50px, 5vh, 75px);
+  }
+
+  .player-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .player-name {
+    font-size: 14px;
+  }
+
+  .player-goals {
+    font-size: 20px;
+  }
+}
+
+@media (width < 1300px) {
+  .video {
+    width: 22vw;
+    height: 12vw;
+  }
+
+  .top-scorer-item {
+    width: clamp(200px, 50vw, 320px);
+    height: clamp(45px, 5vh, 75px);
+  }
+
+  .player {
+    gap: 2px;
+  }
+
+  .player-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .player-name {
+    font-size: 13px;
+  }
+
+  .player-goals {
+    font-size: 18px;
+  }
+}
+
+@media (width < 1200px) {
+  .video {
+    width: 20vw;
+    height: 11vw;
+  }
+
+  .top-scorer-item {
+    width: clamp(180px, 48vw, 300px);
+    height: clamp(40px, 5vh, 70px);
+  }
+
+  .player {
+    gap: 1px;
+  }
+
+  .player-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .player-name {
+    font-size: 12px;
+  }
+
+  .player-goals {
+    font-size: 16px;
+  }
+}
+
+@media (width < 1100px) {
+  .video {
+    width: 40vw;
+    height: 23vw;
+  }
+
+  .player-list {
+    gap: 7px;
+  }
+  .player-season {
+    display: none;
+  }
+
+  .player-name {
+    font-size: 14px;
+  }
+
+  .top-scorer-item {
+    width: clamp(180px, 48vw, 300px);
+    height: clamp(45px, 5vh, 70px);
+  }
+
+  .player-goals {
+    font-size: 18px;
+  }
+  .record-description {
+    font-size: 12px;
+    width: 60%;
+  }
+
+  .player-image-wrapper img {
+    display: none;
+  }
+}
+
+@media (width < 768px) {
+  .video {
+    width: 50vw;
+    height: 33vw;
+  }
+
+  .player-season {
+    display: none;
+  }
+
+  .player-name {
+    font-size: 12px;
+  }
+
+  .top-scorer-item {
+    width: clamp(180px, 48vw, 250px);
+    height: clamp(45px, 5vh, 70px);
+  }
+
+  .player-goals {
+    font-size: 14px;
+  }
+
+  .player-image-wrapper img {
+    display: none;
+  }
+
+  .puck-icon {
+    padding-right: 5px;
+  }
+}
+
+@media (width < 768px) {
+  .video {
+    width: 40vw;
+    height: 25vw;
+  }
+
+  .player-season {
+    display: none;
+  }
+
+  .player-name {
+    font-size: 12px;
+  }
+
+  .top-scorer-item {
+    width: clamp(180px, 48vw, 250px);
+    height: clamp(45px, 5vh, 70px);
+  }
+
+  .player-goals {
+    font-size: 14px;
+  }
+
+  .developer {
+    font-size: 10px;
+  }
+}
+
+@media (width < 768px) {
+  .video {
+    width: 50vw;
+    height: 33vw;
+  }
+
+  .player-season {
+    display: none;
+  }
+
+  .player-name {
+    font-size: 12px;
+  }
+
+  .top-scorer-item {
+    width: clamp(180px, 48vw, 250px);
+    height: clamp(45px, 5vh, 70px);
+  }
+
+  .player-goals {
+    font-size: 14px;
+  }
+
+  .player-image-wrapper img {
+    display: none;
+  }
+
+  .puck-icon {
+    padding-right: 5px;
+  }
+}
+
+@media (width < 500px) {
+  .video-wrapper {
+    display: none;
+  }
+
+  .top-scorer-item {
+    width: clamp(180px, 94vw, 480px);
+    height: clamp(65px, 5vh, 70px);
+  }
+
+  .player-season {
+    display: block;
+  }
+
+  .player {
+    gap: 5px;
+  }
+
+  .player-name {
+    font-size: 12px;
+  }
+
+  .player-goals {
+    font-size: 14px;
+  }
+
+  .developer {
+    font-size: 10px;
+  }
+
+  .top-scorers-section {
+    order: 4;
+    margin-top: auto;
+  }
+
+  .record-progress-section {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 100%;
+    align-items: center;
+  }
+
+  .record-progress__title {
+    visibility: hidden; /* Скрываем оригинальный текст на мобильных устройствах */
+    position: relative;
+  }
+
+  .record-progress__title::after {
+    visibility: visible; /* Показываем текст из data-mobile */
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(
+      -60%,
+      -50%
+    ); /* Корректируем положение, чтобы текст был точно в центре */
+    font-size: 40px;
+    width: 80vw;
+    text-align: center;
+  }
+
+  .remaining-to-record {
+    flex-direction: column;
+  }
+
+  .record-difference {
+    padding-top: 80px;
+    font-size: 160px;
+    font-family: var(--font-primary);
+  }
+
+  .top-scorers-section {
+    justify-content: center;
+  }
+
+  .record-difference::after {
+    position: absolute;
+    content: "ШАЙБ";
+    font-size: clamp(0.75rem, 0.5511rem + 0.9943vw, 2.9375rem);
+    color: var(--title-color);
+    line-height: 1;
+    rotate: 0deg;
+    top: 100%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%);
+  }
+
+  .main {
+    overflow: visible; /* Скрывает все, что выходит за границы */
+  }
+}
+
+/* Медиазапросы для уменьшения движения */
+@media (prefers-reduced-motion: reduce) {
+  .record-section_title,
+  .developer,
+  .player-goals,
+  .progress-bar,
+  .player-image-wrapper img,
+  .record-progress-section {
+    transition: none;
+    transform: none;
+  }
+}
