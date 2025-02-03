@@ -611,6 +611,8 @@
   .header__theme-menu-list {
     flex-direction: column;
     gap: 2px;
+    position: absolute;
+    bottom: -30px;
   }
 
   .show-video-btn {
@@ -619,6 +621,21 @@
 
   .header__theme-menu-button_type_auto {
     display: none;
+  }
+
+  .player {
+    gap: 5px;
+  }
+
+  .player-name {
+    font-size: 16px;
+  }
+
+  .player-season {
+    display: block;
+  }
+  .player-goals {
+    font-size: 26px;
   }
 }
 
