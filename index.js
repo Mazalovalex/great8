@@ -30,6 +30,9 @@ function updateGoalRecord() {
   const progress = ((currentGoalCount - 894 / 2) * 100) / (894 / 2);
   const progressBar = document.querySelector(".progress-barOvi");
   progressBar.setAttribute("data-progress", progress);
+
+  const seeGoalElement = document.querySelector(".seeGoal");
+  seeGoalElement.textContent = currentGoalCount;
 }
 updateGoalRecord();
 
@@ -127,19 +130,32 @@ window.addEventListener("load", function () {
 });
 
 // Находим элементы
+
 const videoWrapper = document.getElementById("video-wrapper");
 const showVideoBtn = document.getElementById("show-video-btn");
 const videoIframe = document.getElementById("video-iframe");
+function toggleVideo() {
+  // Проверяем, скрыто ли видео
+  if (videoWrapper.style.display === "none") {
+    // Показываем видео
+    videoWrapper.style.display = "block";
 
-// Добавляем обработчик клика на кнопку
-showVideoBtn.addEventListener("click", function () {
-  // Показываем видео
-  videoWrapper.style.display = "block";
+    // Устанавливаем источник видео для его запуска
+    videoIframe.src =
+      "https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112";
 
-  // Устанавливаем источник видео для его запуска
-  videoIframe.src =
-    "https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112";
+    // Меняем текст кнопки на "Закрыть видео"
+    showVideoBtn.textContent = "Закрыть видео";
+  } else {
+    // Скрываем видео
+    videoWrapper.style.display = "none";
 
-  // Скрываем кнопку после клика
-  showVideoBtn.style.display = "none";
-});
+    // Очищаем источник видео
+    videoIframe.src = "";
+
+    // Меняем текст кнопки на "Показать видео"
+    showVideoBtn.textContent = "Показать видео";
+  }
+}
+
+showVideoBtn.addEventListener("click", toggleVideo);

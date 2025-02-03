@@ -19,7 +19,7 @@
 .page::before {
   background: url("../image/shum.gif");
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -32,7 +32,7 @@
 
 .page::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -536,124 +536,36 @@
 }
 
 @media (width < 500px) {
-  .video-wrapper {
-    display: none;
+  .main {
+    overflow: visible;
+  }
+
+  .record-section_title {
+    font-size: clamp(2.75rem, 0.0684rem + 13.4078vw, 4.25rem);
+  }
+
+  .record-description-section {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+  }
+  .record-description {
+    width: 95vw;
+  }
+
+  .top-scorers-section {
+    order: 4;
+    margin-top: auto;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .top-scorer-item {
     width: clamp(180px, 90vw, 460px);
     height: clamp(65px, 5vh, 70px);
   }
-
-  .player-season {
-    display: block;
-  }
-
-  .player {
-    gap: 5px;
-  }
-
-  .player-name {
-    font-size: 12px;
-  }
-
-  .player-goals {
-    font-size: 14px;
-  }
-
-  .developer {
-    font-size: 10px;
-  }
-
-  .top-scorers-section {
-    order: 4;
-    margin-top: auto;
-  }
-
-  .record-progress-section {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 20px;
-    height: 100%;
-    align-items: center;
-  }
-
-  .record-progress__title {
-    visibility: hidden; /* Скрываем оригинальный текст на мобильных устройствах */
-    position: relative;
-  }
-
-  .record-progress__title::after {
-    visibility: visible; /* Показываем текст из data-mobile */
-    position: absolute;
-    top: 50%; /* Центрируем по вертикали */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translate(
-      -60%,
-      -50%
-    ); /* Корректируем положение, чтобы текст был точно в центре */
-    font-size: 40px;
-    width: 80vw;
-    text-align: center;
-  }
-
-  .remaining-to-record {
-    flex-direction: column;
-  }
-
-  .record-difference {
-    padding-top: 80px;
-    font-size: 160px;
-    font-family: var(--font-primary);
-  }
-
-  .top-scorers-section {
-    justify-content: center;
-  }
-
   .record-difference::after {
-    position: absolute;
-    content: "ШАЙБ";
-    font-size: clamp(0.75rem, 0.5511rem + 0.9943vw, 2.9375rem);
-    color: var(--title-color);
-    line-height: 1;
-    rotate: 0deg;
-    top: 100%; /* Центрируем по вертикали */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translate(-50%, -50%);
-  }
-
-  .main {
-    overflow: visible; /* Скрывает все, что выходит за границы */
-  }
-  .video-wrapper {
-    position: absolute;
-    z-index: 2;
-    width: 170px;
-    height: 150px;
-  }
-
-  .record-section_title {
-    font-size: 30px;
-  }
-
-  .top-scorers-section {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/* Медиазапросы для уменьшения движения */
-@media (prefers-reduced-motion: reduce) {
-  .record-section_title,
-  .developer,
-  .player-goals,
-  .progress-bar,
-  .player-image-wrapper img,
-  .record-progress-section {
-    transition: none;
-    transform: none;
+    display: none;
   }
 }
 
