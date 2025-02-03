@@ -614,7 +614,7 @@
 
   .record-difference::after {
     position: absolute;
-    content: "ШАЙБ";
+    content: "ШАЙБочек";
     font-size: clamp(0.75rem, 0.5511rem + 0.9943vw, 2.9375rem);
     color: var(--title-color);
     line-height: 1;
