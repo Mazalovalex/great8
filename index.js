@@ -126,36 +126,46 @@ window.addEventListener("load", function () {
   }, 2000);
 });
 
-// Находим элементы
 
-let currentGoalCount = 0;
+
+
 
 const videoWrapper = document.getElementById("video-wrapper");
-const showVideoBtn = document.getElementById("show-video-btn");
-const videoIframe = document.getElementById("video-iframe");
+  const showVideoBtn = document.getElementById("show-video-btn");
+  const videoIframe = document.getElementById("video-iframe");
 
-function toggleVideo() {
-  // Проверяем, скрыто ли видео
-  if (videoWrapper.style.display === "none") {
-    // Показываем видео
-    videoWrapper.style.display = "block";
-
-    // Устанавливаем источник видео для его запуска
-    videoIframe.src =
-      "https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112";
-
-    // Меняем текст кнопки на "Закрыть видео"
-    showVideoBtn.textContent = "Закрыть видео";
-  } else {
-    // Скрываем видео
-    videoWrapper.style.display = "none";
-
-    // Очищаем источник видео
-    videoIframe.src = "";
-
-    // Меняем текст кнопки на "Показать видео"
-    showVideoBtn.textContent = "Показать гол";
+  // Функция для проверки размера экрана
+  function checkScreenSize() {
+    if (window.innerWidth < 500) {
+      // Если ширина экрана меньше 500px, показываем кнопку и скрываем видео
+      showVideoBtn.style.display = "block";
+      videoWrapper.style.display = "none";
+      videoIframe.src = "";
+    } else {
+      // Если ширина экрана больше или равна 500px, скрываем кнопку и показываем видео
+      showVideoBtn.style.display = "none";
+      videoWrapper.style.display = "block";
+    }
   }
-}
 
-showVideoBtn.addEventListener("click", toggleVideo);
+  // Проверка размера экрана при загрузке страницы
+  window.onload = checkScreenSize;
+
+  // Дополнительная обработка изменения ширины окна
+  window.addEventListener('resize', checkScreenSize);
+
+  // Функция для переключения видео
+  function toggleVideo() {
+    if (videoWrapper.style.display === "none") {
+      videoWrapper.style.display = "block";
+      videoIframe.src = "https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112";
+      showVideoBtn.textContent = "Закрыть видео";
+    } else {
+      videoWrapper.style.display = "none";
+      videoIframe.src = "";
+      showVideoBtn.textContent = "Показать гол";
+    }
+  }
+
+  // Добавляем обработчик события для кнопки
+  showVideoBtn.addEventListener("click", toggleVideo);
