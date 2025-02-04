@@ -1,7 +1,7 @@
 @media (320px <= width <= 500px) {
   .record-header-section {
     width: calc(
-      100vw - 10px
+      100vw - 20px
     ); /* 100% ширины экрана минус 10px (по 5px слева и справа) */
     padding: 10px 0px; /* Внутренние отступы */
     text-align: start;
@@ -15,13 +15,45 @@
   }
 
   .record-description-section {
-    width: calc(100vw - 10px);
+    width: calc(100vw - 20px);
     background-color: aquamarine;
     margin: 0 auto; /* Центрируем */
   }
 
+  .record-description {
+    width: calc(100vw - 20px);
+  }
+
   .developer {
+    font-size: 12px;
     text-align: end;
+    padding: 10px 0px;
+  }
+
+  .record-progress-section {
+    background-color: rgb(172, 12, 246);
+    margin: 0 auto; /* Центрируем */
+    width: calc(100vw - 20px);
+  }
+
+  .record-progress__title {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .record-difference {
+    font-size: 200px;
+    font-family: var(--font-primary);
+    line-height: 1;
+  }
+
+  .top-scorers-section {
+    width: calc(100vw - 20px);
+    order: 4;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(127, 255, 133);
+    margin: 0 auto; /* Центрируем */
   }
 
   .record-description-section {
@@ -29,64 +61,19 @@
     flex-direction: column;
   }
 
-  .top-scorers-section {
-    order: 4;
-    margin-top: auto;
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .top-scorer-item {
-    width: clamp(180px, 90vw, 460px);
-    height: clamp(65px, 5vh, 70px);
-  }
-  .record-difference::after {
-    display: none;
-  }
-
-  .record-progress-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 40%;
-    position: relative;
-  }
-
-  .record-progress__title {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    font-size: 50px;
-    text-align: center;
-    width: 90vw;
-  }
-
-  .record-difference {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    font-size: 200px;
-    font-family: var(--font-primary);
+    width: 100%;
+    height: auto;
   }
 
   .video {
     z-index: 2;
-    width: 90vw;
-    height: 25vh;
-    top: 10vh;
+    width: 100%;
+    height: auto;
   }
 
   .show-video-btn {
     display: inline;
-  }
-
-  .header__theme-menu-list {
-    flex-direction: column;
-    gap: 2px;
-    position: absolute;
-    bottom: -30px;
   }
 
   .show-video-btn {
@@ -114,5 +101,10 @@
   .player-img {
     width: 45px;
     height: 45px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column-reverse;
+    gap: 2px;
   }
 }
