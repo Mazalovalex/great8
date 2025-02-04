@@ -502,12 +502,12 @@
   }
 
   .record-section_title {
-    font-size: clamp(2.8125rem, 0.0108rem + 13.7931vw, 4.3125rem);
+    font-size: clamp(2.8125rem, 0.2443rem + 12.6437vw, 4.1875rem);
     text-align: start;
   }
 
   .record-number {
-    font-size: clamp(2.8125rem, 0.0108rem + 13.7931vw, 4.3125rem);
+    font-size: clamp(2.8125rem, 0.2443rem + 12.6437vw, 4.1875rem);
   }
   .record-description-section {
     display: flex;
