@@ -7,6 +7,7 @@
     font-size: clamp(2.8125rem, 0.2443rem + 12.6437vw, 4.1875rem);
     text-align: start;
     outline: 1px solid rgb(0, 0, 0);
+    display: none;
   }
 
   .developer {
