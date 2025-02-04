@@ -1,0 +1,110 @@
+@media (320px <= width <= 500px) {
+  * {
+    margin: 0px !important;
+    outline: 1px solid rgb(255, 0, 0);
+  }
+  .record-section_title {
+    font-size: clamp(2.8125rem, 0.2443rem + 12.6437vw, 4.1875rem);
+    text-align: start;
+    outline: 1px solid rgb(0, 0, 0);
+  }
+
+  .developer {
+    text-align: end;
+  }
+
+  .record-number {
+    font-size: clamp(2.8125rem, 0.2443rem + 12.6437vw, 4.1875rem);
+  }
+  .record-description-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top-scorers-section {
+    order: 4;
+    margin-top: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .top-scorer-item {
+    width: clamp(180px, 90vw, 460px);
+    height: clamp(65px, 5vh, 70px);
+  }
+  .record-difference::after {
+    display: none;
+  }
+
+  .record-progress-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 40%;
+    position: relative;
+  }
+
+  .record-progress__title {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 50px;
+    text-align: center;
+    width: 90vw;
+  }
+
+  .record-difference {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 200px;
+    font-family: var(--font-primary);
+  }
+
+  .video {
+    z-index: 2;
+    width: 90vw;
+    height: 25vh;
+    top: 10vh;
+  }
+
+  .show-video-btn {
+    display: inline;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    bottom: -30px;
+  }
+
+  .show-video-btn {
+    color: var(--accent-color);
+  }
+
+  .header__theme-menu-button_type_auto {
+    display: none;
+  }
+
+  .player {
+    gap: 5px;
+  }
+
+  .player-name {
+    font-size: 16px;
+  }
+
+  .player-season {
+    display: block;
+  }
+  .player-goals {
+    font-size: 26px;
+  }
+  .player-img {
+    width: 45px;
+    height: 45px;
+  }
+}

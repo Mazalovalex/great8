@@ -1,0 +1,6 @@
+@media (width < 320px) {
+  * {
+    /* display: none; */
+    background-color: beige;
+  }
+}
