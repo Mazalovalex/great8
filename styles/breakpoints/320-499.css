@@ -1,22 +1,10 @@
 @media (320px <= width <= 500px) {
-  .page {
-    background-image: var(--background-image);
-    /* height: 100vh; */
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: -3;
-  }
-
   .record-header-section {
     width: calc(
       100vw - 20px
     ); /* 100% ширины экрана минус 10px (по 5px слева и справа) */
     padding: 10px 0px; /* Внутренние отступы */
     text-align: start;
-    background-color: aqua;
     margin: 0 auto; /* Центрируем */
   }
 
@@ -27,7 +15,6 @@
 
   .record-description-section {
     width: calc(100vw - 20px);
-    background-color: aquamarine;
     margin: 0 auto; /* Центрируем */
   }
 
@@ -42,10 +29,10 @@
   }
 
   .record-progress-section {
-    background-color: rgb(217, 255, 0);
     margin: 0 auto; /* Центрируем */
     width: calc(100vw - 20px);
     position: relative;
+    padding: 50px;
   }
 
   .record-progress__title {
@@ -54,7 +41,7 @@
   }
 
   .record-difference {
-    font-size: 200px;
+    font-size: 250px;
     font-family: var(--font-primary);
     line-height: 1;
   }
@@ -62,7 +49,7 @@
   .header__theme-menu-list {
     position: absolute;
     z-index: 2;
-    top: 104%;
+    top: 102%;
     right: 0px;
   }
 
@@ -87,7 +74,6 @@
     order: 4;
     flex-direction: column;
     gap: 10px;
-    background-color: rgb(255, 0, 195);
     margin: 0 auto; /* Центрируем */
     padding: 0px 0px 20px 0px;
   }
