@@ -1,4 +1,15 @@
 @media (320px <= width <= 500px) {
+  .page {
+    background-image: var(--background-image);
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -3;
+  }
+
   .record-header-section {
     width: calc(
       100vw - 20px
@@ -78,6 +89,7 @@
     gap: 10px;
     background-color: rgb(255, 0, 195);
     margin: 0 auto; /* Центрируем */
+    padding: 0px 0px 20px 0px;
   }
 
   .top-scorer-item {
