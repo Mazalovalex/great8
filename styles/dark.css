@@ -1,4 +1,6 @@
 .page.theme_dark {
+	--background-image: url(../image/background.png);
+
 
 	--font-primary: "Russo One", sans-serif;
 	--font-secondary: "Montserrat", sans-serif;

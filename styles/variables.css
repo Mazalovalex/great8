@@ -1,5 +1,5 @@
 :root {
-
+	--background-image: url(../image/background-light.png);
 	
 	--font-primary: "Russo One", sans-serif;
 	--font-secondary: "Montserrat", sans-serif;

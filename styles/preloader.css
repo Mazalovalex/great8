@@ -98,3 +98,15 @@
     animation: none; /* Отключить анимацию для линий */
   }
 }
+
+@media (width < 500px) {
+  .preloader-1 {
+    left: 50%;
+    text-align: left;
+  }
+
+  .preloader-text {
+    width: max-content;
+    text-align: left;
+  }
+}

@@ -25,8 +25,7 @@ function updateGoalRecord() {
   const remainingGoalsElement = document.querySelector(".record-difference");
   const gretskyRecord = 894;
   remainingGoalsElement.textContent = gretskyRecord - currentGoalCount + 1;
-	console.log(remainingGoalsElement);
-	
+  console.log(remainingGoalsElement);
 
   // Записываем актуальный процент прогресс бара Овечкина
   const progress = ((currentGoalCount - 894 / 2) * 100) / (894 / 2);
@@ -103,8 +102,6 @@ function animateText() {
   const recordProgressTitleElement = document.querySelector(
     ".record-progress__title"
   );
- 
-
 
   // Добавляем класс для анимации, чтобы она началась после загрузки страницы
   titleElement.classList.add("visible");
