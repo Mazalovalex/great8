@@ -5,7 +5,7 @@
   }
 
   .record-section_title {
-    font-size: 40px;
+    font-size: calc(45px + (65 - 45) * ((100vw - 320px) / (500 - 320)));
     text-align: start;
     outline: 1px solid rgb(0, 0, 0);
   }
