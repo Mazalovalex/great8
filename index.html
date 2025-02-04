@@ -257,32 +257,15 @@
           <h3 class="record-difference"></h3>
         </div>
         <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-              aria-label="Светлая тема"
-            >
-              светлая
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              aria-label="Авто тема"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-              aria-label="Темная тема"
-            >
-              Темная
-            </button>
-          </li>
-        </ul>
+					<li class="header__theme-menu-item">
+						<label for="theme-select" class="header__theme-menu-label">Тема:</label>
+						<select id="theme-select" class="header__theme-menu-select" aria-label="Выбор темы">
+							<option value="light">Светлая</option>
+							<option value="auto">Авто</option>
+							<option value="dark">Темная</option>
+						</select>
+					</li>
+				</ul>
       </section>
     </main>
   </body>

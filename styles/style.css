@@ -261,6 +261,7 @@
 
 /* Прочие элементы, которые должны быть выше */
 .header__theme-menu-list {
+  position: fixed; /* чтобы позиционировать меню в правом нижнем углу */
   bottom: 18px;
   right: 18px;
   display: flex;
@@ -270,23 +271,31 @@
   z-index: 2; /* Слой для меню */
 }
 
-.header__theme-menu-button {
-  min-width: 80px;
-  text-align: center;
-  color: var(--accent-color);
-  padding: 1px 10px;
+/* Стили для ярлыка (label) */
+.header__theme-menu-label {
   font-size: 14px;
-  background: transparent;
+  color: var(--accent-color);
   text-transform: lowercase;
-  border: 1px solid var(--accent-color);
-  border-radius: 3px;
-  transition: 0.3s ease-in-out;
 }
 
-.header__theme-menu-button:hover,
-.header__theme-menu-button:focus-visible {
+/* Стили для селектора */
+.header__theme-menu-select {
+  padding: 0px 5px;
+  font-size: 14px;
+  color: var(--accent-color);
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
+  text-transform: lowercase;
+  transition: 0.3s ease-in-out;
+  outline: none;
+}
+
+/* При наведении и фокусе */
+.header__theme-menu-select:hover,
+.header__theme-menu-select:focus {
   background-color: var(--text-color);
-  border-color: var(--accent-color); /* Вместо `border: 1px solid` */
+  border-color: var(--accent-color);
   color: var(--shum-backgroung);
 }
 
@@ -650,3 +659,6 @@
 #show-video-btn {
   display: none; /* Кнопка скрыта по умолчанию */
 }
+
+
+
