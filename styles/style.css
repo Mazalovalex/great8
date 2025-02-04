@@ -54,6 +54,11 @@
   justify-content: space-between;
 }
 
+.record-number {
+  font-family: var(--font-primary);
+  color: #fc292e;
+}
+
 .record-description {
   font-size: 12px;
   color: var(--text-color);
@@ -255,11 +260,6 @@
   background-color: var(--text-color);
   border-color: var(--accent-color);
   color: var(--shum-backgroung);
-}
-
-.record-number {
-  font-family: var(--font-primary);
-  color: #fc292e;
 }
 
 .player-goals {
@@ -503,9 +503,12 @@
 
   .record-section_title {
     font-size: clamp(2.8125rem, 0.0108rem + 13.7931vw, 4.3125rem);
-		text-align: start;
+    text-align: start;
   }
 
+  .record-number {
+    font-size: clamp(2.8125rem, 0.0108rem + 13.7931vw, 4.3125rem);
+  }
   .record-description-section {
     display: flex;
     flex-direction: column;
