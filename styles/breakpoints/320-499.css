@@ -53,6 +53,11 @@
     right: 0px;
   }
 
+	.header__theme-menu-label {
+    font-size: 16px;
+
+}
+
   .record-description-section {
     display: flex;
     flex-direction: column;
