@@ -128,7 +128,7 @@ window.addEventListener("load", function () {
       startImageAnimation(images);
       animateText();
     }
-  }, 2000);
+  }, 11112000);
 });
 
 const videoWrapper = document.getElementById("video-wrapper");

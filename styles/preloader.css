@@ -109,5 +109,7 @@
     width: 80vw;
     text-align: left;
     font-size: 10px;
+
+    width: min(700px, 80vw); /* Ограничиваем 700px, но делаем адаптивным */
   }
 }
