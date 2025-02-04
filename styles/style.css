@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Обеспечивает, чтобы высота главного контейнера была равна высоте экрана */
   overflow: hidden; /* Скрывает все, что выходит за границы */
 }
 .page {
