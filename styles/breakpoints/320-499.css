@@ -31,9 +31,10 @@
   }
 
   .record-progress-section {
-    background-color: rgb(172, 12, 246);
+    background-color: rgb(217, 255, 0);
     margin: 0 auto; /* Центрируем */
     width: calc(100vw - 20px);
+    position: relative;
   }
 
   .record-progress__title {
@@ -47,13 +48,11 @@
     line-height: 1;
   }
 
-  .top-scorers-section {
-    width: calc(100vw - 20px);
-    order: 4;
-    flex-direction: column;
-    gap: 10px;
-    background-color: rgb(127, 255, 133);
-    margin: 0 auto; /* Центрируем */
+  .header__theme-menu-list {
+    position: absolute;
+    z-index: 2;
+    top: 104%;
+    right: 0px;
   }
 
   .record-description-section {
@@ -61,27 +60,29 @@
     flex-direction: column;
   }
 
-  .top-scorer-item {
-    width: 100%;
-    height: auto;
-  }
-
   .video {
     z-index: 2;
     width: 100%;
-    height: auto;
+    height: 30vh;
   }
 
   .show-video-btn {
     display: inline;
-  }
-
-  .show-video-btn {
     color: var(--accent-color);
   }
 
-  .header__theme-menu-button_type_auto {
-    display: none;
+  .top-scorers-section {
+    width: calc(100vw - 20px);
+    order: 4;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(255, 0, 195);
+    margin: 0 auto; /* Центрируем */
+  }
+
+  .top-scorer-item {
+    width: 100%;
+    height: auto;
   }
 
   .player {
@@ -101,10 +102,5 @@
   .player-img {
     width: 45px;
     height: 45px;
-  }
-
-  .header__theme-menu-list {
-    flex-direction: column-reverse;
-    gap: 2px;
   }
 }
