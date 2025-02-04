@@ -36,12 +36,12 @@
   }
 
   .record-progress__title {
-    font-size: 50px;
+    font-size: calc(40px + (50 - 40) * ((100vw - 320px) / (500 - 320)));
     text-align: center;
   }
 
   .record-difference {
-    font-size: 250px;
+    font-size: calc(180px + (250 - 180) * ((100vw - 320px) / (500 - 320)));
     font-family: var(--font-primary);
     line-height: 1;
   }
@@ -53,10 +53,9 @@
     right: 0px;
   }
 
-	.header__theme-menu-label {
+  .header__theme-menu-label {
     font-size: 16px;
-
-}
+  }
 
   .record-description-section {
     display: flex;
