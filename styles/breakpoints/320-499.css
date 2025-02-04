@@ -1,11 +1,11 @@
 @media (320px <= width <= 500px) {
   * {
     margin: 0px !important;
-    outline: 1px solid rgb(94, 215, 8);
+    outline: 1px solid rgb(0, 38, 255);
   }
 
   .record-section_title {
-    font-size: calc(45px + (65 - 45) * ((100vw - 320px) / (500 - 320)));
+    font-size: calc(45px + (63 - 45) * ((100vw - 320px) / (500 - 320)));
     text-align: start;
     outline: 1px solid rgb(0, 0, 0);
   }
