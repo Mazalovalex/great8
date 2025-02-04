@@ -1,11 +1,11 @@
 @media (320px <= width <= 500px) {
   * {
     margin: 0px !important;
-    outline: 1px solid rgb(255, 0, 0);
+    outline: 1px solid rgb(94, 215, 8);
   }
 
   .record-section_title {
-    font-size: 65px;
+    font-size: 40px;
     text-align: start;
     outline: 1px solid rgb(0, 0, 0);
   }
@@ -15,7 +15,6 @@
   }
 
   .record-number {
-    font-size: clamp(2.8125rem, 0.2443rem + 12.6437vw, 4.1875rem);
   }
   .record-description-section {
     display: flex;
