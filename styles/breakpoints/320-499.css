@@ -1,20 +1,29 @@
 @media (320px <= width <= 500px) {
-  * {
-    outline: 1px solid rgb(0, 38, 255);
+  .record-header-section {
+    width: calc(
+      100vw - 10px
+    ); /* 100% ширины экрана минус 10px (по 5px слева и справа) */
+    padding: 10px 0px; /* Внутренние отступы */
+    text-align: start;
+    background-color: aqua;
+    margin: 0 auto; /* Центрируем */
   }
 
   .record-section_title {
-    font-size: calc(45px + (63 - 45) * ((100vw - 320px) / (500 - 320)));
-    text-align: start;
-    outline: 1px solid rgb(0, 0, 0);
+    font-size: calc(45px + (60 - 45) * ((100vw - 320px) / (500 - 320)));
+    line-height: 0.8;
+  }
+
+  .record-description-section {
+    width: calc(100vw - 10px);
+    background-color: aquamarine;
+    margin: 0 auto; /* Центрируем */
   }
 
   .developer {
     text-align: end;
   }
 
-  .record-number {
-  }
   .record-description-section {
     display: flex;
     flex-direction: column;
