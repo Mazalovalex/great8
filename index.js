@@ -25,6 +25,8 @@ function updateGoalRecord() {
   const remainingGoalsElement = document.querySelector(".record-difference");
   const gretskyRecord = 894;
   remainingGoalsElement.textContent = gretskyRecord - currentGoalCount + 1;
+	console.log(remainingGoalsElement);
+	
 
   // Записываем актуальный процент прогресс бара Овечкина
   const progress = ((currentGoalCount - 894 / 2) * 100) / (894 / 2);
@@ -98,12 +100,18 @@ function animateText() {
     ".record-description"
   );
   const videoElement = document.querySelector(".video");
+  const recordProgressTitleElement = document.querySelector(
+    ".record-progress__title"
+  );
+ 
+
 
   // Добавляем класс для анимации, чтобы она началась после загрузки страницы
   titleElement.classList.add("visible");
   developerElement.classList.add("visible");
   recordDescriptionElement.classList.add("visible");
   videoElement.classList.add("visible");
+  recordProgressTitleElement.classList.add("visible");
 }
 
 // установка флага для запуска функций после закрытия прелоудера
@@ -120,52 +128,49 @@ window.addEventListener("load", function () {
       console.log("Флаг активен: Прелоадер скрыт.");
       updateProgressBars();
       animateGoalNumbers();
-      // startImageAnimation(images);
+      startImageAnimation(images);
       animateText();
     }
   }, 2000);
 });
 
-
-
-
-
 const videoWrapper = document.getElementById("video-wrapper");
-  const showVideoBtn = document.getElementById("show-video-btn");
-  const videoIframe = document.getElementById("video-iframe");
+const showVideoBtn = document.getElementById("show-video-btn");
+const videoIframe = document.getElementById("video-iframe");
 
-  // Функция для проверки размера экрана
-  function checkScreenSize() {
-    if (window.innerWidth < 500) {
-      // Если ширина экрана меньше 500px, показываем кнопку и скрываем видео
-      showVideoBtn.style.display = "block";
-      videoWrapper.style.display = "none";
-      videoIframe.src = "";
-    } else {
-      // Если ширина экрана больше или равна 500px, скрываем кнопку и показываем видео
-      showVideoBtn.style.display = "none";
-      videoWrapper.style.display = "block";
-    }
+// Функция для проверки размера экрана
+function checkScreenSize() {
+  if (window.innerWidth < 500) {
+    // Если ширина экрана меньше 500px, показываем кнопку и скрываем видео
+    showVideoBtn.style.display = "block";
+    videoWrapper.style.display = "none";
+    videoIframe.src = "";
+  } else {
+    // Если ширина экрана больше или равна 500px, скрываем кнопку и показываем видео
+    showVideoBtn.style.display = "none";
+    videoWrapper.style.display = "block";
   }
+}
 
-  // Проверка размера экрана при загрузке страницы
-  window.onload = checkScreenSize;
+// Проверка размера экрана при загрузке страницы
+window.onload = checkScreenSize;
 
-  // Дополнительная обработка изменения ширины окна
-  window.addEventListener('resize', checkScreenSize);
+// Дополнительная обработка изменения ширины окна
+window.addEventListener("resize", checkScreenSize);
 
-  // Функция для переключения видео
-  function toggleVideo() {
-    if (videoWrapper.style.display === "none") {
-      videoWrapper.style.display = "block";
-      videoIframe.src = "https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112";
-      showVideoBtn.textContent = "Закрыть видео";
-    } else {
-      videoWrapper.style.display = "none";
-      videoIframe.src = "";
-      showVideoBtn.textContent = "Показать гол";
-    }
+// Функция для переключения видео
+function toggleVideo() {
+  if (videoWrapper.style.display === "none") {
+    videoWrapper.style.display = "block";
+    videoIframe.src =
+      "https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112";
+    showVideoBtn.textContent = "Закрыть видео";
+  } else {
+    videoWrapper.style.display = "none";
+    videoIframe.src = "";
+    showVideoBtn.textContent = "Показать гол";
   }
+}
 
-  // Добавляем обработчик события для кнопки
-  showVideoBtn.addEventListener("click", toggleVideo);
+// Добавляем обработчик события для кнопки
+showVideoBtn.addEventListener("click", toggleVideo);

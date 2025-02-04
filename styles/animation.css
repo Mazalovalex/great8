@@ -1,0 +1,20 @@
+.video {
+  transition: opacity 2s ease-out; /* Анимация изменений */
+}
+
+.developer {
+  transition: opacity 2s ease-out; /* Анимация изменений */
+}
+
+.record-description {
+  transition: opacity 2s ease-out; /* Анимация изменений */
+}
+
+.record-section_title {
+  transform: translateY(-500px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.record-progress__title {
+  transition: opacity 2s ease-out; /* Анимация изменений */
+}

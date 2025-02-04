@@ -2,9 +2,12 @@
   --font-primary: "Russo One", sans-serif;
   --font-secondary: "Montserrat", sans-serif;
 
+  --color-background: #ffffff;
   --title-color: #22335f;
   --shum-backgroung: #ffffff;
   --text-color: #22335f;
+  --text-preloader: #22335f;
+
   --font-weight: 300;
   --font-weight-title: 400;
 
@@ -16,6 +19,9 @@
   :root {
     --font-primary: "Russo One", sans-serif;
     --font-secondary: "Montserrat", sans-serif;
+
+    --color-background: #ffffff;
+    --text-preloader: #22335f;
 
     --title-color: #22335f;
     --shum-backgroung: #ffffff;

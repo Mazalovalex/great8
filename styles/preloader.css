@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #1c1b20;
+  background: var(--color-background);
   opacity: 1;
   display: flex;
   justify-content: center;
@@ -13,31 +13,36 @@
   z-index: 9999;
 }
 
+.red-text {
+  color: #e60000;
+  font-weight: 600;
+}
+
 .preloader-1 {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 30%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: left;
   z-index: 9999;
 }
 
 .preloader-text {
-  color: #fff;
+  color: var(--text-preloader);
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   width: 700px;
   font-size: 10px;
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: 2px;
-  text-align: center;
+  text-align: left;
 }
 
 /* Анимация для линий */
 .preloader-1 .line {
   width: 1px;
   height: 12px;
-  background: #fff;
+  background: #e60000;
   margin: 0 1px;
   display: inline-block;
   animation: opacity-1 1000ms infinite ease-in-out;

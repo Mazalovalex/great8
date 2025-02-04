@@ -42,7 +42,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="./styles/animation.css" />
     <link rel="stylesheet" href="./styles/preloader.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -54,7 +54,11 @@
     <div class="preloader" id="preloader">
       <div class="goal">
         <div id="preloader" class="preloader-1">
-          <div class="preloader-text">Исторический момент в мире хоккея</div>
+          <div class="preloader-text">
+            История вершится сейчас!<br />
+            Следи за каждым моментом —
+            <span class="red-text">оставайся с нами!</span>
+          </div>
           <span class="line line-1"></span>
           <span class="line line-2"></span>
           <span class="line line-3"></span>
@@ -252,20 +256,25 @@
       <section class="record-progress-section">
         <div class="remaining-to-record">
           <h2 class="record-progress__title" data-mobile="До рекорда осталось">
-            До рекорда:
+            До рекорда: <span class="record-difference"></span>
           </h2>
-          <h3 class="record-difference"></h3>
         </div>
         <ul class="header__theme-menu-list">
-					<li class="header__theme-menu-item">
-						<label for="theme-select" class="header__theme-menu-label">Тема:</label>
-						<select id="theme-select" class="header__theme-menu-select" aria-label="Выбор темы">
-							<option value="light">Светлая</option>
-							<option value="auto">Авто</option>
-							<option value="dark">Темная</option>
-						</select>
-					</li>
-				</ul>
+          <li class="header__theme-menu-item">
+            <label for="theme-select" class="header__theme-menu-label"
+              >Тема:</label
+            >
+            <select
+              id="theme-select"
+              class="header__theme-menu-select"
+              aria-label="Выбор темы"
+            >
+              <option value="light">Светлая</option>
+              <option value="auto">Авто</option>
+              <option value="dark">Темная</option>
+            </select>
+          </li>
+        </ul>
       </section>
     </main>
   </body>
