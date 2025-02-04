@@ -148,7 +148,6 @@
   position: relative;
 }
 
-
 .player-img {
   width: 45px;
   height: 45px;
@@ -650,6 +649,10 @@
     text-align: center;
     width: 80vw;
   }
+
+  .page::before {
+    background: url("../image/shum.gif?v=2");
+  }
 }
 
 #video-wrapper {
@@ -659,6 +662,3 @@
 #show-video-btn {
   display: none; /* Кнопка скрыта по умолчанию */
 }
-
-
-
