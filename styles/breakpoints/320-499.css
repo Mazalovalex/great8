@@ -3,11 +3,11 @@
     margin: 0px !important;
     outline: 1px solid rgb(255, 0, 0);
   }
+
   .record-section_title {
-    font-size: clamp(2.8125rem, 0.2443rem + 12.6437vw, 4.1875rem);
+    font-size: clamp(2.8125rem, 0.4777rem + 11.4943vw, 4.0625rem);
     text-align: start;
     outline: 1px solid rgb(0, 0, 0);
-    display: none;
   }
 
   .developer {
