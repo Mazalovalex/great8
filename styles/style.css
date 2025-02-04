@@ -362,6 +362,10 @@
 }
 
 @media (width < 1100px) {
+  .main {
+    overflow: visible;
+  }
+
   .video {
     width: 40vw;
     height: 23vw;
@@ -489,27 +493,23 @@
 }
 
 @media (width < 500px) {
-	*{
-		outline: 1px solid green;
-	}
-  .main {
-    overflow: visible;
+  * {
+    outline: 1px solid green;
+    margin: 0px !important;
+  }
+  .developer {
+    text-align: end;
   }
 
-	.developer{
-		text-align: end;
-		
-	}
-
   .record-section_title {
-    font-size: 12px;
+    font-size: clamp(2.8125rem, 0.0108rem + 13.7931vw, 4.3125rem);
+		text-align: start;
   }
 
   .record-description-section {
     display: flex;
     flex-direction: column;
   }
-
 
   .top-scorers-section {
     order: 4;
