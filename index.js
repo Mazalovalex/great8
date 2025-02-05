@@ -1,6 +1,6 @@
 const images = [
-  "./image/OviPNG/ovechkin1.png",
-  "./image/OviPNG/ovechkin2.png",
+  "./image/OviPNG/ovechkin1.png ",
+  "./image/OviPNG/ovechkin2.png ",
   "./image/OviPNG/ovechkin3.png",
   "./image/OviPNG/ovechkin4.png",
   "./image/OviPNG/ovechkin5.png",
