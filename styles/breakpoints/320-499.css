@@ -1,4 +1,8 @@
 @media (320px <= width <= 500px) {
+  .page {
+    background-image: var(--background-image-mobil);
+  }
+
   .record-header-section {
     width: calc(
       100vw - 20px

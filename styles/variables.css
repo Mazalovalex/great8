@@ -1,5 +1,7 @@
 :root {
-	--background-image: url(../image/background-light.png);
+	--background-image: url(../image/background/backgroung-dark.webp);
+	--background-image-mobil: url(../image/background/backgroung-mobil_dark.webp);
+
 	
 	--font-primary: "Russo One", sans-serif;
 	--font-secondary: "Montserrat", sans-serif;

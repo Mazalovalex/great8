@@ -98,18 +98,3 @@
     animation: none; /* Отключить анимацию для линий */
   }
 }
-
-@media (width < 500px) {
-  .preloader-1 {
-    left: 50%;
-    text-align: left;
-  }
-
-  .preloader-text {
-    width: 80vw;
-    text-align: left;
-    font-size: 10px;
-
-    width: min(700px, 80vw); /* Ограничиваем 700px, но делаем адаптивным */
-  }
-}
