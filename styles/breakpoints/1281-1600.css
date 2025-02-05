@@ -1,0 +1,12 @@
+@media (max-width: 1600px) {
+  .video {
+    z-index: 2;
+    width: 25vw;
+    height: 29vh;
+  }
+
+  .top-scorer-item {
+    height: 65px;
+    padding-right: 0px;
+  }
+}

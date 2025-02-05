@@ -17,8 +17,7 @@
 
   .record-description-section {
     width: calc(100vw - 20px);
-    margin: 0 auto; /* Центрируем */
-    display: flex;
+    margin: 0 auto;
     flex-direction: column;
   }
 
@@ -65,15 +64,15 @@
   .player-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: none; /* Изображение заполняет контейнер, обрезая излишки */
-    object-position: top center; /* Устанавливаем изображение с верхней части */
+    object-fit: none; 
+    object-position: top center; 
   }
 
   .top-scorers-section {
     width: calc(100vw - 20px);
     order: 4;
     padding: 0px 0px 40px 0px;
-    margin: 0 auto; /* Прижимаем к правому краю */
+    margin: 0 auto; 
     gap: 10px;
   }
 
