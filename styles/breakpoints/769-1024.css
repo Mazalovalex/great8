@@ -13,7 +13,7 @@
   }
 
   .record-section_title {
-    font-size: calc(105px + (125 - 105) * ((100vw - 768px) / (1024 - 768)));
+    font-size: clamp(6.5625rem, 2.7929rem + 7.8431vw, 7.8125rem);
     line-height: 0.8;
     background-color: rgb(255, 0, 144);
   }
