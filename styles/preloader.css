@@ -107,8 +107,8 @@
   }
 
   .preloader-text {
-    width: 80vw;
-    text-align: left;
+    width: 70vw;
+    text-align: center;
     font-size: 10px;
   }
 }

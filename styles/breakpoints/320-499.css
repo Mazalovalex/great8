@@ -108,7 +108,7 @@
 
   .player-image-wrapper {
     position: absolute;
-    top: 12%;
+    top: 13%;
     left: 40%;
     transform: translateX(-50%);
     z-index: -1;
