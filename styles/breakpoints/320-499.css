@@ -4,18 +4,11 @@
   }
 
   .record-header-section {
-    width: calc(
-      100vw - 20px
-    ); /* 100% ширины экрана минус 10px (по 5px слева и справа) */
-    padding: 10px 0px; /* Внутренние отступы */
-    text-align: start;
-    margin: 0 auto; /* Центрируем */
-    background-color: yellow;
+    /* наследуют от 500 - 768 */
   }
 
   .record-section_title {
     font-size: calc(45px + (60 - 45) * ((100vw - 320px) / (500 - 320)));
-    line-height: 0.8;
   }
 
   .record-description-section {
