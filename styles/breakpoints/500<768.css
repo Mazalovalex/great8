@@ -39,8 +39,8 @@
     width: calc(100vw - 20px);
     position: relative;
     margin: 0 auto;
-		text-align: left;
-		background-color: aquamarine;
+    text-align: left;
+    background-color: aquamarine;
   }
 
   .record-progress__title {
@@ -77,10 +77,42 @@
   .top-scorers-section {
     width: calc(100vw - 20px);
     order: 4;
-    gap: 10px;
     padding: 0px 0px 40px 0px;
     margin: 0 auto; /* Прижимаем к правому краю */
-
     background-color: blue;
+    gap: 20px;
+  }
+
+  .video {
+    z-index: 2;
+    width: 50vw;
+    height: 30vh;
+  }
+
+
+
+  .top-scorer-item {
+		width: 100%;
+    height: auto;
+    padding-right: 0px;
+  }
+
+  .player {
+    gap: 5px;
+  }
+
+  .player-name {
+    font-size: 16px;
+  }
+
+  .player-season {
+    display: block;
+  }
+  .player-goals {
+    font-size: 26px;
+  }
+  .player-img {
+    width: 45px;
+    height: 45px;
   }
 }
