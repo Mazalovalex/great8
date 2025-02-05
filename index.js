@@ -11,8 +11,7 @@ const images = [
   "./image/OviPNG/ovechkin10.png",
   "./image/OviPNG/ovechkin11.png",
   "./image/OviPNG/ovechkin12.png",
-  "./image/OviPNG/ovechkin4.png",
-  "./image/OviPNG/ovechkin3.png",
+  "./image/OviPNG/ovechkin5.png",
   "./image/OviPNG/ovechkin1.png",
 ];
 // Функция для Остатка до рекорда, шайб овечкина в топ 5 игроков, прогресс бара
