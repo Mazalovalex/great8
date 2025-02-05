@@ -1,8 +1,15 @@
 @media (min-width: 500px) and (max-width: 768px) {
-  * {
-    background-color: rgb(170, 255, 0);
-  }
   .main {
     overflow: visible;
+  }
+
+  .record-header-section {
+    width: calc(
+      100vw - 20px
+    ); /* 100% ширины экрана минус 10px (по 5px слева и справа) */
+    padding: 10px 0px; /* Внутренние отступы */
+    text-align: start;
+    margin: 0 auto; /* Центрируем */
+    background-color: aqua;
   }
 }
