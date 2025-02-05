@@ -1,4 +1,4 @@
-@media (600px <= width <= 2000px) {
+@media (100px <= width <= 2000px) {
   * {
     background-color: rgb(0, 255, 42);
   }
