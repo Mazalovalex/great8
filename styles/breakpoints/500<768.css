@@ -86,13 +86,11 @@
   .video {
     z-index: 2;
     width: 50vw;
-    height: 30vh;
+    height: 50vh;
   }
 
-
-
   .top-scorer-item {
-		width: 100%;
+    width: 100%;
     height: auto;
     padding-right: 0px;
   }
