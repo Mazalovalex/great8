@@ -10,6 +10,7 @@
     padding: 10px 0px; /* Внутренние отступы */
     text-align: start;
     margin: 0 auto; /* Центрируем */
+    background-color: yellow;
   }
 
   .record-section_title {
