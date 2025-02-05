@@ -12,6 +12,7 @@ const images = [
   "./image/OviPNG/ovechkin11.png",
   "./image/OviPNG/ovechkin12.png",
   "./image/OviPNG/ovechkin3.png",
+	"./image/OviPNG/ovechkin6.png",
   "./image/OviPNG/ovechkin1.png",
 ];
 // Функция для Остатка до рекорда, шайб овечкина в топ 5 игроков, прогресс бара
@@ -81,7 +82,7 @@ function startImageAnimation(imagesArr) {
 
   let currentIndex = 0;
   const imageElement = document.querySelector(".ovechkin-image");
-  const frameDelay = 120;
+  const frameDelay = 100;
 
   const interval = setInterval(function () {
     if (currentIndex >= imagesArr.length) {

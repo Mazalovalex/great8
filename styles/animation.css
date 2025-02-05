@@ -12,7 +12,7 @@
 
 .record-section_title {
   transform: translateY(-500px);
-  transition: transform 1s ease-out, opacity 1s ease-out;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
 
 .record-progress__title {
