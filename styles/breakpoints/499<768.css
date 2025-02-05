@@ -1,4 +1,4 @@
-@media (min-width: 809px) and (max-width: 811px) {
+@media (min-width: 500px) and (max-width: 768px) {
   * {
     background-color: rgb(170, 255, 0);
   }
