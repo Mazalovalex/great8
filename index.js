@@ -12,7 +12,7 @@ const images = [
   "./image/OviPNG/ovechkin11.png",
   "./image/OviPNG/ovechkin12.png",
   "./image/OviPNG/ovechkin3.png",
-	"./image/OviPNG/ovechkin6.png",
+  "./image/OviPNG/ovechkin6.png",
   "./image/OviPNG/ovechkin1.png",
 ];
 // Функция для Остатка до рекорда, шайб овечкина в топ 5 игроков, прогресс бара
@@ -75,26 +75,48 @@ function animateGoalNumbers() {
 }
 // Функция для анимации фотографий Овечкина
 function startImageAnimation(imagesArr) {
+  if (!imagesArr.length) return;
+
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
-  if (prefersReducedMotion) return; // Если включен режим уменьшения движения, прерываем анимацию
+  if (prefersReducedMotion) return;
+
+  const imageElement = document.querySelector(".ovechkin-image");
+  if (!imageElement) return;
 
   let currentIndex = 0;
-  const imageElement = document.querySelector(".ovechkin-image");
   const frameDelay = 100;
 
-  const interval = setInterval(function () {
-    if (currentIndex >= imagesArr.length) {
-      clearInterval(interval);
-      return;
-    }
+  // 1️⃣ Делаем картинку прозрачной перед началом
+  imageElement.style.opacity = "0";
 
-    if (imageElement) {
+  setTimeout(() => {
+    // 2️⃣ Устанавливаем первое изображение перед началом анимации
+    imageElement.src = imagesArr[currentIndex];
+
+    // 3️⃣ Плавно показываем картинку
+    imageElement.style.transition = "opacity 0.5s ease-in-out";
+    imageElement.style.opacity = "1";
+
+    currentIndex++;
+
+    // 4️⃣ Запускаем анимацию после появления первой картинки
+    const interval = setInterval(() => {
+      if (currentIndex >= imagesArr.length) {
+        clearInterval(interval);
+        return;
+      }
+
       imageElement.src = imagesArr[currentIndex];
+
+      imageElement.onerror = () => {
+        imageElement.src = "./image/OviPNG/fallback.png";
+      };
+
       currentIndex++;
-    }
-  }, frameDelay);
+    }, frameDelay);
+  }, 300); // Небольшая задержка перед стартом (300 мс)
 }
 
 function animateText() {
