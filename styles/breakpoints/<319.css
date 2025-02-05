@@ -1,4 +1,4 @@
-@media (width < 320px) {
+@media (width < 319px) {
   * {
     display: none;
   }

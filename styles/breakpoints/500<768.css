@@ -2,4 +2,7 @@
   * {
     background-color: rgb(170, 255, 0);
   }
+  .main {
+    overflow: visible;
+  }
 }
