@@ -73,9 +73,7 @@ function startImageAnimation(imagesArr) {
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
-  const isSmallScreen = window.innerWidth < 100;
-
-  if (prefersReducedMotion || isSmallScreen) return; // Прерываем анимацию, если включено уменьшение движения или экран маленький
+  if (prefersReducedMotion) return; // Если включен режим уменьшения движения, прерываем анимацию
 
   let currentIndex = 0;
   const imageElement = document.querySelector(".ovechkin-image");
@@ -93,11 +91,6 @@ function startImageAnimation(imagesArr) {
     }
   }, frameDelay);
 }
-
-// Проверяем ширину экрана при изменении размера окна
-window.addEventListener("resize", function () {
-  startImageAnimation(images); // Перезапуск функции при изменении ширины экрана
-});
 
 function animateText() {
   const developerElement = document.querySelector(".developer");
