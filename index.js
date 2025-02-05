@@ -77,7 +77,7 @@ function startImageAnimation(imagesArr) {
 
   let currentIndex = 0;
   const imageElement = document.querySelector(".ovechkin-image");
-  const frameDelay = 110;
+  const frameDelay = 2500;
 
   const interval = setInterval(function () {
     if (currentIndex >= imagesArr.length) {
