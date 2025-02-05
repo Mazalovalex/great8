@@ -82,22 +82,24 @@ function startImageAnimation(imagesArr) {
   ).matches;
   if (prefersReducedMotion) return;
 
-  const imageElement = document.querySelector(".ovechkin-image");
-  if (!imageElement) return;
+  const imageContainer = document.querySelector(".ovechkin-image"); // Контейнер
+  const imageElement = imageContainer?.querySelector("img"); // Само изображение
+
+  if (!imageContainer || !imageElement) return;
 
   let currentIndex = 0;
   const frameDelay = 100;
 
-  // 1️⃣ Делаем картинку прозрачной перед началом
-  imageElement.style.opacity = "0";
+  // 1️⃣ Делаем контейнер прозрачным перед началом
+  imageContainer.style.opacity = "0";
 
   setTimeout(() => {
     // 2️⃣ Устанавливаем первое изображение перед началом анимации
     imageElement.src = imagesArr[currentIndex];
 
-    // 3️⃣ Плавно показываем картинку
-    imageElement.style.transition = "opacity 0.5s ease-in-out";
-    imageElement.style.opacity = "1";
+    // 3️⃣ Плавно показываем контейнер (вместе с изображением)
+    imageContainer.style.transition = "opacity 0.5s ease-in-out";
+    imageContainer.style.opacity = "1";
 
     currentIndex++;
 
