@@ -34,4 +34,53 @@
     text-align: end;
     padding: 10px 0px;
   }
+
+  .record-progress-section {
+    width: calc(100vw - 20px);
+    position: relative;
+    margin: 0 auto;
+		text-align: left;
+		background-color: aquamarine;
+  }
+
+  .record-progress__title {
+    font-size: calc(40px + (50 - 40) * ((100vw - 320px) / (500 - 320)));
+    text-align: center;
+  }
+
+  .record-difference {
+    font-size: calc(190px + (220 - 170) * ((100vw - 320px) / (500 - 320)));
+    font-family: var(--font-primary);
+    line-height: 1;
+  }
+
+  .player-image-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем по X и Y */
+    z-index: -1;
+    opacity: 0.3;
+    overflow: hidden; /* Обрезаем все, что выходит за границы */
+    width: 100vw;
+    height: 70vh; /* Делаем контейнер во весь экран */
+  }
+
+  .player-image-wrapper img {
+    width: 100vw; /* Исходный размер изображения равен ширине экрана */
+    height: auto;
+    display: block;
+    transform: scale(3); /* Увеличиваем в 3 раза */
+    transform-origin: top center; /* Центрируем точку увеличения */
+  }
+
+  .top-scorers-section {
+    width: calc(100vw - 20px);
+    order: 4;
+    gap: 10px;
+    padding: 0px 0px 40px 0px;
+    margin: 0 auto; /* Прижимаем к правому краю */
+
+    background-color: blue;
+  }
 }
