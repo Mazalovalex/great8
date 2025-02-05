@@ -3,14 +3,9 @@
     overflow: visible;
   }
 
-  .record-header-section {
-    width: calc(
-      100vw - 20px
-    ); /* 100% ширины экрана минус 10px (по 5px слева и справа) */
-    padding: 10px 0px; /* Внутренние отступы */
-    text-align: start;
-    margin: 0 auto; /* Центрируем */
-  }
+  /* .record-header-section {
+    наследуют от 768 - 1024
+  } */
 
   .record-section_title {
     font-size: calc(56px + (102 - 56) * ((100vw - 500px) / (768 - 500)));

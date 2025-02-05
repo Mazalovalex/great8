@@ -1,11 +1,11 @@
 @media (max-width: 1024px) {
   .main {
-		background-color: aquamarine;
+    background-color: aquamarine;
     overflow: visible;
   }
 
   .record-header-section {
-		background-color: rebeccapurple;
+    background-color: rgb(223, 243, 0);
 
     width: calc(
       100vw - 20px
@@ -16,7 +16,7 @@
   }
 
   .record-section_title {
-    font-size: calc(56px + (102 - 56) * ((100vw - 500px) / (768 - 500)));
+    font-size: calc(105px + (142 - 105) * ((100vw - 768px) / (1024 - 768)));
     line-height: 0.8;
   }
 
