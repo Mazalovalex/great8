@@ -1,4 +1,4 @@
-@media (809px <= width <= 813px) {
+@media (809px <= width <= 1000px) {
   * {
     background-color: red;
   }
