@@ -13,9 +13,9 @@
   }
 
   .record-section_title {
-    font-size: 12px;
+    font-size: calc(100px + (130 - 100) * ((100vw - 768px) / (1024 - 768)));
     line-height: 0.8;
-    background-color: blue;
+    background-color: rgb(255, 225, 0);
   }
 
   .record-description-section {
