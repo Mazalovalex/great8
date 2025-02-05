@@ -73,7 +73,7 @@ function startImageAnimation(imagesArr) {
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
-  const isSmallScreen = window.innerWidth < 1100;
+  const isSmallScreen = window.innerWidth < 100;
 
   if (prefersReducedMotion || isSmallScreen) return; // Прерываем анимацию, если включено уменьшение движения или экран маленький
 
@@ -132,7 +132,7 @@ window.addEventListener("load", function () {
       console.log("Флаг активен: Прелоадер скрыт.");
       updateProgressBars();
       animateGoalNumbers();
-      //startImageAnimation(images);
+      startImageAnimation(images);
       animateText();
     }
   }, 2000);
