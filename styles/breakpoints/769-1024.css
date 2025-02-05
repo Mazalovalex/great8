@@ -5,7 +5,7 @@
   }
 
   .record-header-section {
-    background-color: rgb(223, 243, 0);
+    background-color: rgb(47, 255, 0);
 
     width: calc(
       100vw - 20px
@@ -16,7 +16,7 @@
   }
 
   .record-section_title {
-    font-size: calc(105px + (142 - 105) * ((100vw - 768px) / (1024 - 768)));
+    font-size: calc(102px + (138 - 102) * ((100vw - 768px) / (1024 - 768)));
     line-height: 0.8;
   }
 
