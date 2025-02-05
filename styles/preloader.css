@@ -13,11 +13,6 @@
   z-index: 9999;
 }
 
-.red-text {
-  color: #e60000;
-  font-weight: 600;
-}
-
 .preloader-1 {
   position: fixed;
   top: 50%;
@@ -38,6 +33,11 @@
   text-align: left;
 }
 
+.red-text {
+  color: #e60000;
+  font-weight: 600;
+}
+
 /* Анимация для линий */
 .preloader-1 .line {
   width: 1px;
@@ -47,7 +47,6 @@
   display: inline-block;
   animation: opacity-1 1000ms infinite ease-in-out;
 }
-
 .preloader-1 .line-1 {
   animation-delay: 800ms;
 }
@@ -60,6 +59,9 @@
 .preloader-1 .line-4 {
   animation-delay: 200ms;
 }
+.preloader-1 .line-5 {
+  animation-delay: 0ms;
+} /* Добавил отсутствующую .line-5 */
 .preloader-1 .line-6 {
   animation-delay: 200ms;
 }
@@ -73,7 +75,6 @@
   animation-delay: 800ms;
 }
 
-/* Анимация для линий */
 @keyframes opacity-1 {
   0% {
     opacity: 1;
@@ -96,5 +97,18 @@
 @media (prefers-reduced-motion: reduce) {
   .preloader-1 .line {
     animation: none; /* Отключить анимацию для линий */
+  }
+}
+
+@media (width < 500px) {
+  .preloader-1 {
+    left: 50%;
+    text-align: left;
+  }
+
+  .preloader-text {
+    width: 80vw;
+    text-align: left;
+    font-size: 10px;
   }
 }
