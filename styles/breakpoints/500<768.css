@@ -10,7 +10,6 @@
     padding: 10px 0px; /* Внутренние отступы */
     text-align: start;
     margin: 0 auto; /* Центрируем */
-    background-color: rgb(0, 58, 233);
   }
 
   .record-section_title {
@@ -40,7 +39,6 @@
     position: relative;
     margin: 0 auto;
     text-align: left;
-    background-color: aquamarine;
   }
 
   .record-progress__title {
@@ -79,8 +77,7 @@
     order: 4;
     padding: 0px 0px 40px 0px;
     margin: 0 auto; /* Прижимаем к правому краю */
-    background-color: blue;
-    gap: 20px;
+    gap: 10px;
   }
 
   .video {
@@ -112,5 +109,16 @@
   .player-img {
     width: 45px;
     height: 45px;
+  }
+
+	.header__theme-menu-list {
+    position: absolute;
+    z-index: 2;
+    bottom: 1%;
+    right: 0px;
+  }
+
+  .header__theme-menu-label {
+    font-size: 16px;
   }
 }
