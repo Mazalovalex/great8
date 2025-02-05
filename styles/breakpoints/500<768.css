@@ -54,22 +54,21 @@
 
   .player-image-wrapper {
     position: absolute;
-    top: 50%;
+    bottom: -350px;
     left: 50%;
-    transform: translate(-50%, -50%); /* Центрируем по X и Y */
+    transform: translate(-50%, -50%);
     z-index: -1;
     opacity: 0.3;
-    overflow: hidden; /* Обрезаем все, что выходит за границы */
+    overflow: hidden;
     width: 100vw;
-    height: 70vh; /* Делаем контейнер во весь экран */
+    height: 100vh;
   }
 
   .player-image-wrapper img {
-    width: 100vw; /* Исходный размер изображения равен ширине экрана */
-    height: auto;
-    display: block;
-    transform: scale(3); /* Увеличиваем в 3 раза */
-    transform-origin: top center; /* Центрируем точку увеличения */
+    width: 100%;
+    height: 100%;
+    object-fit: none ; /* Изображение заполняет контейнер, обрезая излишки */
+		object-position: top center; /* Устанавливаем изображение с верхней части */
   }
 
   .top-scorers-section {
@@ -111,7 +110,7 @@
     height: 45px;
   }
 
-	.header__theme-menu-list {
+  .header__theme-menu-list {
     position: absolute;
     z-index: 2;
     bottom: 1%;
