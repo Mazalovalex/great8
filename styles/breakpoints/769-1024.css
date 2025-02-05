@@ -13,9 +13,9 @@
   }
 
   .record-section_title {
-    font-size: clamp(6.5625rem, 2.7929rem + 7.8431vw, 7.8125rem);
+    font-size: clamp(5rem, 1.2304rem + 7.8431vw, 6.25rem);
     line-height: 0.8;
-    background-color: rgb(255, 0, 144);
+    background-color: rgb(4, 255, 0);
   }
 
   .record-description-section {
