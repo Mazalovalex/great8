@@ -40,7 +40,7 @@
   }
 
   .record-progress__title {
-    font-size: calc(40px + (50 - 40) * ((100vw - 320px) / (500 - 320)));
+    font-size: calc(40px + (60 - 40) * ((100vw - 320px) / (500 - 320)));
     text-align: center;
   }
 

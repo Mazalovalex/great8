@@ -26,11 +26,10 @@
   .record-progress-section {
     margin: 0 auto; /* Центрируем */
     width: calc(100vw - 20px);
-    padding: 50px;
   }
 
   .record-progress__title {
-    font-size: calc(40px + (50 - 40) * ((100vw - 320px) / (500 - 320)));
+    font-size: calc(45px + (85 - 45) * ((100vw - 320px) / (500 - 320)));
   }
 
   .record-difference {
@@ -96,6 +95,4 @@
     width: 45px;
     height: 45px;
   }
-
-  
 }
