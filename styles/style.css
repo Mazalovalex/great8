@@ -204,6 +204,7 @@ body {
   width: clamp(300px, 75vw, 2784px);
   height: auto;
   display: block;
+  object-fit: contain; /* Сохраняем пропорции и вписываем изображение в контейнер */
 }
 
 /* Прочие элементы, которые должны быть выше */
@@ -403,7 +404,6 @@ body {
     font-size: 14px;
   }
 
-
   .puck-icon {
     padding-right: 5px;
   }
@@ -460,15 +460,9 @@ body {
     font-size: 14px;
   }
 
-
-
   .puck-icon {
     padding-right: 5px;
   }
-
-
-
-
 }
 
 #video-wrapper {

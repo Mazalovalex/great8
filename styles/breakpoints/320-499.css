@@ -108,16 +108,21 @@
 
   .player-image-wrapper {
     position: absolute;
-    top: 13%;
-    left: 40%;
-    transform: translateX(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем по X и Y */
     z-index: -1;
-		opacity: 0.3;
+    opacity: 0.3;
+    overflow: hidden; /* Обрезаем все, что выходит за границы */
+    width: 100vw;
+    height: 70vh; /* Делаем контейнер во весь экран */
   }
 
   .player-image-wrapper img {
-    width: 1000px;
+    width: 100vw; /* Исходный размер изображения равен ширине экрана */
     height: auto;
     display: block;
+    transform: scale(3); /* Увеличиваем в 3 раза */
+    transform-origin: top center; /* Центрируем точку увеличения */
   }
 }
