@@ -17,4 +17,21 @@
     font-size: calc(56px + (102 - 56) * ((100vw - 500px) / (768 - 500)));
     line-height: 0.8;
   }
+
+  .record-description-section {
+    width: calc(100vw - 20px);
+    margin: 0 auto; /* Центрируем */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .record-description {
+    width: calc(100vw - 20px);
+  }
+
+  .developer {
+    font-size: 12px;
+    text-align: end;
+    padding: 10px 0px;
+  }
 }

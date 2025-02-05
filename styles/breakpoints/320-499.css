@@ -3,28 +3,25 @@
     overflow: visible;
   }
 
-  .record-header-section {
-    /* наследуют от 500 - 768 */
-  }
+  /* .record-header-section {
+    наследуют от 500 - 768
+  } */
 
   .record-section_title {
     font-size: calc(45px + (60 - 45) * ((100vw - 320px) / (500 - 320)));
   }
 
-  .record-description-section {
-    width: calc(100vw - 20px);
-    margin: 0 auto; /* Центрируем */
-  }
+  /* .record-description-section {
+    наследуют от 500 - 768
+  } */
 
-  .record-description {
-    width: calc(100vw - 20px);
-  }
+  /* .record-description {
+    наследуют от 500 - 768
+  } */
 
-  .developer {
-    font-size: 12px;
-    text-align: end;
-    padding: 10px 0px;
-  }
+  /* .developer {
+    наследуют от 500 - 768
+  } */
 
   .record-progress-section {
     margin: 0 auto; /* Центрируем */
