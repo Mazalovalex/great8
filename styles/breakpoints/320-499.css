@@ -1,4 +1,8 @@
 @media (min-width: 320px) and (max-width: 500px) {
+  .main {
+    overflow: visible;
+  }
+
   .record-header-section {
     width: calc(
       100vw - 20px
