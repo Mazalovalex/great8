@@ -103,7 +103,7 @@
 @media (width < 500px) {
   .preloader-1 {
     left: 50%;
-    text-align: left;
+    text-align: center;
   }
 
   .preloader-text {
