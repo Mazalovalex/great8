@@ -1,5 +1,5 @@
-@media (809px <= width <= 1000px) {
+@media (800px <= width <= 1000px) {
   * {
-    background-color: red;
+    background-color: rgb(43, 234, 0);
   }
 }
