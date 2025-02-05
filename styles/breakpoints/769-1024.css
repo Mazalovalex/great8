@@ -6,18 +6,16 @@
 
   .record-header-section {
     background-color: rgb(47, 255, 0);
-
-    width: calc(
-      100vw - 20px
-    ); /* 100% ширины экрана минус 10px (по 5px слева и справа) */
-    padding: 10px 0px; /* Внутренние отступы */
+    width: calc(100vw - 20px);
+    padding: 10px 0px;
     text-align: start;
-    margin: 0 auto; /* Центрируем */
+    margin: 0 auto;
   }
 
   .record-section_title {
-    font-size: calc(102px + (138 - 102) * ((100vw - 768px) / (1024 - 768)));
+    font-size: 12px;
     line-height: 0.8;
+    background-color: blue;
   }
 
   .record-description-section {
