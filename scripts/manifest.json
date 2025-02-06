@@ -1,0 +1,26 @@
+{
+  "name": "Great 8: Овечкин vs Гретцки",
+  "short_name": "Great 8",
+  "description": "Следите за гонкой Александра Овечкина за рекордом Уэйна Гретцки!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00113C",
+  "theme_color": "#00113C",
+  "icons": [
+    {
+      "src": "./image/favicon-192x192white.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./image/favicon-512x512white.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./image/favicon-180x180white.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

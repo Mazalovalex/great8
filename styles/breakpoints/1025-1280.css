@@ -11,7 +11,6 @@
   }
 
   .record-section_title {
-    font-size: clamp(6.25rem, 2.4804rem + 7.8431vw, 7.5rem);
     line-height: 0.8;
   }
 
@@ -64,15 +63,15 @@
   .player-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: none; 
-    object-position: top center; 
+    object-fit: none;
+    object-position: top center;
   }
 
   .top-scorers-section {
     width: calc(100vw - 20px);
     order: 4;
     padding: 0px 0px 40px 0px;
-    margin: 0 auto; 
+    margin: 0 auto;
     gap: 10px;
   }
 

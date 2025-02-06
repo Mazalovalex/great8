@@ -1,57 +1,126 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <!-- Кодировка и адаптивность -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Овечкин и рекорд Гретцки — сколько голов осталось?</title>
     <meta
       name="description"
-      content="Следите за прогрессом Александра Овечкина в погоне за рекордом Уэйна Гретцки. Статистика, видео и аналитика."
+      content="Следите за гонкой Александра Овечкина за рекордом Уэйна Гретцки! Актуальная статистика, видео голов."
     />
+    <meta name="author" content="Mazalov Alex" />
+    <meta name="robots" content="index, follow" />
     <meta
       name="keywords"
-      content="Александр Овечкин, рекорд НХЛ, Уэйн Гретцки, гонка за рекордом, лучший снайпер НХЛ, хоккей, статистика, видео голов, Great 8, Вашингтон Кэпиталз, история НХЛ"
+      content="Овечкин, рекорд Гретцки, НХЛ, статистика, хоккей, сколько осталось голов Овечкину"
     />
 
+    <!-- Open Graph (Facebook, LinkedIn, Telegram) -->
     <meta
       property="og:title"
-      content="Great 8! Сколько голов до рекорда Овечкина?"
+      content="Great 8! Сколько голов до рекорда Гретски?"
     />
     <meta
       property="og:description"
-      content="Следите за прогрессом Александра Овечкина в погоне за рекордом НХЛ Уэйна Гретцки. Актуальная статистика, видео последнего гола."
+      content="Следите за тем, как Александр Овечкин приближается к рекорду НХЛ, установленному Уэйном Гретцки."
     />
     <meta property="og:image" content="https://great8.ru/image/Social.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:url" content="https://great8.ru/" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Great 8" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Овечкин и рекорд: сколько голов до вершины?"
+    />
+    <meta
+      name="twitter:description"
+      content="Овечкин на пути к величию! Узнайте, сколько голов осталось до исторического рекорда НХЛ."
+    />
+    <meta name="twitter:image" content="https://great8.ru/image/Social.jpg" />
+
+    <!-- PWA: manifest и цвета -->
     <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      content="#00113C"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
 
-    <title>
-      Сколько голов до рекорда Овечкина? Статистика, видео и аналитика
-    </title>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <link rel="manifest" href="./scripts/manifest.json" />
 
+    <!-- Favicon и иконки -->
     <link rel="icon" type="image/svg+xml" href="./image/favicon.svg" />
-    <link rel="icon" href="./image/favicon.png" sizes="192x192" />
-    <link rel="shortcut icon" href="./image/favicon.ico" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap"
+      rel="icon"
+      href="./image/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./image/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./image/favicon-192x192.png"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./image/favicon-512x512.png"
+      sizes="512x512"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./image/favicon-180x180.png"
+      sizes="180x180"
+    />
+    <link rel="mask-icon" href="./image/favicon.svg" />
+
+    <!-- Шрифты -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Russo+One&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Стили -->
     <link rel="stylesheet" href="./styles/preloader.css" />
     <link rel="stylesheet" href="./styles/animation.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
+
     <link rel="stylesheet" href="./styles/variables.css" />
+
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/breakpoints.css" />
+
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
-    <!-- Yandex.Metrika counter -->
+
+    <!-- Yandex.Metrika -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
         m[i] =
@@ -92,7 +161,6 @@
           alt=""
         /></div
     ></noscript>
-    <!-- /Yandex.Metrika counter -->
   </head>
   <body class="page">
     <div class="preloader" id="preloader">
@@ -113,7 +181,6 @@
         <span class="line line-9"></span>
       </div>
     </div>
-
     <main class="main">
       <div class="player-image-wrapper">
         <img
@@ -129,9 +196,12 @@
       </section>
       <section class="record-description-section">
         <h2 class="record-description">
-          Следите за погоней за рекордом! Александр Овечкин забил свой 878-й гол
-          в НХЛ, и теперь ему осталось всего 17 голов, чтобы побить вечный
-          рекорд Уэйна Гретцки, который составляет 894 гола.
+          Александр Овечкин продолжает стремительное приближение к рекорду Уэйна
+          Гретцки! В матче с «Флоридой Пантерз», завершившемся победой
+          Вашингтона 6:3, Овечкин забил свой 878-й гол в НХЛ. Этот гол стал
+          особенно ярким, так как был забит буквально на последней секунде игры,
+          когда Ови отправил шайбу в пустые ворота соперников. Теперь до
+          великого рекорда Гретцки — 894 гола — осталось всего 17 голов.
         </h2>
         <div class="developer">
           <a
@@ -146,7 +216,9 @@
       </section>
       <section class="top-scorers-section">
         <!-- Кнопка для запуска видео -->
-        <p class="show-video-btn" id="show-video-btn">Показать гол</p>
+        <p class="show-video-btn" id="show-video-btn" aria-expanded="false">
+          Показать гол
+        </p>
 
         <!-- Видео, скрытое изначально -->
         <div class="video-wrapper" id="video-wrapper" style="">
@@ -173,7 +245,7 @@
               <div class="player-info">
                 <div class="player">
                   <p class="player-name">Уэйн Гретцки</p>
-                  <p class="player-season">Сыграл 20 сезонов в НХЛ</p>
+                  <p class="player-season">Провел 20 сезонов в НХЛ</p>
                 </div>
                 <p class="player-goals recordGretski">894</p>
               </div>
@@ -199,7 +271,7 @@
               <div class="player-info">
                 <div class="player">
                   <p class="player-name">Александр Овечкин</p>
-                  <p class="player-season">Играет 19 сезон в НХЛ</p>
+                  <p class="player-season">Проводит 19-й сезон в НХЛ</p>
                 </div>
                 <p class="player-goals goalsOvechkin"></p>
               </div>
@@ -225,7 +297,7 @@
               <div class="player-info opacity">
                 <div class="player">
                   <p class="player-name">Горди Хоу</p>
-                  <p class="player-season">Сыграл 26 сезонов в НХЛ</p>
+                  <p class="player-season">Провел 26 сезонов в НХЛ</p>
                 </div>
                 <p class="player-goals recordGretski">801</p>
               </div>
@@ -251,7 +323,7 @@
               <div class="player-info opacity">
                 <div class="player">
                   <p class="player-name">Яромир Ягр</p>
-                  <p class="player-season">Сыграл 24 сезона в НХЛ</p>
+                  <p class="player-season">Провел 24 сезона в НХЛ</p>
                 </div>
                 <p class="player-goals recordGretski">766</p>
               </div>
@@ -277,7 +349,7 @@
               <div class="player-info opacity">
                 <div class="player">
                   <p class="player-name">Бретт Халл</p>
-                  <p class="player-season">Сыграл 19 сезонов в НХЛ</p>
+                  <p class="player-season">Провел 19 сезонов в НХЛ</p>
                 </div>
                 <p class="player-goals recordGretski">741</p>
               </div>
@@ -297,18 +369,17 @@
       <section class="record-progress-section">
         <div class="remaining-to-record">
           <h2 class="record-progress__title" data-mobile="До рекорда осталось">
-            До рекорда: <span class="record-difference"></span>
+            До рекорда : <span class="record-difference"></span>
           </h2>
         </div>
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
-            <label for="theme-select" class="header__theme-menu-label"
-              >Тема:</label
-            >
+            <label for="theme-select" class="header__theme-menu-label"></label>
             <select
               id="theme-select"
               class="header__theme-menu-select"
               aria-label="Выбор темы"
+              aria-live="polite"
             >
               <option value="light">Светлая</option>
               <option value="auto">Авто</option>
