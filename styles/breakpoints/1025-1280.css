@@ -1,17 +1,22 @@
 @media (max-width: 1280px) {
+  * {
+  }
+
   .main {
-    overflow: visible;
+    /* overflow: auto; */
   }
 
   .record-header-section {
     width: calc(100vw - 20px);
-    padding: 10px 0px;
+    padding: 0px 0px;
     text-align: start;
     margin: 0 auto;
   }
 
   .record-section_title {
     line-height: 0.8;
+    font-size: clamp(2.5rem, -0.1112rem + 13.9266vw, 33.3125rem);
+		font-size: 12px;
   }
 
   .record-description-section {
@@ -51,7 +56,6 @@
   .player-image-wrapper {
     position: absolute;
     bottom: -350px;
-    left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
     opacity: 0.3;

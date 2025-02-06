@@ -108,6 +108,8 @@
     />
 
     <!-- Стили -->
+    <link rel="stylesheet" href="./styles/popup_isOpen.css" />
+
     <link rel="stylesheet" href="./styles/preloader.css" />
     <link rel="stylesheet" href="./styles/animation.css" />
 
@@ -163,6 +165,13 @@
     ></noscript>
   </head>
   <body class="page">
+    <div class="popup-hide popup popup_type_edit">
+      <div class="popup__content">
+        <div class="popup__content">
+          <button class="popup-button">закрыть</button>
+        </div>
+      </div>
+    </div>
     <div class="preloader" id="preloader">
       <div class="preloader-1">
         <div class="preloader-text">
@@ -216,9 +225,13 @@
       </section>
       <section class="top-scorers-section">
         <!-- Кнопка для запуска видео -->
-        <p class="show-video-btn" id="show-video-btn" aria-expanded="false">
+        <!-- <p class="show-video-btn" id="show-video-btn" aria-expanded="false">
           Показать гол
-        </p>
+        </p> -->
+
+
+				<button class="show-video-btn" id="show-video-btn" aria-expanded="false">Смотреть <span class="goal-number"></span>-й гол овечкина</button>
+
 
         <!-- Видео, скрытое изначально -->
         <div class="video-wrapper" id="video-wrapper" style="">
@@ -391,5 +404,6 @@
     </main>
     <script src="./scripts/set-theme.js" async></script>
     <script src="./index.js" async></script>
+    <script src="./scripts/modal.js" async></script>
   </body>
 </html>

@@ -35,6 +35,9 @@ function updateGoalRecord() {
   const progressBar = document.querySelector(".progress-barOvi");
   progressBar.setAttribute("data-progress", progress);
 
+  const goalNumber = document.querySelector(".goal-number");
+  goalNumber.textContent = currentGoalCount;
+
   // Обновляем высоту видеоплеера для разрешений от 500 до 1280
   const TopPlayersElement = document.querySelector(".player-list");
 
@@ -193,7 +196,7 @@ function toggleVideo() {
   } else {
     videoWrapper.style.display = "none";
     videoIframe.src = "";
-    showVideoBtn.textContent = "Показать гол";
+    showVideoBtn.textContent = "Смотреть гол Овечкина";
   }
 }
 

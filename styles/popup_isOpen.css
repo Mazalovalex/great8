@@ -1,0 +1,37 @@
+.popup {
+  font-family: "Inter", Arial, sans-serif;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.popup_is-opened {
+  display: block; /* Или visibility: visible; */
+  opacity: 1; /* Полная непрозрачность */
+}
+
+.popup-hide {
+  display: none; /* Или visibility: hidden; */
+  opacity: 0; /* Начальная непрозрачность */
+  transition: opacity 50s ease-in-out; /*Плавная анимация */
+  background-color: #ffffff;
+}
+
+.popup__content {
+  background-color: #fff;
+  border-radius: 5px 0 0 5px;
+  box-sizing: border-box;
+  max-width: 500px;
+  min-height: 100%;
+  padding: 34px 36px;
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+}

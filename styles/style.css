@@ -7,7 +7,6 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   flex: 1;
 }
 
@@ -30,7 +29,7 @@ body {
 
 .record-section_title {
   font-family: var(--font-primary);
-  font-size: clamp(2.8125rem, 0.2013rem + 13.9266vw, 33.625rem);
+  font-size: clamp(2.8125rem, 0.2013rem + 13.6166vw, 33.625rem);
   color: var(--title-color);
   line-height: 0.8;
   opacity: 0;
@@ -45,7 +44,7 @@ body {
 
 .record-number {
   font-family: var(--font-primary);
-  color: #CF4342;
+  color: #cf4342;
 }
 
 .record-description {
@@ -187,14 +186,14 @@ body {
 
 .record-difference {
   font-size: clamp(0.75rem, -0.6023rem + 6.7614vw, 15.625rem);
-  color: #CF4342;
+  color: #cf4342;
   position: relative;
   line-height: 0.9;
 }
 
 /* Элемент с изображением игрока */
 .player-image-wrapper {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
@@ -269,4 +268,42 @@ body {
 
 #show-video-btn {
   display: none; /* Кнопка скрыта по умолчанию */
+
+  width: 210px;
+  height: 40px;
+
+  background: #ffffff;
+  border-radius: 5px;
+  color: #22335f;
+  font-size: 12px;
+  z-index: 4;
+  position: relative;
+  text-align: start;
+  padding-left: 15px;
+	font-weight: 500;
+}
+
+#show-video-btn::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #22335f;
+  border-radius: 50%; /* Делаем круг */
+  left: 82%;
+  top: 50%;
+  transform: translateY(-50%) translateX(2px);
+}
+
+#show-video-btn::before {
+  content: "";
+  position: absolute;
+  left: 86.5%;
+  top: 50%;
+  transform: translateY(-50%) translateX(2px);
+  width: 0;
+  height: 0;
+  border-left: 8px solid #22335f; /* Треугольник направлен вправо */
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
 }
