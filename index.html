@@ -20,11 +20,11 @@
       property="og:description"
       content="Следите за прогрессом Александра Овечкина в погоне за рекордом НХЛ Уэйна Гретцки. Актуальная статистика, видео последнего гола."
     />
-    <meta
-      property="og:image"
-      content="https://mazalovalex.github.io/great8/image/Social.jpg"
-    />
-    <meta property="og:url" content="https://mazalovalex.github.io/great8/" />
+    <meta property="og:image" content="https://great8.ru/image/Social.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:url" content="https://great8.ru/" />
     <meta property="og:type" content="website" />
     <meta name="color-scheme" content="dark light" />
 
@@ -42,8 +42,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/preloader.css" />
 
+    <link rel="stylesheet" href="./styles/preloader.css" />
     <link rel="stylesheet" href="./styles/animation.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -51,6 +51,48 @@
     <link rel="stylesheet" href="./styles/breakpoints.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(99781906, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/99781906"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
   </head>
   <body class="page">
     <div class="preloader" id="preloader">
@@ -76,21 +118,20 @@
       <div class="player-image-wrapper">
         <img
           class="ovechkin-image"
-          src="./image/OviPNG/ovechkin1.png "
+          src="./image/OviPNG/ovechkin1.png"
           alt="Александр Овечкин"
         />
       </div>
       <section class="record-header-section">
         <h1 class="record-section_title">
-          OVECHKIN<span class="record-number">877</span>
+          OVECHKIN<span class="record-number">878</span>
         </h1>
       </section>
       <section class="record-description-section">
         <h2 class="record-description">
-          Овечкин, которому осталось 18 голов до того, чтобы побить вечный
-          рекорд Уэйна Гретцки (894), сравнял счет 4-4 на 12:21 третьего
-          периода, забив броском с синей линии, который отрикошетил от перчатки
-          Коннора Хеллебайка. Это стал 24-й гол Овечкина в сезоне.
+          Следите за погоней за рекордом! Александр Овечкин забил свой 878-й гол
+          в НХЛ, и теперь ему осталось всего 17 голов, чтобы побить вечный
+          рекорд Уэйна Гретцки, который составляет 894 гола.
         </h2>
         <div class="developer">
           <a
@@ -111,8 +152,7 @@
         <div class="video-wrapper" id="video-wrapper" style="">
           <iframe
             id="video-iframe"
-            src="https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112"
-            frameborder="0"
+            src="https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368279563112"
             allow="autoplay; fullscreen"
             allowfullscreen
             class="video"
@@ -121,7 +161,7 @@
 
         <article class="top-players">
           <ul class="player-list">
-            <li class="top-scorer-item" aria-label="Уэйн Гретцки">
+            <li class="top-scorer-item">
               <div class="progress-bar" data-progress="100"></div>
               <div class="item-image_circle">
                 <img
@@ -147,7 +187,7 @@
                 />
               </div>
             </li>
-            <li class="top-scorer-item" aria-label="Александр Овечкин">
+            <li class="top-scorer-item">
               <div class="progress-bar progress-barOvi" data-progress=""></div>
               <div class="item-image_circle">
                 <img
@@ -173,7 +213,7 @@
                 />
               </div>
             </li>
-            <li class="top-scorer-item" aria-label="Горди Хоу">
+            <li class="top-scorer-item">
               <div class="progress-bar" data-progress="79"></div>
               <div class="item-image_circle opacity">
                 <img
@@ -199,7 +239,7 @@
                 />
               </div>
             </li>
-            <li class="top-scorer-item" aria-label="Яромир Ягр">
+            <li class="top-scorer-item">
               <div class="progress-bar" data-progress="71"></div>
               <div class="item-image_circle opacity">
                 <img
@@ -225,7 +265,7 @@
                 />
               </div>
             </li>
-            <li class="top-scorer-item" aria-label="Бретт Халл">
+            <li class="top-scorer-item">
               <div class="progress-bar" data-progress="65"></div>
               <div class="item-image_circle">
                 <img
@@ -237,7 +277,7 @@
               <div class="player-info opacity">
                 <div class="player">
                   <p class="player-name">Бретт Халл</p>
-                  <p class="player-season">Сыграл 19 сезона в НХЛ</p>
+                  <p class="player-season">Сыграл 19 сезонов в НХЛ</p>
                 </div>
                 <p class="player-goals recordGretski">741</p>
               </div>
@@ -278,8 +318,7 @@
         </ul>
       </section>
     </main>
+    <script src="./scripts/set-theme.js" async></script>
+    <script src="./index.js" async></script>
   </body>
-
-  <script src="./scripts/set-theme.js" async></script>
-  <script src="./index.js" async></script>
 </html>

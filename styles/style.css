@@ -45,7 +45,7 @@ body {
 
 .record-number {
   font-family: var(--font-primary);
-  color: #fc292e;
+  color: #cf4342;
 }
 
 .record-description {
@@ -54,6 +54,7 @@ body {
   font-weight: var(--font-weight);
   opacity: 0.5;
   width: 35%;
+  z-index: 4;
 }
 
 .developer {
@@ -79,6 +80,7 @@ body {
   border-radius: 5px;
   opacity: 0;
   z-index: 4;
+  border: none;
 }
 
 .top-players {
@@ -124,7 +126,6 @@ body {
 .player-img {
   width: 45px;
   height: 45px;
-  border: 1px solid #7c1b20;
   border-radius: 50%;
 }
 
@@ -186,7 +187,7 @@ body {
 
 .record-difference {
   font-size: clamp(0.75rem, -0.6023rem + 6.7614vw, 15.625rem);
-  color: #fc292e;
+  color: #cf4342;
   position: relative;
   line-height: 0.9;
 }

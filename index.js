@@ -11,14 +11,13 @@ const images = [
   "./image/OviPNG/ovechkin10.png",
   "./image/OviPNG/ovechkin11.png",
   "./image/OviPNG/ovechkin12.png",
-  "./image/OviPNG/ovechkin3.png",
-  "./image/OviPNG/ovechkin6.png",
-  "./image/OviPNG/ovechkin1.png",
+  "./image/OviPNG/ovechkin13.png",
+  "./image/OviPNG/ovechkin14.png",
+  "./image/OviPNG/ovechkin15.png",
 ];
-// Функция для Остатка до рекорда, шайб овечкина в топ 5 игроков, прогресс бара
 
+// Функция для обновления данных о рекорде
 function updateGoalRecord() {
-  // Получаем текущее количество голов
   const currentGoalCountElement = document.querySelector(".record-number");
   const currentGoalCount = Number(currentGoalCountElement.textContent);
 
@@ -26,44 +25,70 @@ function updateGoalRecord() {
   const ovechkinGoalElement = document.querySelector(".goalsOvechkin");
   ovechkinGoalElement.textContent = currentGoalCount;
 
-  // Записываем рекорд Гретцки
+  // Обновляем разницу до рекорда Гретцки
   const remainingGoalsElement = document.querySelector(".record-difference");
   const gretskyRecord = 894;
   remainingGoalsElement.textContent = gretskyRecord - currentGoalCount + 1;
-  console.log(remainingGoalsElement);
 
-  // Записываем актуальный процент прогресс бара Овечкина
+  // Обновляем прогресс-бар
   const progress = ((currentGoalCount - 894 / 2) * 100) / (894 / 2);
   const progressBar = document.querySelector(".progress-barOvi");
   progressBar.setAttribute("data-progress", progress);
+
+  // Обновляем высоту видеоплеера для разрешений от 500 до 1280
+  const TopPlayersElement = document.querySelector(".player-list");
+
+  if (!TopPlayersElement) {
+    console.error("Элемент .player-list не найден.");
+    return;
+  }
+
+  const mediaQuery = window.matchMedia(
+    "(min-width: 500px) and (max-width: 1280px)"
+  );
+
+  const updateHeight = () => {
+    if (mediaQuery.matches) {
+      const heightTopPlayers = getComputedStyle(TopPlayersElement).height;
+      const videoPlayer = document.querySelector(".video");
+      if (videoPlayer) {
+        videoPlayer.style.height = heightTopPlayers;
+      }
+    }
+  };
+
+  updateHeight();
+  mediaQuery.addEventListener("change", updateHeight);
 }
+
 updateGoalRecord();
 
 // Функция для обновления прогресс-баров
 function updateProgressBars() {
   const progressBars = document.querySelectorAll(".progress-bar");
 
-  progressBars.forEach(function (bar) {
+  progressBars.forEach((bar) => {
     const progress = bar.dataset.progress;
     bar.style.width = progress + "%";
   });
 }
+
 // Функция для анимации чисел
 function animateGoalNumbers() {
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
-  if (prefersReducedMotion) return; // Если включен режим уменьшения движения, прерываем анимацию
+  if (prefersReducedMotion) return;
 
   const goalElements = document.querySelectorAll(".player-goals");
 
-  goalElements.forEach(function (goalElement) {
+  goalElements.forEach((goalElement) => {
     const targetNumber = parseInt(goalElement.textContent, 10);
     let currentNumber = 500;
     const duration = 2000;
     const stepTime = duration / (targetNumber - currentNumber);
 
-    const interval = setInterval(function () {
+    const interval = setInterval(() => {
       currentNumber++;
       goalElement.textContent = currentNumber;
 
@@ -73,54 +98,53 @@ function animateGoalNumbers() {
     }, stepTime);
   });
 }
+
 // Функция для анимации фотографий Овечкина
-function startImageAnimation(imagesArr) {
-  if (!imagesArr.length) return;
+function startImageAnimation(imagesArr, frameDelay = 100) {
+  if (!Array.isArray(imagesArr) || !imagesArr.length) {
+    console.error("Ошибка: Массив изображений пуст или не является массивом.");
+    return;
+  }
 
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
-  if (prefersReducedMotion) return;
+  if (prefersReducedMotion) {
+    console.log("Анимация отключена: включён режим уменьшения движения.");
+    return;
+  }
 
-  const imageContainer = document.querySelector(".ovechkin-image"); // Контейнер
-  const imageElement = imageContainer?.querySelector("img"); // Само изображение
+  const imageElement = document.querySelector(".ovechkin-image");
+  if (!imageElement) {
+    console.error("Ошибка: Элемент .ovechkin-image не найден.");
+    return;
+  }
 
-  if (!imageContainer || !imageElement) return;
+  imageElement.onerror = () => {
+    console.error(
+      `Ошибка загрузки изображения: ${imageElement.src}. Заменяем на изображение по умолчанию.`
+    );
+    imageElement.src = "./image/OviPNG/ovechkin1.png";
+  };
 
   let currentIndex = 0;
-  const frameDelay = 100;
-
-  // 1️⃣ Делаем контейнер прозрачным перед началом
-  imageContainer.style.opacity = "0";
 
   setTimeout(() => {
-    // 2️⃣ Устанавливаем первое изображение перед началом анимации
-    imageElement.src = imagesArr[currentIndex];
-
-    // 3️⃣ Плавно показываем контейнер (вместе с изображением)
-    imageContainer.style.transition = "opacity 0.5s ease-in-out";
-    imageContainer.style.opacity = "1";
-
-    currentIndex++;
-
-    // 4️⃣ Запускаем анимацию после появления первой картинки
     const interval = setInterval(() => {
-      if (currentIndex >= imagesArr.length) {
+      if (!imageElement || currentIndex >= imagesArr.length) {
         clearInterval(interval);
+        console.log("Анимация завершена: все изображения показаны.");
         return;
       }
 
       imageElement.src = imagesArr[currentIndex];
-
-      imageElement.onerror = () => {
-        imageElement.src = "./image/OviPNG/fallback.png";
-      };
-
+      console.log(`Показ изображения: ${imagesArr[currentIndex]}`);
       currentIndex++;
     }, frameDelay);
-  }, 300); // Небольшая задержка перед стартом (300 мс)
+  }, 300);
 }
 
+// Функция для анимации текста
 function animateText() {
   const developerElement = document.querySelector(".developer");
   const titleElement = document.querySelector(".record-section_title");
@@ -132,7 +156,6 @@ function animateText() {
     ".record-progress__title"
   );
 
-  // Добавляем класс для анимации, чтобы она началась после загрузки страницы
   titleElement.classList.add("visible");
   developerElement.classList.add("visible");
   recordDescriptionElement.classList.add("visible");
@@ -140,52 +163,28 @@ function animateText() {
   recordProgressTitleElement.classList.add("visible");
 }
 
-// установка флага для запуска функций после закрытия прелоудера
-let preloaderHidden = false;
-
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    const preloader = document.getElementById("preloader");
-    preloader.classList.add("hidden");
-    preloader.style.display = "none";
-    preloaderHidden = true;
-
-    if (preloaderHidden) {
-      console.log("Флаг активен: Прелоадер скрыт.");
-      updateProgressBars();
-      animateGoalNumbers();
-      startImageAnimation(images);
-      animateText();
-    }
-  }, 2000);
-});
-
-const videoWrapper = document.getElementById("video-wrapper");
-const showVideoBtn = document.getElementById("show-video-btn");
-const videoIframe = document.getElementById("video-iframe");
-
 // Функция для проверки размера экрана
 function checkScreenSize() {
+  const videoWrapper = document.getElementById("video-wrapper");
+  const showVideoBtn = document.getElementById("show-video-btn");
+  const videoIframe = document.getElementById("video-iframe");
+
   if (window.innerWidth < 500) {
-    // Если ширина экрана меньше 500px, показываем кнопку и скрываем видео
     showVideoBtn.style.display = "block";
     videoWrapper.style.display = "none";
     videoIframe.src = "";
   } else {
-    // Если ширина экрана больше или равна 500px, скрываем кнопку и показываем видео
     showVideoBtn.style.display = "none";
     videoWrapper.style.display = "block";
   }
 }
 
-// Проверка размера экрана при загрузке страницы
-window.onload = checkScreenSize;
-
-// Дополнительная обработка изменения ширины окна
-window.addEventListener("resize", checkScreenSize);
-
 // Функция для переключения видео
 function toggleVideo() {
+  const videoWrapper = document.getElementById("video-wrapper");
+  const showVideoBtn = document.getElementById("show-video-btn");
+  const videoIframe = document.getElementById("video-iframe");
+
   if (videoWrapper.style.display === "none") {
     videoWrapper.style.display = "block";
     videoIframe.src =
@@ -198,5 +197,26 @@ function toggleVideo() {
   }
 }
 
-// Добавляем обработчик события для кнопки
-showVideoBtn.addEventListener("click", toggleVideo);
+// Инициализация при загрузке страницы
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hidden");
+    preloader.style.display = "none";
+
+    updateProgressBars();
+    animateGoalNumbers();
+    startImageAnimation(images);
+    animateText();
+    checkScreenSize();
+  }, 2000);
+});
+
+// Обработчик изменения размера окна
+window.addEventListener("resize", checkScreenSize);
+
+// Обработчик для кнопки переключения видео
+const showVideoBtn = document.getElementById("show-video-btn");
+if (showVideoBtn) {
+  showVideoBtn.addEventListener("click", toggleVideo);
+}

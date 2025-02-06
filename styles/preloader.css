@@ -34,7 +34,7 @@
 }
 
 .red-text {
-  color: #e60000;
+  color: #cf4342;
   font-weight: 600;
 }
 
@@ -42,7 +42,7 @@
 .preloader-1 .line {
   width: 1px;
   height: 12px;
-  background: #e60000;
+  background: #cf4342;
   margin: 0 1px;
   display: inline-block;
   animation: opacity-1 1000ms infinite ease-in-out;
@@ -100,7 +100,7 @@
   }
 }
 
-@media (width < 500px) {
+@media (max-width: 500px) {
   .preloader-1 {
     top: 50%;
     left: 50%;
