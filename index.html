@@ -33,7 +33,7 @@
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:url" content="https://great8.ru/" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Great 8" />
+    <meta property="og:site_name" content="ОВИ ГОЛ!" />
     <meta property="og:locale" content="ru_RU" />
 
     <!-- Twitter -->
@@ -52,7 +52,7 @@
     <meta name="color-scheme" content="dark light" />
     <meta
       name="theme-color"
-      content="#00113C"
+      content="#000A2B"
       media="(prefers-color-scheme: dark)"
     />
     <meta
@@ -108,8 +108,6 @@
     />
 
     <!-- Стили -->
-    <link rel="stylesheet" href="./styles/popup_isOpen.css" />
-
     <link rel="stylesheet" href="./styles/preloader.css" />
     <link rel="stylesheet" href="./styles/animation.css" />
 
@@ -165,13 +163,6 @@
     ></noscript>
   </head>
   <body class="page">
-    <div class="popup-hide popup popup_type_edit">
-      <div class="popup__content">
-        <div class="popup__content">
-          <button class="popup-button">закрыть</button>
-        </div>
-      </div>
-    </div>
     <div class="preloader" id="preloader">
       <div class="preloader-1">
         <div class="preloader-text">
@@ -200,17 +191,13 @@
       </div>
       <section class="record-header-section">
         <h1 class="record-section_title">
-          OVECHKIN<span class="record-number">878</span>
+          OVECHKIN<span class="record-number">879</span>
         </h1>
       </section>
       <section class="record-description-section">
         <h2 class="record-description">
-          Александр Овечкин продолжает стремительное приближение к рекорду Уэйна
-          Гретцки! В матче с «Флоридой Пантерз», завершившемся победой
-          Вашингтона 6:3, Овечкин забил свой 878-й гол в НХЛ. Этот гол стал
-          особенно ярким, так как был забит буквально на последней секунде игры,
-          когда Ови отправил шайбу в пустые ворота соперников. Теперь до
-          великого рекорда Гретцки — 894 гола — осталось всего 17 голов.
+          Александр Овечкин (Вашингтон Кэпиталс) оформил 879-й гол НХЛ, приблизившись к рекорду Гретцки (894). На 19:07 первого периода он получил пас от Мартина Фехевари и резким ударом отправил шайбу мимо вратаря Ивана Федотова. Прекрасный гол!
+Следующий матч против Юты — 9 февраля 2025 в 20:30 по московскому времени.
         </h2>
         <div class="developer">
           <a
@@ -225,19 +212,19 @@
       </section>
       <section class="top-scorers-section">
         <!-- Кнопка для запуска видео -->
-        <!-- <p class="show-video-btn" id="show-video-btn" aria-expanded="false">
-          Показать гол
-        </p> -->
-
-
-				<button class="show-video-btn" id="show-video-btn" aria-expanded="false">Смотреть <span class="goal-number"></span>-й гол овечкина</button>
-
+        <button
+          class="show-video-btn"
+          id="show-video-btn"
+          aria-expanded="false"
+        >
+          Смотреть <span class="goal-number"></span>-й гол овечкина
+        </button>
 
         <!-- Видео, скрытое изначально -->
-        <div class="video-wrapper" id="video-wrapper" style="">
+       <div class="video-wrapper" id="video-wrapper" style="">
           <iframe
             id="video-iframe"
-            src="https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368279563112"
+            src=""
             allow="autoplay; fullscreen"
             allowfullscreen
             class="video"
@@ -403,7 +390,6 @@
       </section>
     </main>
     <script src="./scripts/set-theme.js" async></script>
-    <script src="./index.js" async></script>
-    <script src="./scripts/modal.js" async></script>
+    <script type="module" src="./index.js" async></script>
   </body>
 </html>

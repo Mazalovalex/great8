@@ -1,7 +1,6 @@
 @media (max-width: 1600px) {
   .record-section_title {
     font-size: clamp(2.5rem, -0.1112rem + 13.9266vw, 33.3125rem);
-
   }
   .video {
     z-index: 2;

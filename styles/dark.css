@@ -1,18 +1,18 @@
 .page.theme_dark {
-	--background-image: url(../image/background/backgroung-dark.webp);
+  --background-image: url(../image/background/backgroung-dark.webp);
 
-	--font-primary: "Russo One", sans-serif;
-	--font-secondary: "Montserrat", sans-serif;
+  --font-primary: "Russo One", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
 
-	--color-background: #121026;
+  --color-background: #000a2b;
   --title-color: #ffffff;
   --shum-backgroung: #121026;
   --text-color: #ffffff;
-	--text-preloader:#ffffff;
-
+  --text-preloader: #ffffff;
 
   --font-weight: 100;
-	--font-weight-title:400;
+  --font-weight-title: 400;
   --accent-color: #ffffff;
-	--btn-color: #121026:
+  --btn-color: #000a2b;
+  --btn-backgroung: #ffffff;
 }

@@ -48,9 +48,7 @@
   }
 
   .player-image-wrapper {
-    position: absolute;
     bottom: -550px;
-    left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
     opacity: 0.3;

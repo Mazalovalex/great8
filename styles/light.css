@@ -1,39 +1,43 @@
 .page.theme_light {
   --background-image: url(../image/background/backgroung-light.webp);
+  --background-image-mobil: url(../image/background/backgroung-mobil_light.webp);
+
   --font-primary: "Russo One", sans-serif;
   --font-secondary: "Montserrat", sans-serif;
 
   --color-background: #ffffff;
-  --title-color: #22335f;
+  --title-color: #000a2b;
   --shum-backgroung: #ffffff;
-  --text-color: #22335f;
-  --text-preloader: #22335f;
+  --text-color: #000a2b;
+  --text-preloader: #000a2b;
 
   --font-weight: 300;
   --font-weight-title: 400;
 
-  --accent-color: #22335f;
+  --accent-color: #000a2b;
   --btn-color: #ffffff;
+  --btn-backgroung: #000a2b;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --background-image: url(../image/background/backgroung-light.webp);
-    --background-image-mobil: url(../image/background/backgroung-mobil_light.webp);
 
     --font-primary: "Russo One", sans-serif;
     --font-secondary: "Montserrat", sans-serif;
 
     --color-background: #ffffff;
-    --text-preloader: #22335f;
+    --text-preloader: #000a2b;
 
-    --title-color: #22335f;
+    --title-color: #000a2b;
     --shum-backgroung: #ffffff;
-    --text-color: #22335f;
+    --text-color: #000a2b;
     --font-weight: 300;
     --font-weight-title: 400;
 
-    --accent-color: #22335f;
+    --accent-color: #000a2b;
+
     --btn-color: #ffffff;
+    --btn-backgroung: #000a2b;
   }
 }

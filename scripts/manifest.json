@@ -4,8 +4,8 @@
   "description": "Следите за гонкой Александра Овечкина за рекордом Уэйна Гретцки!",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#00113C",
-  "theme_color": "#00113C",
+  "background_color": "#000A2B",
+  "theme_color": "#000A2B",
   "icons": [
     {
       "src": "./image/favicon-192x192white.png",

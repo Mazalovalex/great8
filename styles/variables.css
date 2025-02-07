@@ -4,7 +4,7 @@
   --font-primary: "Russo One", sans-serif;
   --font-secondary: "Montserrat", sans-serif;
 
-  --color-background: #121026;
+  --color-background: #000a2b;
   --title-color: #ffffff;
   --shum-backgroung: #121026;
   --text-color: #ffffff;
@@ -12,7 +12,7 @@
 
   --font-weight: 100;
   --font-weight-title: 400;
-
   --accent-color: #ffffff;
-  --btn-color: #121026;
+  --btn-color: #000a2b;
+  --btn-backgroung: #ffffff;
 }

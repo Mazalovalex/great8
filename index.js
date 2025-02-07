@@ -1,3 +1,6 @@
+import { videoData } from "./scripts/data.js"; // Импортируем объект из другого файла
+console.log(videoData.videoUrl);
+
 const images = [
   "./image/OviPNG/ovechkin1.png",
   "./image/OviPNG/ovechkin2.png",
@@ -37,6 +40,16 @@ function updateGoalRecord() {
 
   const goalNumber = document.querySelector(".goal-number");
   goalNumber.textContent = currentGoalCount;
+
+  ///видео в HTML из обьекта
+  console.log("Пытаемся получить URL видео...");
+  console.log(videoData);
+  console.log(videoData.videoUrl);
+  const videoUrl = videoData.videoUrl;
+  console.log("Полученный URL видео: ", videoUrl); // Логируем полученный URL
+
+  const videoIframe = document.getElementById("video-iframe");
+  videoIframe.src = videoUrl; // Используем URL из объекта
 
   // Обновляем высоту видеоплеера для разрешений от 500 до 1280
   const TopPlayersElement = document.querySelector(".player-list");
@@ -182,24 +195,6 @@ function checkScreenSize() {
   }
 }
 
-// Функция для переключения видео
-function toggleVideo() {
-  const videoWrapper = document.getElementById("video-wrapper");
-  const showVideoBtn = document.getElementById("show-video-btn");
-  const videoIframe = document.getElementById("video-iframe");
-
-  if (videoWrapper.style.display === "none") {
-    videoWrapper.style.display = "block";
-    videoIframe.src =
-      "https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368141588112";
-    showVideoBtn.textContent = "Закрыть видео";
-  } else {
-    videoWrapper.style.display = "none";
-    videoIframe.src = "";
-    showVideoBtn.textContent = "Смотреть гол Овечкина";
-  }
-}
-
 // Инициализация при загрузке страницы
 window.addEventListener("load", function () {
   setTimeout(function () {
@@ -217,9 +212,49 @@ window.addEventListener("load", function () {
 
 // Обработчик изменения размера окна
 window.addEventListener("resize", checkScreenSize);
+////!!!!!!!!!!!!!!
+
+function toggleVideo() {
+  const videoWrapper = document.getElementById("video-wrapper");
+  const showVideoBtn = document.getElementById("show-video-btn");
+  const videoIframe = document.getElementById("video-iframe");
+
+  // Доступ к ссылке на видео из объекта
+  const videoUrl = videoData.videoUrl;
+  console.log("Полученный URL видео: ", videoUrl); // Логируем полученный URL
+
+  // Если видео скрыто
+  if (videoWrapper.style.display === "none" || !videoWrapper.style.display) {
+    console.log("Видео скрыто, показываем...");
+
+    videoWrapper.style.display = "block"; // Показываем видео
+    showVideoBtn.textContent = "Закрыть видео";
+    console.log("Текст на кнопке изменен на 'Закрыть видео'");
+
+    // Если iframe уже имеет src, ничего не меняем, иначе устанавливаем видео
+    if (!videoIframe.getAttribute("src")) {
+      console.log("В iframe нет src, задаем URL из объекта");
+      videoIframe.src = videoUrl; // Используем URL из объекта
+      // Логируем, что ссылка установлена
+      console.log("Ссылка на видео установлена: ", videoIframe.src);
+    } else {
+      console.log("Видео уже имеет src, не меняем");
+    }
+  } else {
+    console.log("Видео отображается, скрываем...");
+    videoWrapper.style.display = "none"; // Скрываем видео
+    videoIframe.src = ""; // Останавливаем видео, очищая src
+    showVideoBtn.textContent = "Смотреть гол Овечкина";
+    console.log("Текст на кнопке изменен на 'Смотреть гол Овечкина'");
+  }
+}
 
 // Обработчик для кнопки переключения видео
 const showVideoBtn = document.getElementById("show-video-btn");
 if (showVideoBtn) {
   showVideoBtn.addEventListener("click", toggleVideo);
+  console.log("Обработчик клика добавлен на кнопку");
+} else {
+  console.log("Кнопка не найдена!");
 }
+
