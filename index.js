@@ -1,63 +1,46 @@
-import { videoData } from "./scripts/data.js"; // Импортируем объект из другого файла
-console.log(videoData.videoUrl);
-
-const images = [
-  "./image/OviPNG/ovechkin1.png",
-  "./image/OviPNG/ovechkin2.png",
-  "./image/OviPNG/ovechkin3.png",
-  "./image/OviPNG/ovechkin4.png",
-  "./image/OviPNG/ovechkin5.png",
-  "./image/OviPNG/ovechkin6.png",
-  "./image/OviPNG/ovechkin7.png",
-  "./image/OviPNG/ovechkin8.png",
-  "./image/OviPNG/ovechkin9.png",
-  "./image/OviPNG/ovechkin10.png",
-  "./image/OviPNG/ovechkin11.png",
-  "./image/OviPNG/ovechkin12.png",
-  "./image/OviPNG/ovechkin13.png",
-  "./image/OviPNG/ovechkin14.png",
-  "./image/OviPNG/ovechkin15.png",
-];
+import { data } from "./scripts/data.js"; // Импортируем объект из другого файла
+import { images } from "./scripts/Images.js"; // Импортируем объект из другого файла
 
 // Функция для обновления данных о рекорде
 function updateGoalRecord() {
-  const currentGoalCountElement = document.querySelector(".record-number");
-  const currentGoalCount = Number(currentGoalCountElement.textContent);
+  // Обновляем количество голов Овечкина в заголовке
+  const ovechkinGoalTitleElement = document.querySelector(".record-number");
+  ovechkinGoalTitleElement.textContent = data.ovechkinGoals;
 
-  // Обновляем количество голов Овечкина
-  const ovechkinGoalElement = document.querySelector(".goalsOvechkin");
-  ovechkinGoalElement.textContent = currentGoalCount;
+  // Обновляем описание  под заголовке
+  const recordDescriptionElement = document.querySelector(
+    ".record-description"
+  );
+  recordDescriptionElement.textContent = data.description;
+  // Обновляем количество голов Овечкина в Топ 5
+  const TopPlayersOvechkinGoalElement =
+    document.querySelector(".goalsOvechkin");
+  TopPlayersOvechkinGoalElement.textContent = data.ovechkinGoals;
 
   // Обновляем разницу до рекорда Гретцки
   const remainingGoalsElement = document.querySelector(".record-difference");
-  const gretskyRecord = 894;
-  remainingGoalsElement.textContent = gretskyRecord - currentGoalCount + 1;
+  remainingGoalsElement.textContent =
+    data.gretskyRecord - data.ovechkinGoals + 1;
 
   // Обновляем прогресс-бар
-  const progress = ((currentGoalCount - 894 / 2) * 100) / (894 / 2);
   const progressBar = document.querySelector(".progress-barOvi");
+  const progress =
+    ((data.ovechkinGoals - data.gretskyRecord / 2) * 100) /
+    (data.gretskyRecord / 2);
   progressBar.setAttribute("data-progress", progress);
 
+  //обновляем значение в кнопке мобильная версия
   const goalNumber = document.querySelector(".goal-number");
-  goalNumber.textContent = currentGoalCount;
+  goalNumber.textContent = data.ovechkinGoals;
 
-  ///видео в HTML из обьекта
-  console.log("Пытаемся получить URL видео...");
-  console.log(videoData);
-  console.log(videoData.videoUrl);
-  const videoUrl = videoData.videoUrl;
-  console.log("Полученный URL видео: ", videoUrl); // Логируем полученный URL
-
-  const videoIframe = document.getElementById("video-iframe");
-  videoIframe.src = videoUrl; // Используем URL из объекта
+  ///Обновляем видео в HTML из обьекта
+  const videoIframe = document.querySelector(".video");
+  videoIframe.src = data.videoUrl; // Используем URL из объекта
 
   // Обновляем высоту видеоплеера для разрешений от 500 до 1280
   const TopPlayersElement = document.querySelector(".player-list");
-
-  if (!TopPlayersElement) {
-    console.error("Элемент .player-list не найден.");
-    return;
-  }
+  const videoPlayer = document.querySelector(".video");
+  const heightTopPlayers = getComputedStyle(TopPlayersElement).height;
 
   const mediaQuery = window.matchMedia(
     "(min-width: 500px) and (max-width: 1280px)"
@@ -65,24 +48,25 @@ function updateGoalRecord() {
 
   const updateHeight = () => {
     if (mediaQuery.matches) {
-      const heightTopPlayers = getComputedStyle(TopPlayersElement).height;
-      const videoPlayer = document.querySelector(".video");
-      if (videoPlayer) {
-        videoPlayer.style.height = heightTopPlayers;
-      }
+      // Обновляем высоту только если медиазапрос выполнен
+      videoPlayer.style.height = heightTopPlayers;
+    } else {
+      // Можно задать высоту по умолчанию или другое значение
+      videoPlayer.style.height = "200px"; // Сбросить высоту, если не подходит диапазон
     }
   };
 
+  // Инициализация высоты при загрузке
   updateHeight();
+
+  // Обновление при изменении размера окна
   mediaQuery.addEventListener("change", updateHeight);
 }
-
 updateGoalRecord();
 
-// Функция для обновления прогресс-баров
+// Функция для обновления красной линией прогресс-баров
 function updateProgressBars() {
   const progressBars = document.querySelectorAll(".progress-bar");
-
   progressBars.forEach((bar) => {
     const progress = bar.dataset.progress;
     bar.style.width = progress + "%";
@@ -138,7 +122,9 @@ function startImageAnimation(imagesArr, frameDelay = 100) {
 
   imageElement.onerror = () => {
     console.error(
-      `Ошибка загрузки изображения: ${imageElement.src}. Заменяем на изображение по умолчанию.`
+      "Ошибка загрузки изображения: " +
+        imageElement.src +
+        "Заменяем на изображение по умолчанию."
     );
     imageElement.src = "./image/OviPNG/ovechkin1.png";
   };
@@ -154,7 +140,6 @@ function startImageAnimation(imagesArr, frameDelay = 100) {
       }
 
       imageElement.src = imagesArr[currentIndex];
-      console.log(`Показ изображения: ${imagesArr[currentIndex]}`);
       currentIndex++;
     }, frameDelay);
   }, 300);
@@ -220,21 +205,15 @@ function toggleVideo() {
   const videoIframe = document.getElementById("video-iframe");
 
   // Доступ к ссылке на видео из объекта
-  const videoUrl = videoData.videoUrl;
-  console.log("Полученный URL видео: ", videoUrl); // Логируем полученный URL
-
   // Если видео скрыто
   if (videoWrapper.style.display === "none" || !videoWrapper.style.display) {
-    console.log("Видео скрыто, показываем...");
-
     videoWrapper.style.display = "block"; // Показываем видео
     showVideoBtn.textContent = "Закрыть видео";
-    console.log("Текст на кнопке изменен на 'Закрыть видео'");
 
     // Если iframe уже имеет src, ничего не меняем, иначе устанавливаем видео
     if (!videoIframe.getAttribute("src")) {
       console.log("В iframe нет src, задаем URL из объекта");
-      videoIframe.src = videoUrl; // Используем URL из объекта
+      videoIframe.src = data.videoUrl; // Используем URL из объекта
       // Логируем, что ссылка установлена
       console.log("Ссылка на видео установлена: ", videoIframe.src);
     } else {
@@ -257,4 +236,3 @@ if (showVideoBtn) {
 } else {
   console.log("Кнопка не найдена!");
 }
-

@@ -33,6 +33,7 @@ body {
   color: var(--title-color);
   line-height: 0.8;
   opacity: 0;
+  text-align: start;
   z-index: 0;
 }
 
@@ -44,7 +45,7 @@ body {
 
 .record-number {
   font-family: var(--font-primary);
-  color: #CF4342;
+  color: #cf4342;
 }
 
 .record-description {
@@ -186,7 +187,7 @@ body {
 
 .record-difference {
   font-size: clamp(0.75rem, -0.6023rem + 6.7614vw, 15.625rem);
-  color: #CF4342;
+  color: #cf4342;
   position: relative;
   line-height: 0.9;
 }

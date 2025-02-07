@@ -1,6 +1,10 @@
-const videoData = {
+const data = {
   videoUrl:
     "https://players.brightcove.net/6415718365001/D3UCGynRWU_default/index.html?videoId=6368405631112",
+  ovechkinGoals: 879,
+  description:
+    "Александр Овечкин (Вашингтон Кэпиталс) оформил 879-й гол НХЛ, приблизившись к рекорду Гретцки (894). На 19:07 первого периода он получил пас от Мартина Фехевари и резким ударом отправил шайбу мимо вратаря Ивана Федотова. Прекрасный гол! Следующий матч против Юты — 9 февраля 2025 в 20:30(МСК)",
+  gretskyRecord: 894,
 };
 
-export { videoData };
+export { data };
