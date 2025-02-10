@@ -1,5 +1,10 @@
 fetch("http://127.0.0.1:5500/model/popup-player-info.json")
   .then(function (resp) {
+    if (!resp.ok) {
+      throw new Error(
+        "Ошибка сети: ответ сервера не успешен (" + resp.statusText + ")"
+      );
+    }
     return resp.json();
   })
   .then(function (data) {
@@ -128,4 +133,7 @@ fetch("http://127.0.0.1:5500/model/popup-player-info.json")
         document.querySelector(".fact-3").textContent = playerData.facts[2];
       });
     });
+  })
+  .catch(function (error) {
+    console.error("Произошла ошибка при выполнении запроса:", error.message);
   });
