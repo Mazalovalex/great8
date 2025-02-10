@@ -1,8 +1,27 @@
-import { data } from "./scripts/data.js"; // Импортируем объект из другого файла
 import { images } from "./scripts/Images.js"; // Импортируем объект из другого файла
 
+fetch("http://127.0.0.1:5500/model/data.json")
+  .then((resp) => resp.json())
+  .then((data) => {
+    console.log("Data is loaded");
+    console.log(data);
+    console.log("Now here you can do what you want");
+
+    updateGoalRecord(data);
+    showVideoBtn.addEventListener("click", function () {
+      toggleVideo(data);
+    });
+  });
+
+const modalWindows = document.querySelectorAll(".popup"); // все попапы
+console.log(modalWindows);
+// Добавляем анимацию для всех модальных окон
+modalWindows.forEach(function (modalWindow) {
+  modalWindow.classList.add("popup_is-animated"); // добавление класса анимации
+});
+
 // Функция для обновления данных о рекорде
-function updateGoalRecord() {
+function updateGoalRecord(data) {
   // Обновляем количество голов Овечкина в заголовке
   const ovechkinGoalTitleElement = document.querySelector(".record-number");
   ovechkinGoalTitleElement.textContent = data.ovechkinGoals;
@@ -62,7 +81,7 @@ function updateGoalRecord() {
   // Обновление при изменении размера окна
   mediaQuery.addEventListener("change", updateHeight);
 }
-updateGoalRecord();
+// updateGoalRecord();
 
 // Функция для обновления красной линией прогресс-баров
 function updateProgressBars() {
@@ -199,7 +218,7 @@ window.addEventListener("load", function () {
 window.addEventListener("resize", checkScreenSize);
 ////!!!!!!!!!!!!!!
 
-function toggleVideo() {
+function toggleVideo(data) {
   const videoWrapper = document.getElementById("video-wrapper");
   const showVideoBtn = document.getElementById("show-video-btn");
   const videoIframe = document.getElementById("video-iframe");
@@ -230,9 +249,4 @@ function toggleVideo() {
 
 // Обработчик для кнопки переключения видео
 const showVideoBtn = document.getElementById("show-video-btn");
-if (showVideoBtn) {
-  showVideoBtn.addEventListener("click", toggleVideo);
-  console.log("Обработчик клика добавлен на кнопку");
-} else {
-  console.log("Кнопка не найдена!");
-}
+

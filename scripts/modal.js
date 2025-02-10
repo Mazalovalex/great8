@@ -1,35 +1,45 @@
-// const popupPlayers = document.querySelector(".popup");
-// const topScorerItem = document.querySelector(".top-scorer-item");
-// const popupButtonElement = document.querySelector(".popup-button");
+const popupPlayers = document.querySelector(".popup");
+const topScorerItems = document.querySelectorAll(".top-scorer-item");
+const popupButtonElement = document.querySelector(".popup__button-close");
 
-// console.log(popupPlayers);
-// console.log(topScorerItem);
-// console.log(popupButtonElement);
+// Открытие модального окна
+function openModal(modalElement) {
+  modalElement.classList.add("popup_is-opened");
+  modalElement.addEventListener("mousedown", handleCloseOverlay);
+  document.addEventListener("keydown", handleCloseEsc);
+}
 
-// if (popupPlayers && topScorerItem && popupButtonElement) {
-//   // Открытие попапа по клику на topScorerItem
-//   topScorerItem.addEventListener("click", () => {
-//     openModal(popupPlayers);
-//   });
+// Закрытие модального окна
+function closeModal(modalElement) {
+  modalElement.classList.remove("popup_is-opened");
+  modalElement.removeEventListener("mousedown", handleCloseOverlay);
+  document.removeEventListener("keydown", handleCloseEsc);
+}
 
-//   // Закрытие попапа по клику на popupButtonElement
-//   popupButtonElement.addEventListener("click", () => {
-//     closeModal(popupPlayers);
-//   });
+// Обработчик клика по оверлею
+function handleCloseOverlay(evt) {
+  if (evt.target === evt.currentTarget) {
+    closeModal(evt.currentTarget);
+  }
+}
 
-//   // Функция открытия модального окна
-//   function openModal(modalElement) {
-//     modalElement.classList.remove("popup-hide");
-//     modalElement.classList.add("popup_is-opened");
-//   }
+// Обработчик нажатия клавиши Esc
+function handleCloseEsc(evt) {
+  if (evt.key === "Escape") {
+    const openPopup = document.querySelector(".popup_is-opened");
+    closeModal(openPopup);
+  }
+}
 
-//   // Функция закрытия модального окна
-//   function closeModal(modalElement) {
-//     modalElement.classList.add("popup-hide");
-//     modalElement.classList.remove("popup_is-opened");
-//   }
-// } else {
-//   console.error(
-//     "popupPlayers, topScorerItem или popupButtonElement не найдены в документе"
-//   );
-// }
+// Открытие попапа по клику на topScorerItem
+topScorerItems.forEach((topScorerItem) => {
+  topScorerItem.addEventListener("click", () => {
+    openModal(popupPlayers); // Открытие попапа
+  });
+});
+
+// Обработчик для кнопки закрытия попапа
+popupButtonElement.addEventListener("click", function (evt) {
+  const modal = evt.target.closest(".popup");
+  closeModal(modal); // Закрытие попапа
+});

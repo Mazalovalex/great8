@@ -103,11 +103,12 @@
 
     <!-- Шрифты -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Russo+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap"
       rel="stylesheet"
     />
 
     <!-- Стили -->
+
     <link rel="stylesheet" href="./styles/preloader.css" />
     <link rel="stylesheet" href="./styles/animation.css" />
 
@@ -115,6 +116,8 @@
 
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/popup/popup.css" />
+
     <link rel="stylesheet" href="./styles/breakpoints.css" />
 
     <link rel="stylesheet" href="./styles/dark.css" />
@@ -210,7 +213,7 @@
       <section class="top-scorers-section">
         <!-- Кнопка для запуска видео -->
         <button
-          class="show-video-btn"
+          class="show-video-btn btn"
           id="show-video-btn"
           aria-expanded="false"
         >
@@ -230,7 +233,7 @@
 
         <article class="top-players">
           <ul class="player-list">
-            <li class="top-scorer-item">
+            <li class="top-scorer-item" data-name="Уэйн Гретцки">
               <div class="progress-bar" data-progress="100"></div>
               <div class="item-image_circle">
                 <img
@@ -256,7 +259,7 @@
                 />
               </div>
             </li>
-            <li class="top-scorer-item">
+            <li class="top-scorer-item" data-name="Александр Овечкин">
               <div class="progress-bar progress-barOvi" data-progress=""></div>
               <div class="item-image_circle">
                 <img
@@ -282,7 +285,7 @@
                 />
               </div>
             </li>
-            <li class="top-scorer-item">
+            <li class="top-scorer-item" data-name="Горди Хоу">
               <div class="progress-bar" data-progress="79"></div>
               <div class="item-image_circle opacity">
                 <img
@@ -308,7 +311,7 @@
                 />
               </div>
             </li>
-            <li class="top-scorer-item">
+            <li class="top-scorer-item" data-name="Яромир Ягр">
               <div class="progress-bar" data-progress="71"></div>
               <div class="item-image_circle opacity">
                 <img
@@ -334,7 +337,7 @@
                 />
               </div>
             </li>
-            <li class="top-scorer-item">
+            <li class="top-scorer-item" data-name="Бретт Халл">
               <div class="progress-bar" data-progress="65"></div>
               <div class="item-image_circle">
                 <img
@@ -365,8 +368,10 @@
       </section>
       <section class="record-progress-section">
         <div class="remaining-to-record">
-          <h2 class="record-progress__title" data-mobile="До рекорда осталось">
-            До рекорда : <span class="record-difference"></span>
+          <h2 class="record-progress__title">
+            <span>До рекорда :</span>
+            <span class="record-difference"></span>
+            <span class="text-puck">шайб</span>
           </h2>
         </div>
         <ul class="header__theme-menu-list">
@@ -386,7 +391,184 @@
         </ul>
       </section>
     </main>
+    <div class="popup">
+      <div class="popup__content">
+        <div class="popup_content-section">
+          <div class="section__picture_content">
+            <img
+              class="picture__img_11 picture__img"
+              src=""
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="picture__img_12 picture__img"
+              src=""
+              alt=""
+              loading="lazy"
+            />
+            <img
+              class="picture__img_13 picture__img"
+              src=""
+              alt=""
+              loading="lazy"
+            />
+          </div>
+          <div class="popup__body">
+						<div class="pusto" style="display: none;"></div>
+
+            <div class="popup__body-player-info">
+              <div class="popup__body-player">
+                <img class="popup__body__img" src="" alt="" loading="lazy" />
+                <img />
+              </div>
+              <div class="popup__body-player-info-details">
+                <h3 class="popup__title popup__body-player-info-name"></h3>
+                <ul class="info-list">
+                  <div class="info-list_up-stonge">
+                    <li class="info-list-height">
+                      <span class="info-list-title">Рост: </span>
+                      <span
+                        class="info-list-text info-list-height-change"
+                      ></span>
+                    </li>
+                    <li class="info-list-weight">
+                      <span class="info-list-title">Вес: </span>
+                      <span
+                        class="info-list-text info-list-weight-change"
+                      ></span>
+                    </li>
+                    <li class="info-list-shoots">
+                      <span class="info-list-title">Хват: </span>
+                      <span
+                        class="info-list-text info-list-shoots-change"
+                      ></span>
+                    </li>
+                  </div>
+                  <li class="info-list-birthDate">
+                    <span class="info-list-title">Дата рождения: </span>
+                    <span
+                      class="info-list-text info-list-birthDate-change"
+                    ></span>
+                  </li>
+                  <div class="info-list-citizenship">
+                    <li class="info-list-birthplace">
+                      <span class="info-list-title">Место рождения: </span>
+                      <span
+                        class="info-list-text info-list-birthplace-change"
+                      ></span>
+                    </li>
+                    <img
+                      class="info-list-citizenship-flag"
+                      src=""
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <li class="info-list-draft">
+                    <span class="info-list-title">Драфт: </span>
+                    <span class="info-list-text info-list-draft-change"></span>
+                  </li>
+                  <li class="info-list-clubs">
+                    <span class="info-list-title">Клубы: </span>
+                    <span class="info-list-text info-list-clubs-change"></span>
+                  </li>
+                  <li class="info-list-nickname">
+                    <span class="info-list-title">прозвище: </span>
+                    <span
+                      class="info-list-text info-list-nickname-change"
+                    ></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="next-match-wrapper">
+                <p class="next-match-text">Следующий матч</p>
+                <div class="team-info">
+                  <div class="home-team">
+                    <img
+                      src="./image/team-logo/Вашингтон.svg"
+                      alt="Фотография Уэйна Гретцки"
+                      class="player-img"
+                    />
+                    <img />
+                    <p class="team-text">Вашингтон</p>
+                  </div>
+                  <div class="time-games">
+                    <ul>
+                      <li>02/09/2025</li>
+                      <li>20:30(мск)</li>
+                    </ul>
+                  </div>
+                  <div class="away-team">
+                    <img
+                      src="./image/team-logo/Юта.svg"
+                      alt="Фотография Уэйна Гретцки"
+                      class="player-img"
+                    />
+                    <p class="team-text">Юта</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup__statistics">
+              <div class="table">
+                <div class="table-header">Матчи</div>
+                <div class="table-header">Голы</div>
+                <div class="table-header">Ассисты</div>
+                <div class="table-header">Очки</div>
+                <div class="table-header">Штрафы</div>
+                <div class="table-header">Броски</div>
+                <div class="table-header">% реализации</div>
+
+                <div class="table-cell table-games-played-value">
+                  Сыгранные матчи
+                </div>
+                <div class="table-cell table-goals-value">Голы</div>
+                <div class="table-cell table-assists-value">Ассисты</div>
+                <div class="table-cell table-points-value">Очки</div>
+                <div class="table-cell table-penalty-minutes-value">
+                  Штрафные минуты
+                </div>
+                <div class="table-cell table-shots-on-goal-value">
+                  Броски по воротам
+                </div>
+                <div class="table-cell table-shooting-percentage-value">
+                  Процент реализации бросков
+                </div>
+              </div>
+              <p class="update-info">
+                *Статистика была обновлена 8 февраля 2025 года
+              </p>
+            </div>
+          </div>
+          <div class="popup__facts">
+            <h3 class="popup__title">Интересные факты</h3>
+            <ul class="facts-list">
+              <li class="fact">
+                <span class="fact-title fact-1-title"></span>
+                <span class="fact-text fact-1"></span>
+              </li>
+              <li class="fact">
+                <span class="fact-title fact-2-title"></span>
+                <span class="fact-text fact-2"></span>
+              </li>
+              <li class="fact">
+                <span class="fact-title fact-3-title"></span>
+                <span class="fact-text fact-3"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup-footer">
+          <button class="button popup__button-close">Закрыть</button>
+        </div>
+      </div>
+    </div>
+
     <script src="./scripts/set-theme.js" async></script>
     <script type="module" src="./index.js" async></script>
+    <script src="./scripts/modal.js" async></script>
+    <script src="./scripts/popup.js" async></script>
   </body>
 </html>

@@ -29,11 +29,19 @@
   }
 
   .record-progress__title {
-    font-size: calc(45px + (85 - 45) * ((100vw - 320px) / (500 - 320)));
+    font-size: calc(25px + (45 - 25) * ((100vw - 320px) / (500 - 320)));
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
   }
 
   .record-difference {
-    font-size: calc(180px + (250 - 180) * ((100vw - 320px) / (500 - 320)));
+    font-size: calc(120px + (150 - 120) * ((100vw - 320px) / (500 - 320)));
+    line-height: 0.9;
+  }
+
+  .text-puck {
+    font-size: 25px;
   }
 
   .header__theme-menu-list {

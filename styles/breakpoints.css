@@ -4,3 +4,10 @@
 @import url("./breakpoints/500<768.css");
 @import url("./breakpoints/320-499.css");
 @import url("./breakpoints/<319.css");
+
+@import url("./breakpoints/popup/1281-1600.css");
+@import url("./breakpoints/popup/1025-1280.css");
+@import url("./breakpoints/popup/769-1024.css");
+@import url("./breakpoints/popup/500-768.css");
+
+

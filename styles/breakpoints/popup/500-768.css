@@ -1,0 +1,67 @@
+@media (max-width: 768px) {
+  .popup {
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .popup__content {
+    background-color: #ec0000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    overflow: visible;
+    border-radius: 5px 5px 0 0;
+    overflow-y: auto; /* Включаем вертикальный скролл */
+    overflow-x: hidden; /* Убираем горизонтальный скролл */
+  }
+
+  .popup_content-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popup__body {
+    order: -2;
+    position: relative;
+  }
+
+  .popup__body-player-info {
+    display: flex;
+    flex-direction: column;
+		gap: 20px;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .popup__body__img {
+    position: sticky;
+    top: 30%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+
+  .popup__body {
+    background: transparent; /* Убираем фон */
+    backdrop-filter: none; /* Убираем размытие */
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+
+  .popup__body-player-info-name {
+    text-align: center;
+
+		.info-list{
+		}
+  }
+}

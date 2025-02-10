@@ -1,0 +1,37 @@
+.popup {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end; /* Выравнивание контента вправо */
+  height: 100%;
+}
+
+.popup_is-animated {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.6s, opacity 0.6s;
+}
+
+.popup__content {
+  background: linear-gradient(180deg, #7c1b20 0%, #382e2e 51.68%);
+  box-sizing: border-box;
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.popup_is-opened {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.6s, opacity 0.6s;
+}

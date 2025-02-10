@@ -1,0 +1,29 @@
+@media (max-width: 1600px) {
+  .section__picture_content {
+    grid-auto-rows: minmax(
+      70px,
+      140px
+    ); /* Строки будут иметь высоту от 70px до 150px */
+  }
+
+  .popup__body-player {
+    width: 120px;
+  }
+
+  .popup__body-player-info {
+    padding-bottom: 10px;
+  }
+
+  .info-list {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2px;
+  }
+
+  .fact-text {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}

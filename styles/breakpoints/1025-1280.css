@@ -31,22 +31,27 @@
   }
 
   .record-progress-section {
-    width: calc(100vw - 20px);
     position: relative;
-    margin: 0 auto;
     text-align: left;
+    display: flex;
+    flex-direction: column;
   }
 
   .record-progress__title {
-    font-size: calc(40px + (50 - 40) * ((100vw - 320px) / (500 - 320)));
+    font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (500 - 320)));
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .record-difference {
-    font-size: calc(190px + (220 - 170) * ((100vw - 320px) / (500 - 320)));
+    font-size: calc(130px + (150 - 130) * ((100vw - 320px) / (500 - 320)));
     font-family: var(--font-primary);
-    line-height: 1;
   }
+
+	.text-puck{
+		font-size: 46px;
+	}
 
   .player-image-wrapper {
     position: absolute;
@@ -110,8 +115,13 @@
     padding-right: 5px;
   }
 
+  .remaining-to-record {
+    position: relative;
+    margin: 0 auto;
+  }
+
   .header__theme-menu-list {
-    position: absolute;
+    position: relative;
     z-index: 2;
     bottom: 1%;
     right: 0px;
