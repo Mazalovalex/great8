@@ -273,6 +273,7 @@
   gap: 15px;
   display: grid;
   grid-template-columns: repeat(4, minmax(150px, 1fr));
+  color: #ffffff;
 }
 
 .facts-item {
