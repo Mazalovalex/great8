@@ -1,5 +1,5 @@
 // Загружаем JSON-файл с данными игроков
-fetch("http://127.0.0.1:5500/model/popup-player-info.json")
+fetch("https://mazalovalex.github.io/great8/model/popup-player-info.json")
   .then(function (resp) {
     if (!resp.ok) {
       throw new Error(

@@ -1,6 +1,6 @@
 import { images } from "./scripts/Images.js";
 
-fetch("http://127.0.0.1:5500/model/data.json")
+fetch("https://mazalovalex.github.io/great8/model/data.json")
   .then((resp) => {
     if (!resp.ok) {
       throw new Error(`Ошибка сети: ${resp.status} ${resp.statusText}`);
