@@ -53,7 +53,6 @@
   }
 
   .player-image-wrapper {
-    bottom: -600px;
     transform: translate(-50%, -50%);
     z-index: -1;
     opacity: 0.3;
