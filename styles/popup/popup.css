@@ -103,6 +103,7 @@
   font-size: 14px;
   text-transform: uppercase;
   text-align: left;
+  color: #ffffff;
 }
 
 .popup__body-player-info-details {
@@ -125,6 +126,7 @@
   flex-direction: column;
   justify-content: start;
   gap: 2px;
+  color: #ffffff;
 }
 
 .info-list_up-stonge {
@@ -279,7 +281,7 @@
   padding: 10px;
   border-radius: 20px 0 20px 0;
   text-align: center;
-  border: 1px solid;
+  border: 1px solid white;
 }
 
 .fact-title {
