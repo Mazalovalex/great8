@@ -1,12 +1,12 @@
 {
   "playersData": [
     {
-      "background": "./image/Popup/Gretski/Ramka.png",
+      "background": "./image/Popup/Gretski/Ramka.webp",
       "name": "Уэйн Гретцки",
       "photos": [
-        "./image/Popup/Gretski/1.png",
-        "./image/Popup/Gretski/2.png",
-        "./image/Popup/Gretski/3.png"
+        "./image/Popup/Gretski/1.webp",
+        "./image/Popup/Gretski/2.webp",
+        "./image/Popup/Gretski/3.webp"
       ],
       "photosAlt": [
         "Уэйн Гретцки в Эдмонтоне",
@@ -19,11 +19,11 @@
         "weight": "84 кг",
         "birthDate": "26 января 1961 года (возраст 64)",
         "birthplace": "Брантфорд, Канада",
-        "flag": "./image/Popup/Gretski/flag.png",
+        "flag": "./image/Popup/Gretski/flag.webp",
         "altFlat": "флаг Канады",
         "shoots": "Левша",
         "draft": "Не участвовал в драфте НХЛ, подписан 'Эдмонтоном' в 1979 году",
-        "img": "./image/Popup/Gretski/avatar.png",
+        "img": "./image/Popup/Gretski/avatar.webp",
         "nickname": "Великий",
         "number": 99,
         "clubs": "Эдмонтон Ойлерз (1978–1988), Лос-Анджелес Кингз (1988–1996), Сент-Луис Блюз (1996), Нью-Йорк Рейнджерс (1996–1999)"
@@ -60,12 +60,12 @@
       ]
     },
     {
-      "background": "./image/Popup/Ovechkin/Ramka.png",
+      "background": "./image/Popup/Ovechkin/Ramka.webp",
       "name": "Александр Овечкин",
       "photos": [
-        "./image/Popup/Ovechkin/1.png",
-        "./image/Popup/Ovechkin/2.png",
-        "./image/Popup/Ovechkin/3.png"
+        "./image/Popup/Ovechkin/1.webp",
+        "./image/Popup/Ovechkin/2.webp",
+        "./image/Popup/Ovechkin/3.webp"
       ],
       "photosAlt": [
         "Александр Овечкин и долгожданный кубок Стэнли",
@@ -78,11 +78,11 @@
         "weight": "108 кг",
         "birthDate": "17 сентября 1985 года (возраст 39)",
         "birthplace": "Москва, Россия",
-        "flag": "./image/Popup/Ovechkin/flag.png",
+        "flag": "./image/Popup/Ovechkin/flag.webp",
         "altFlat": "флаг ВЕЛИКОЙ РОССИИ",
         "shoots": "Правша",
         "draft": "Выбран под 1-м номером в 1-м раунде драфта 2004 года клубом 'Вашингтон Кэпиталз'",
-        "img": "./image/Popup/Ovechkin/avatar.png",
+        "img": "./image/Popup/Ovechkin/avatar.webp",
         "nickname": "Ови, Великая Восьмерка",
         "number": 8,
         "clubs": "Вашингтон Кэпиталз (2005–н.в.)"
@@ -119,12 +119,12 @@
       ]
     },
     {
-      "background": "./image/Popup/Howe/Ramka.png",
+      "background": "./image/Popup/Howe/Ramka.webp",
       "name": "Горди Хоу",
       "photos": [
-        "./image/Popup/Howe/1.png",
-        "./image/Popup/Howe/2.png",
-        "./image/Popup/Howe/3.png"
+        "./image/Popup/Howe/1.webp",
+        "./image/Popup/Howe/2.webp",
+        "./image/Popup/Howe/3.webp"
       ],
       "photosAlt": [
         "Горди Хоу в Детройте",
@@ -137,11 +137,11 @@
         "weight": "93 кг",
         "birthDate": "31 марта 1928 года (умер в 2016, в возрасте 88 лет)",
         "birthplace": "Флорал, Канада",
-        "flag": "./image/Popup/Howe/flag.png",
+        "flag": "./image/Popup/Howe/flag.webp",
         "altFlat": "флаг канады",
         "shoots": "Правша",
         "draft": "Не участвовал в драфте НХЛ, подписан 'Детройтом' в 1946 году",
-        "img": "./image/Popup/Howe/avatar.png",
+        "img": "./image/Popup/Howe/avatar.webp",
         "nickname": "Мистер Хоккей",
         "number": 9,
         "clubs": "Детройт Ред Уингз (1946–1971), Хьюстон Аэрос (1973–1977), Нью-Ингленд Уэйлерз (1977–1980)"
@@ -183,12 +183,12 @@
       ]
     },
     {
-      "background": "./image/Popup/Jagr/Ramka.png",
+      "background": "./image/Popup/Jagr/Ramka.webp",
       "name": "Яромир Ягр",
       "photos": [
-        "./image/Popup/Jagr/1.png",
-        "./image/Popup/Jagr/2.png",
-        "./image/Popup/Jagr/3.png"
+        "./image/Popup/Jagr/1.webp",
+        "./image/Popup/Jagr/2.webp",
+        "./image/Popup/Jagr/3.webp"
       ],
       "photosAlt": [
         "Яромир Ягр в Питтсбурге",
@@ -201,11 +201,11 @@
         "weight": "104 кг",
         "birthDate": "15 февраля 1972 года (возраст 52)",
         "birthplace": "Кладно, Чехия",
-        "flag": "./image/Popup/Jagr/flag.png",
+        "flag": "./image/Popup/Jagr/flag.webp",
         "altFlat": "флаг чехии",
         "shoots": "Правша",
         "draft": "Выбран под 5-м номером в 1-м раунде драфта 1990 года клубом 'Питтсбург Пингвинз'",
-        "img": "./image/Popup/Jagr/avatar.png",
+        "img": "./image/Popup/Jagr/avatar.webp",
         "nickname": "Ягр",
         "number": 68,
         "clubs": "Питтсбург Пингвинз (1990–2001, 2011–2012), Вашингтон Кэпиталз (2001–2004), Нью-Йорк Рейнджерс (2004–2008), Филадельфия Флайерз (2011), Даллас Старз (2012–2013), Бостон Брюинз (2013), Нью-Джерси Девилз (2013–2015), Флорида Пантерз (2015–2017), Калгари Флэймз (2017–2018), Рытиржи Кладно (Чехия, 2018–н.в.)"
@@ -242,12 +242,12 @@
       ]
     },
     {
-      "background": "./image/Popup/Hull/Ramka.png",
+      "background": "./image/Popup/Hull/Ramka.webp",
       "name": "Бретт Халл",
       "photos": [
-        "./image/Popup/Hull/1.png",
-        "./image/Popup/Hull/2.png",
-        "./image/Popup/Hull/3.png"
+        "./image/Popup/Hull/1.webp",
+        "./image/Popup/Hull/2.webp",
+        "./image/Popup/Hull/3.webp"
       ],
       "photosAlt": [
         "Бретт Халл в Сент-Луисе",
@@ -260,11 +260,11 @@
         "weight": "91 кг",
         "birthDate": "9 августа 1964 года (возраст 60)",
         "birthplace": "Беллевилл, Канада",
-        "flag": "./image/Popup/Hull/flag.png",
+        "flag": "./image/Popup/Hull/flag.webp",
         "altFlat": "флаг канады",
         "shoots": "Правша",
         "draft": "Выбран под 117-м номером в 6-м раунде драфта 1984 года клубом 'Калгари Флэймз'",
-        "img": "./image/Popup/Hull/avatar.png",
+        "img": "./image/Popup/Hull/avatar.webp",
         "nickname": "Золотой Бретт",
         "number": [16, 22],
         "clubs": "Калгари Флэймз (1986–1988), Сент-Луис Блюз (1988–1998), Даллас Старз (1998–2001), Детройт Ред Уингз (2001–2004), Финикс Койотс (2005–2006)"
