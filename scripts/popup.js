@@ -79,7 +79,7 @@ fetch("https://mazalovalex.github.io/great8/model/popup-player-info.json")
         // === ОБНОВЛЕНИЕ ФОНА ПОПАПА (только для планшетов 500-768px) ===
         const popupBody = document.querySelector(".popup__body-player");
 
-        if (window.innerWidth >= 320 && window.innerWidth <= 768) {
+        if (window.innerWidth >= 320 && window.innerWidth <= 1024) {
           if (playerData.background) {
             popupBody.style.backgroundImage =
               "url(" + playerData.background + ")";
