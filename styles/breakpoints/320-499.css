@@ -26,6 +26,7 @@
   .record-progress-section {
     margin: 0 auto; /* Центрируем */
     width: calc(100vw - 20px);
+    padding: 20px 0;
   }
 
   .record-progress__title {
