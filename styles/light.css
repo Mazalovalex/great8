@@ -17,6 +17,11 @@
   --accent-color: #000a2b;
   --btn-color: #ffffff;
   --btn-backgroung: #000a2b;
+
+  --z-index-background: -1;
+  --z-index-content: 1;
+  --z-index-menu: 10;
+  --z-index-modal: 100;
 }
 
 @media (prefers-color-scheme: light) {
@@ -40,5 +45,10 @@
 
     --btn-color: #ffffff;
     --btn-backgroung: #000a2b;
+
+    --z-index-background: -1;
+    --z-index-content: 1;
+    --z-index-menu: 10;
+    --z-index-modal: 100;
   }
 }

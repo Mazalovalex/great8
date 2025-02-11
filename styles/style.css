@@ -1,3 +1,4 @@
+/* Общие стили для body */
 body {
   display: flex;
   flex-direction: column;
@@ -5,21 +6,22 @@ body {
   overflow-x: hidden;
 }
 
+/* Основной контейнер */
 .main {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
+/* Страница с фоном */
 .page {
-  background-image: var(--background-image);
+  position: relative;
   height: 100vh;
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  position: relative;
-  z-index: -3;
 }
 
 .page::after {
@@ -30,10 +32,12 @@ body {
   background-color: var(--background-fon);
 }
 
+/* Секция с заголовком */
 .record-header-section {
+  margin: 10px;
   white-space: nowrap;
   text-align: center;
-  margin: 10px;
+  z-index: var(--z-index-content);
 }
 
 .record-section_title {
@@ -41,15 +45,16 @@ body {
   font-size: clamp(2.8125rem, 0.2013rem + 13.6166vw, 33.625rem);
   color: var(--title-color);
   line-height: 0.8;
-  opacity: 0;
   text-align: start;
-  z-index: 0;
+  opacity: 0;
 }
 
+/* Секция с описанием */
 .record-description-section {
   display: flex;
   margin: 10px 18px;
   justify-content: space-between;
+  z-index: var(--z-index-content);
 }
 
 .record-number {
@@ -58,18 +63,17 @@ body {
 }
 
 .record-description {
-  font-size: 14px;
-  color: var(--text-color);
-  font-weight: var(--font-weight);
-  opacity: 0.5;
   width: 45%;
-  z-index: 4;
+  font-size: 14px;
+  font-weight: var(--font-weight);
+  color: var(--text-color);
+  opacity: 0.5;
 }
 
 .developer {
-  color: var(--accent-color);
   font-size: 14px;
   font-weight: var(--font-weight);
+  color: var(--accent-color);
   opacity: 0;
 }
 
@@ -77,23 +81,20 @@ body {
   opacity: 0.5;
 }
 
+/* Секция с топовыми игроками */
 .top-scorers-section {
   margin: 20px 18px;
   display: flex;
   justify-content: space-between;
+  z-index: var(--z-index-content);
 }
 
 .video {
   width: 20vw;
   height: 11vw;
+  border: none;
   border-radius: 5px;
   opacity: 0;
-  z-index: 4;
-  border: none;
-}
-
-.top-players {
-  z-index: 3;
 }
 
 .player-list {
@@ -103,15 +104,14 @@ body {
 }
 
 .top-scorer-item {
+  position: relative;
   width: clamp(200px, 50vw, 430px);
   height: clamp(55px, 8vh, 85px);
-
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
   background: #2b2128;
   border-radius: 5px;
-  display: flex;
-  padding: 10px 0;
-  justify-content: space-between;
-  position: relative;
 }
 
 .top-scorer-item:hover {
@@ -127,9 +127,9 @@ a:hover {
   position: absolute;
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, #161b21 0%, #e2323b 99.99%, #7c1b20 100%);
   left: 0;
   top: 0;
+  background: linear-gradient(90deg, #161b21 0%, #e2323b 99.99%, #7c1b20 100%);
   border-radius: 5px;
   transition: width 2.1s ease-in-out;
 }
@@ -138,7 +138,7 @@ a:hover {
   padding: 0 12px;
   display: flex;
   align-items: center;
-  position: relative;
+  z-index: var(--z-index-content);
 }
 
 .player-img {
@@ -154,13 +154,13 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   color: #ffffff;
+  z-index: var(--z-index-content);
 }
 
 .player {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  z-index: 0;
 }
 
 .player-name {
@@ -175,81 +175,80 @@ a:hover {
 }
 
 .puck-icon {
+  width: 12%;
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 12%;
-  z-index: 2;
+  z-index: var(--z-index-content);
 }
 
+/* Секция с прогрессом */
 .record-progress-section {
   margin: 0 18px 18px 18px;
   display: flex;
   align-items: end;
   justify-content: space-between;
-  margin-top: auto; /* Это прижмет секцию к низу */
+  margin-top: auto;
+  z-index: 1;
 }
 
 .remaining-to-record {
-  display: flex;
   position: fixed;
+  display: flex;
   align-items: flex-end;
-  z-index: 2;
 }
 
 .record-progress__title {
   font-family: var(--font-primary);
-  text-transform: uppercase;
-  color: var(--text-color);
   font-size: clamp(0.75rem, 0.4205rem + 1.6477vw, 4.375rem);
+  color: var(--text-color);
+  text-transform: uppercase;
   opacity: 0;
 }
 
 .record-difference {
   font-size: clamp(0.75rem, -0.6023rem + 6.7614vw, 15.625rem);
   color: #cf4342;
-  position: relative;
   line-height: 0.9;
+  position: relative;
 }
 
+/* Обертка для изображения Овечкина */
 .player-image-wrapper {
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
-  object-fit: contain;
   height: 100vh;
+  object-fit: contain;
+  z-index: 1;
 }
 
 .ovechkin-image {
   position: absolute;
-  bottom: 0; /* Прижимаем изображение к нижнему краю */
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   height: 90%;
 }
 
-/* Прочие элементы, которые должны быть выше */
+/* Меню выбора темы */
 .header__theme-menu-list {
-  position: fixed; /* чтобы позиционировать меню в правом нижнем углу */
+  position: fixed;
   bottom: 18px;
   right: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  z-index: 2; /* Слой для меню */
 }
 
-/* Стили для ярлыка (label) */
 .header__theme-menu-label {
   font-size: 14px;
   color: var(--accent-color);
   text-transform: lowercase;
 }
 
-/* Стили для селектора */
 .header__theme-menu-select {
   padding: 0px 5px;
   font-size: 12px;
@@ -263,7 +262,6 @@ a:hover {
   cursor: pointer;
 }
 
-/* При наведении и фокусе */
 .header__theme-menu-select:hover,
 .header__theme-menu-select:focus {
   background-color: var(--text-color);
@@ -271,42 +269,20 @@ a:hover {
   color: var(--shum-backgroung);
 }
 
-.player-goals {
-  font-size: clamp(1.0625rem, 0.8864rem + 0.8807vw, 3rem);
-  font-family: var(--font-primary);
-  z-index: 2;
-}
-
-.opacity {
-  opacity: 80%;
-}
-
-.visible {
-  opacity: 1; /* Элемент становится видимым */
-  transform: translateY(0); /* Элемент возвращается в нормальное положение */
-  z-index: 2;
-}
-
-#video-wrapper {
-  z-index: 2;
-}
-
+/* Кнопка показа видео */
 #show-video-btn {
-  display: none; /* Кнопка скрыта по умолчанию */
-
+  display: none;
   width: 245px;
   height: 40px;
-
-  background-color: var(--btn-backgroung);
-  border-radius: 5px;
-  border: none;
-  color: var(--btn-color);
-  font-size: 12px;
-  z-index: 4;
-  position: relative;
-  text-align: start;
   padding-left: 15px;
+  font-size: 12px;
   font-weight: 500;
+  color: var(--btn-color);
+  background-color: var(--btn-backgroung);
+  border: none;
+  border-radius: 5px;
+  text-align: start;
+  position: relative;
 }
 
 #show-video-btn::after {
@@ -314,11 +290,11 @@ a:hover {
   position: absolute;
   width: 23px;
   height: 23px;
-  border: 1px solid var(--btn-color);
-  border-radius: 50%; /* Делаем круг */
   left: 85%;
   top: 50%;
   transform: translateY(-50%) translateX(2px);
+  border: 1px solid var(--btn-color);
+  border-radius: 50%;
 }
 
 #show-video-btn::before {
@@ -329,7 +305,22 @@ a:hover {
   transform: translateY(-50%) translateX(2px);
   width: 0;
   height: 0;
-  border-left: 8px solid var(--btn-color); /* Треугольник направлен вправо */
+  border-left: 8px solid var(--btn-color);
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
+}
+
+/* Общие классы */
+.opacity {
+  opacity: 80%;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.player-goals {
+  font-family: var(--font-primary);
+  font-size: clamp(1.0625rem, 0.8864rem + 0.8807vw, 3rem);
 }
