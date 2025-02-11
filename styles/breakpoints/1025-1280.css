@@ -1,11 +1,10 @@
 @media (max-width: 1280px) {
   .main {
     overflow: visible;
-    overflow-x: hidden;
   }
 
   .record-header-section {
-    background-color: rgb(55, 0, 255);
+    background-color: rgb(0, 255, 30);
     width: calc(100vw - 20px);
     padding: 10px 0px;
     text-align: start;
@@ -13,6 +12,8 @@
   }
 
   .record-section_title {
+    font-size: clamp(2.5rem, -0.1112rem + 13.2266vw, 33.3125rem);
+
     line-height: 0.8;
   }
 
