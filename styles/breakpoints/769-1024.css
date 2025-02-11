@@ -11,7 +11,7 @@
   }
 
   .record-section_title {
-    font-size: clamp(2.5rem, -0.1112rem + 13.7266vw, 33.3125rem);
+    font-size: clamp(2.5rem, -0.1112rem + 13.266vw, 33.3125rem);
     line-height: 0.8;
   }
 
@@ -37,7 +37,7 @@
     position: relative;
     margin: 0 auto;
     text-align: left;
-		margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .record-progress__title {
