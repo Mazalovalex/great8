@@ -327,7 +327,7 @@
   font-size: 14px;
 }
 
-.popup__button-close {
+.button {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 5px;
@@ -340,7 +340,11 @@
   cursor: pointer;
 }
 
-.popup__button-close:hover {
+.button:hover {
   color: #161b21;
   background-color: #ffffff;
+}
+
+.button-down {
+  display: none;
 }

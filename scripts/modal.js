@@ -1,6 +1,7 @@
 const popupPlayers = document.querySelector(".popup");
 const topScorerItems = document.querySelectorAll(".top-scorer-item");
-const popupButtonElement = document.querySelector(".popup__button-close");
+const popupButtonElements = document.querySelectorAll(".popup__button-close");
+console.log(popupButtonElements);
 
 // Открытие модального окна
 function openModal(modalElement) {
@@ -38,8 +39,11 @@ topScorerItems.forEach((topScorerItem) => {
   });
 });
 
-// Обработчик для кнопки закрытия попапа
-popupButtonElement.addEventListener("click", function (evt) {
-  const modal = evt.target.closest(".popup");
-  closeModal(modal); // Закрытие попапа
+// // Обработчик для кнопок закрытия попапа
+
+popupButtonElements.forEach(function (popupButtonClose) {
+  popupButtonClose.addEventListener("click", function (evt) {
+    const modal = evt.target.closest(".popup");
+    closeModal(modal);
+  });
 });

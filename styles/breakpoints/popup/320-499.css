@@ -82,10 +82,10 @@
     margin-bottom: 15px;
   }
 
-	.popup__body-player-info-name{
-		font-size: 14px;
-		width: 250px;
-	}
+  .popup__body-player-info-name {
+    font-size: 14px;
+    width: 250px;
+  }
 
   /* Растягиваем любые элементы, которые занимают 2 столбца */
   .section__picture_content img:nth-child(2n) {
@@ -94,5 +94,15 @@
 
   .popup__facts {
     padding-bottom: 0;
+  }
+
+  .button-down {
+    display: block;
+
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
   }
 }
