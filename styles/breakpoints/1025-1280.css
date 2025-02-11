@@ -4,7 +4,7 @@
   }
 
   .record-header-section {
-    background-color: rgb(0, 255, 30);
+    background-color: rgb(0, 157, 255);
     width: calc(100vw - 20px);
     padding: 10px 0px;
     text-align: start;
@@ -12,7 +12,7 @@
   }
 
   .record-section_title {
-    font-size: clamp(2.5rem, -0.1112rem + 13.2266vw, 33.3125rem);
+    font-size: clamp(2.5rem, -0.1112rem + 13.0266vw, 33.3125rem);
 
     line-height: 0.8;
   }
