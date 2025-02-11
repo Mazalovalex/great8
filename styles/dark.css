@@ -1,5 +1,6 @@
 .page.theme_dark {
   --background-image: url(../image/background/backgroung-dark.webp);
+  --background-fon: rgb(0, 17, 60, 0.8);
 
   --font-primary: "Russo One", sans-serif;
   --font-secondary: "Montserrat", sans-serif;

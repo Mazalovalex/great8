@@ -236,12 +236,12 @@
 }
 
 .table-header {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300; /* Вес шрифта для заголовков */
   align-self: end;
   text-align: center;
   border-right: 1px solid #989898;
-	padding: 5px;
+  padding: 5px;
 }
 
 .table-header:nth-child(1) {
@@ -291,14 +291,13 @@
 
 .fact-number {
   font-family: var(--font-primary);
-  font-size: 40px;
+  font-size: 35px;
   color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .fact-text {
   font-weight: 300;
-  font-size: 12px;
-  opacity: 1;
+  font-size: 14px;
 }
 .popup__section-history {
   display: flex;
@@ -310,7 +309,7 @@
 }
 
 .popup__history-text {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
 }
 

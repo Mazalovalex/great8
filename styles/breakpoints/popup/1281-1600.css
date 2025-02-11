@@ -19,11 +19,11 @@
   }
 
   .info-list {
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 2px;
+    gap: 3px;
   }
 
   .fact-text {
