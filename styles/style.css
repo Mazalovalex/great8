@@ -93,7 +93,7 @@ body {
 }
 
 .top-players {
-  z-index: 1;
+  z-index: 3;
 }
 
 .player-list {
@@ -217,7 +217,7 @@ a:hover {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 2;
   object-fit: contain;
   height: 100vh;
 }
@@ -284,6 +284,7 @@ a:hover {
 .visible {
   opacity: 1; /* Элемент становится видимым */
   transform: translateY(0); /* Элемент возвращается в нормальное положение */
+  z-index: 2;
 }
 
 #video-wrapper {

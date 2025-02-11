@@ -15,6 +15,7 @@
 
   .record-header-section {
     margin-bottom: 0;
+		z-index: 1;
   }
 
   .top-scorers-section {
