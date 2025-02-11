@@ -4,7 +4,6 @@
   }
 
   .record-header-section {
-    background-color: rgb(0, 157, 255);
     width: calc(100vw - 20px);
     padding: 10px 0px;
     text-align: start;
@@ -64,7 +63,7 @@
   .top-scorers-section {
     width: calc(100vw - 20px);
     order: 4;
-    padding: 0px 0px 40px 0px;
+    padding: 0px 0px 20px 0px;
     margin: 0 auto;
     gap: 10px;
   }
@@ -75,8 +74,12 @@
     height: 35vh;
   }
 
+  .top-players {
+    width: 100%	;
+  }
+
   .top-scorer-item {
-    width: 55vw;
+    width: 100%;
     height: auto;
     padding-right: 0px;
   }
