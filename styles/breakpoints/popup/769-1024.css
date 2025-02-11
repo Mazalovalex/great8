@@ -1,9 +1,8 @@
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
 	.popup__content {
     width: 100%;
-    overflow-y: auto; /* Включаем вертикальный скролл */
-    overflow-x: hidden; /* Убираем горизонтальный скролл */
+    overflow-y: auto; 
+    overflow-x: hidden;
 		border-radius: 0px;
-
   }
-}
+} */
