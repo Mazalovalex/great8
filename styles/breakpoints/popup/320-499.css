@@ -1,0 +1,93 @@
+@media (max-width: 499px) {
+  .table {
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 2 колонки */
+    grid-template-rows: repeat(7, auto); /* 7 строк */
+    margin: auto; /* Центрирование */
+    justify-items: stretch; /* Растягиваем ячейки по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+  }
+
+  .table-header-games {
+    order: 1;
+  }
+  .table-header-goals {
+    order: 2;
+  }
+  .table-header-assists {
+    order: 3;
+  }
+  .table-header-points {
+    order: 4;
+  }
+  .table-header-penalties {
+    order: 5;
+  }
+  .table-header-shots {
+    order: 6;
+  }
+  .table-header-shooting-percentage {
+    order: 7;
+  }
+
+  .table-cell-games-played {
+    order: 1;
+  }
+  .table-cell-goals {
+    order: 2;
+  }
+  .table-cell-assists {
+    order: 3;
+  }
+  .table-cell-points {
+    order: 4;
+  }
+  .table-cell-penalties {
+    order: 5;
+  }
+  .table-cell-shots {
+    order: 6;
+  }
+  .table-cell-shooting-percentage {
+    order: 7;
+  }
+
+  .table-header:nth-child(1) {
+    border-left: none;
+  }
+
+  .table-cell:nth-child(8) {
+    border-left: none;
+  }
+
+  .table-cell {
+    border-bottom: 1px solid #989898;
+    border-right: none;
+    height: 30px;
+  }
+
+  .table-header {
+    border-bottom: 1px solid #989898;
+    height: 30px;
+  }
+
+  .section__picture_content {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* 2 колонки */
+    grid-auto-rows: minmax(70px, 180px);
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Растягиваем любые элементы, которые занимают 2 столбца */
+  .section__picture_content img:nth-child(2n) {
+    grid-column: span 2; /* Растягиваем на две колонки, если это 2-е, 4-е и так далее */
+  }
+
+  .popup__facts {
+    padding-bottom: 0;
+  }
+}

@@ -1,20 +1,29 @@
-import { images } from "./scripts/Images.js"; // Импортируем объект из другого файла
+import { images } from "./scripts/Images.js";
 
 fetch("http://127.0.0.1:5500/model/data.json")
-  .then((resp) => resp.json())
+  .then((resp) => {
+    if (!resp.ok) {
+      throw new Error(`Ошибка сети: ${resp.status} ${resp.statusText}`);
+    }
+    return resp.json();
+  })
   .then((data) => {
-    console.log("Data is loaded");
+    console.log("Данные загружены");
     console.log(data);
-    console.log("Now here you can do what you want");
+    console.log("Теперь вы можете делать что угодно с этими данными");
 
     updateGoalRecord(data);
     showVideoBtn.addEventListener("click", function () {
       toggleVideo(data);
     });
+  })
+  .catch((error) => {
+    console.error("Произошла ошибка при выполнении запроса:", error.message);
+    // Дополнительные действия при ошибке, например, показать сообщение пользователю
+    alert("Не удалось загрузить данные. Пожалуйста, попробуйте позже.");
   });
 
 const modalWindows = document.querySelectorAll(".popup"); // все попапы
-console.log(modalWindows);
 // Добавляем анимацию для всех модальных окон
 modalWindows.forEach(function (modalWindow) {
   modalWindow.classList.add("popup_is-animated"); // добавление класса анимации
@@ -249,4 +258,3 @@ function toggleVideo(data) {
 
 // Обработчик для кнопки переключения видео
 const showVideoBtn = document.getElementById("show-video-btn");
-

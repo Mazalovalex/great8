@@ -7,6 +7,7 @@
   display: flex;
   justify-content: flex-end; /* Выравнивание контента вправо */
   height: 100%;
+  width: 100%;
 }
 
 .popup_is-animated {
@@ -17,7 +18,7 @@
 }
 
 .popup__content {
-  background: linear-gradient(180deg, #7c1b20 0%, #382e2e 51.68%);
+  background: linear-gradient(159deg, #7c1b20 0%, #00081b 51.68%);
   box-sizing: border-box;
   width: 50%;
   height: 100vh;
@@ -27,6 +28,8 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
+  overflow-y: auto; /* Включаем вертикальный скролл */
+  overflow-x: hidden; /* Убираем горизонтальный скролл */
 }
 
 .popup_is-opened {
@@ -34,4 +37,307 @@
   opacity: 1;
   visibility: visible;
   transition: visibility 0.6s, opacity 0.6s;
+}
+
+/* СТИЛИ ПОПАП! */
+
+/* ПОПАП СТИЛИ */
+
+.section__picture_content {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  grid-auto-rows: minmax(
+    70px,
+    180px
+  ); /* Строки будут иметь высоту от 70px до 150px */
+  grid-auto-flow: dense;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.picture__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Заполняет ячейку, обрезая лишнее */
+  object-position: top center;
+  background-color: #959595;
+  border-radius: 5px;
+}
+
+.popup__body {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.25);
+
+  backdrop-filter: blur(20px);
+  padding: 15px 15px 15px 15px;
+  /* background-color: green; */
+  margin-bottom: 15px;
+}
+
+.popup__body-player {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.popup__body-player-info {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.popup__body-player-title-img {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.popup__body-player-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 20px;
+}
+.popup__body__img {
+  height: 100%;
+  background-color: #959595;
+  object-fit: cover; /* Изображение заполняет контейнер, сохраняя пропорции, может быть обрезано */
+  object-position: top center;
+  border-radius: 5px;
+}
+
+.info-list {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2px;
+}
+
+.info-list_up-stonge {
+  display: flex;
+  gap: 20px;
+}
+
+.info-list-citizenship {
+  display: flex;
+  gap: 10px;
+}
+
+.info-list-citizenship-flag {
+  width: 20px;
+  height: 12px;
+  align-self: center;
+}
+
+.info-list-title {
+  font-weight: 500;
+}
+
+.info-list-text {
+  font-weight: 200;
+}
+
+.next-match-wrapper {
+  background-color: #ffffff;
+  width: 40%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 110px;
+}
+
+.next-match-text {
+  color: #161b21;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+}
+
+.team-info {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  padding: 10px 10px 10px 10px;
+}
+
+.home-team,
+.time-games,
+.away-team {
+  width: 80px; /* Минимальная ширина */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #8c8c8c; */
+}
+
+.home-team {
+  width: 30%;
+}
+
+.time-games {
+  flex-grow: 2;
+
+  font-size: 10px;
+  font-weight: 400;
+  gap: 5px;
+  color: #161b21;
+}
+
+.away-team {
+  width: 30%;
+}
+
+.home-team-logo {
+  height: 100%;
+}
+.away-team-logo {
+  height: 100%;
+}
+
+.team-text {
+  font-size: 12px;
+  color: #161b21;
+  font-weight: 600;
+}
+
+.popup__statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.table {
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 колонок с одинаковой шириной */
+  grid-template-rows: auto; /* Строки автоматически подстраиваются под содержимое */
+  width: 100%;
+  margin: auto;
+  justify-items: stretch;
+  align-items: center;
+}
+
+.table-header {
+  font-size: 12px;
+  font-weight: 300; /* Вес шрифта для заголовков */
+  align-self: end;
+  text-align: center;
+  border-right: 1px solid #989898;
+	padding: 5px;
+}
+
+.table-header:nth-child(1) {
+  border-left: 1px solid #989898;
+}
+
+.table-cell {
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+  border-right: 1px solid #989898;
+  font-family: var(--font-primary);
+}
+
+.table-cell:nth-child(8) {
+  border-left: 1px solid #989898;
+}
+
+.popup__facts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.facts-list {
+  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+}
+
+.facts-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px 0 20px 0;
+  text-align: center;
+  border: 1px solid;
+}
+
+.fact-title {
+  line-height: 1.3;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fact-number {
+  font-family: var(--font-primary);
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.fact-text {
+  font-weight: 300;
+  font-size: 12px;
+  opacity: 1;
+}
+.popup__section-history {
+  display: flex;
+  gap: 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  padding: 15px;
+}
+
+.popup__history-text {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.text {
+  font-size: 14px;
+}
+
+.popup__button-close {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  z-index: 4;
+  font-weight: 500;
+  width: 150px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.popup__button-close:hover {
+  color: #161b21;
+  background-color: #ffffff;
 }
