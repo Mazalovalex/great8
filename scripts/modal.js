@@ -6,6 +6,7 @@ console.log(popupButtonElements);
 // Открытие модального окна
 function openModal(modalElement) {
   modalElement.classList.add("popup_is-opened");
+  modalElement.scrollTop = 0; // Сброс позиции скролла на верх
   modalElement.addEventListener("mousedown", handleCloseOverlay);
   document.addEventListener("keydown", handleCloseEsc);
 }
@@ -39,8 +40,7 @@ topScorerItems.forEach((topScorerItem) => {
   });
 });
 
-// // Обработчик для кнопок закрытия попапа
-
+// Обработчик для кнопок закрытия попапа
 popupButtonElements.forEach(function (popupButtonClose) {
   popupButtonClose.addEventListener("click", function (evt) {
     const modal = evt.target.closest(".popup");
