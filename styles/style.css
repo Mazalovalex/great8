@@ -250,7 +250,7 @@ a:hover {
 }
 
 .header__theme-menu-select {
-  padding: 0px 2px;
+  padding: 0px 5px;
   color: var(--accent-color);
   background: transparent;
   border: 1px solid var(--accent-color);
@@ -299,7 +299,7 @@ a:hover {
 #show-video-btn::before {
   content: "";
   position: absolute;
-  left: 87.5%;
+  left: 87.3%;
   top: 50%;
   transform: translateY(-50%) translateX(2px);
   width: 0;
