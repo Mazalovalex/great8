@@ -3,106 +3,40 @@
     overflow: visible;
   }
 
-  .record-header-section {
-    width: calc(100vw - 20px);
-    padding: 10px 0px;
-    text-align: start;
-    margin: 0 auto;
-  }
-
   .record-section_title {
     font-size: clamp(2.5rem, -0.1112rem + 13vw, 33.3125rem);
     line-height: 0.8;
   }
 
-  .record-description-section {
-    width: calc(100vw - 20px);
-    margin: 0 auto; /* Центрируем */
-    display: flex;
-    flex-direction: column;
-  }
-
-  .record-description {
-    width: calc(100vw - 20px);
-  }
-
-  .developer {
-    font-size: 12px;
-    text-align: end;
-    padding: 10px 0px;
-  }
-
   .record-progress-section {
     width: calc(100vw - 20px);
-    position: relative;
     margin: 0 auto;
-    text-align: left;
     margin-bottom: 20px;
   }
 
   .record-progress__title {
     font-size: calc(15px + (30 - 15) * ((100vw - 320px) / (500 - 320)));
-    text-align: center;
   }
 
   .record-difference {
     font-size: calc(150px + (170 - 150) * ((100vw - 320px) / (500 - 320)));
-    font-family: var(--font-primary);
     line-height: 1;
   }
 
   .top-scorers-section {
-    width: calc(100vw - 20px);
-    order: 4;
     padding: 0px 0px 40px 0px;
-    margin: 0 auto; /* Прижимаем к правому краю */
-    gap: 10px;
-  }
-
-  .video {
-    z-index: 2;
-    width: 40vw;
-    height: 35vh;
   }
 
   .top-scorer-item {
     width: 55vw;
-    height: auto;
-    padding-right: 0px;
   }
 
   .player {
     gap: 5px;
   }
 
-  .player-name {
-    font-size: 16px;
-  }
-
-  .player-season {
-    display: block;
-    font-size: 14px;
-  }
-  .player-goals {
-    font-size: 26px;
-  }
-  .player-img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .puck-icon {
-    padding-right: 5px;
-  }
-
   .header__theme-menu-list {
     position: absolute;
     z-index: 2;
-    bottom: 1%;
-    right: 0px;
-  }
-
-  .header__theme-menu-label {
-    font-size: 16px;
   }
 }

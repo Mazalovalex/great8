@@ -4,22 +4,21 @@
   }
 
   .record-header-section {
-    width: calc(100vw - 20px);
-    padding: 10px 0px;
-    text-align: start;
     margin: 0 auto;
+    padding: 10px 0;
+    text-align: start;
+    width: calc(100vw - 20px);
   }
 
   .record-section_title {
     font-size: clamp(2.5rem, -0.1112rem + 13.0266vw, 33.3125rem);
-
     line-height: 0.8;
   }
 
   .record-description-section {
-    width: calc(100vw - 20px);
-    margin: 0 auto;
     flex-direction: column;
+    margin: 0 auto;
+    width: calc(100vw - 20px);
   }
 
   .record-description {
@@ -28,27 +27,27 @@
 
   .developer {
     font-size: 12px;
+    padding: 10px 0;
     text-align: end;
-    padding: 10px 0px;
   }
 
   .record-progress-section {
-    position: relative;
-    text-align: left;
     display: flex;
     flex-direction: column;
+    position: relative;
+    text-align: left;
   }
 
   .record-progress__title {
-    font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (500 - 320)));
-    text-align: center;
     display: flex;
     flex-direction: column;
+    font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (500 - 320)));
+    text-align: center;
   }
 
   .record-difference {
-    font-size: calc(130px + (150 - 130) * ((100vw - 320px) / (500 - 320)));
     font-family: var(--font-primary);
+    font-size: calc(130px + (150 - 130) * ((100vw - 320px) / (500 - 320)));
   }
 
   .text-puck {
@@ -56,32 +55,32 @@
   }
 
   .player-image-wrapper {
-    z-index: 0;
     opacity: 0.3;
+    z-index: 0;
   }
 
   .top-scorers-section {
-    width: calc(100vw - 20px);
-    order: 4;
-    padding: 0px 0px 20px 0px;
-    margin: 0 auto;
     gap: 10px;
+    margin: 0 auto;
+    order: 4;
+    padding: 0 0 20px;
+    width: calc(100vw - 20px);
   }
 
   .video {
-    z-index: 2;
-    width: 40vw;
     height: 35vh;
+    width: 40vw;
+    z-index: 2;
   }
 
   .top-players {
-    width: 100%	;
+    width: 100%;
   }
 
   .top-scorer-item {
-    width: 100%;
     height: auto;
-    padding-right: 0px;
+    padding-right: 0;
+    width: 100%;
   }
 
   .player {
@@ -96,12 +95,14 @@
     display: block;
     font-size: 14px;
   }
+
   .player-goals {
     font-size: 26px;
   }
+
   .player-img {
-    width: 45px;
     height: 45px;
+    width: 45px;
   }
 
   .puck-icon {
@@ -109,15 +110,15 @@
   }
 
   .remaining-to-record {
-    position: relative;
     margin: 0 auto;
+    position: relative;
   }
 
   .header__theme-menu-list {
-    position: relative;
-    z-index: 2;
     bottom: 1%;
-    right: 0px;
+    position: relative;
+    right: 0;
+    z-index: 2;
   }
 
   .header__theme-menu-label {

@@ -1,31 +1,9 @@
 @media (min-width: 320px) and (max-width: 500px) {
-  .main {
-    overflow: visible;
-  }
-
-  /* .record-header-section {
-    наследуют от 500 - 768
-  } */
-
   .record-section_title {
     font-size: calc(43px + (58 - 43) * ((100vw - 320px) / (500 - 320)));
   }
 
-  /* .record-description-section {
-    наследуют от 500 - 768
-  } */
-
-  /* .record-description {
-    наследуют от 500 - 768
-  } */
-
-  /* .developer {
-    наследуют от 500 - 768
-  } */
-
   .record-progress-section {
-    margin: 0 auto; /* Центрируем */
-    width: calc(100vw - 20px);
     padding: 30px 0;
   }
 
@@ -46,19 +24,7 @@
   }
 
   .header__theme-menu-list {
-    position: absolute;
-    z-index: 2;
-    top: 102%;
-    right: 0px;
-  }
-
-  .header__theme-menu-label {
-    font-size: 16px;
-  }
-
-  .record-description-section {
-    display: flex;
-    flex-direction: column;
+    top: 108%;
   }
 
   .video {
@@ -73,8 +39,6 @@
   }
 
   .top-scorers-section {
-    width: calc(100vw - 20px);
-    order: 4;
     flex-direction: column;
     gap: 10px;
     margin: 0 auto; /* Центрируем */
@@ -86,10 +50,6 @@
     height: auto;
   }
 
-  .player {
-    gap: 5px;
-  }
-
   .player-name {
     font-size: 16px;
   }
@@ -99,9 +59,5 @@
   }
   .player-goals {
     font-size: 26px;
-  }
-  .player-img {
-    width: 45px;
-    height: 45px;
   }
 }
