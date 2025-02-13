@@ -1,4 +1,8 @@
 @media (min-width: 320px) and (max-width: 500px) {
+  .ovechkin-image {
+    height: 70%;
+  }
+
   .record-section_title {
     font-size: calc(43px + (58 - 43) * ((100vw - 320px) / (500 - 320)));
   }
