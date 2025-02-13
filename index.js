@@ -170,7 +170,7 @@ function startImageAnimation(imagesArr, frameDelay = 100) {
       imageElement.src = imagesArr[currentIndex];
       currentIndex++;
     }, frameDelay);
-  }, 300);
+  }, 10);
 }
 
 // Функция для анимации текста

@@ -35,8 +35,6 @@ fetch("https://mazalovalex.github.io/great8/model/popup-player-info.json")
           return;
         }
 
-        console.log("Выбранный игрок:", playerData);
-
         function factListItems(selector, dataArray) {
           const listItems = document.querySelectorAll(selector);
 
@@ -59,12 +57,15 @@ fetch("https://mazalovalex.github.io/great8/model/popup-player-info.json")
         }
 
         factListItems(".facts-item", playerData.facts);
+
         function fillListItems(selector, dataArray) {
           const listItems = document.querySelectorAll(selector);
           listItems.forEach((li, index) => {
             li.textContent = dataArray[index] || ""; // Если данных нет, оставляем пустым
           });
         }
+
+        console.log(document.querySelectorAll(".match-data"));
 
         // Заполняем факты и рекорды игрока
         fillListItems(".popup__history-text", playerData.popupHistoryText);
@@ -127,7 +128,7 @@ fetch("https://mazalovalex.github.io/great8/model/popup-player-info.json")
 
         // === ПОКАЗЫВАЕМ БЛОК "СЛЕДУЮЩИЙ МАТЧ" ДЛЯ ОВЕЧКИНА ===
         nextMatchWrapper.style.display =
-          playerData.name === "Александр Овечкин" ? "block" : "none";
+          playerData.name === "Александр Овечкин" ? "flex" : "none";
 
         // === ЗАПОЛНЯЕМ СТАТИСТИКУ ===
         const statsSelectors = {

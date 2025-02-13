@@ -217,7 +217,7 @@
           id="show-video-btn"
           aria-expanded="false"
         >
-          Смотреть <span class="goal-number"></span>-й гол овечкина
+          Смотреть <span class="goal-number"></span>-й гол Овечкина
         </button>
 
         <!-- Видео, скрытое изначально -->
@@ -479,35 +479,49 @@
                   </li>
                 </ul>
               </div>
+
               <div class="next-match-wrapper">
                 <p class="next-match-text">Следующий матч</p>
                 <div class="team-info">
                   <div class="home-team">
                     <img
-                      src="./image/team-logo/Вашингтон.svg"
-                      alt="Фотография Уэйна Гретцки"
-                      class="next-match-icon-club"
+                      class="match-data"
+                      data-key="homeTeamLogo"
+                      src="./image/team-logo/pittsburgh-penguins.svg"
+                      alt=""
+                      width="40px"
+                      height="40px"
                     />
-                    <img />
-                    <p class="team-text">Вашингтон</p>
+                    <p class="match-data team-text" data-key="homeTeam">
+                      Питтсбург Пингвинз
+                    </p>
                   </div>
                   <div class="time-games">
-                    <ul>
-                      <li>02/09/2025</li>
-                      <li>20:30(мск)</li>
+                    <ul class="time-games-list">
+                      <li class="match-data" data-key="date">22 Фев. 2025</li>
+                      <li class="match-data" data-key="time">23:00 MSK</li>
+                      <p class="match-data venue-text" data-key="venue">
+                        PPG Paints Arena
+                      </p>
                     </ul>
                   </div>
                   <div class="away-team">
                     <img
-                      src="./image/team-logo/Юта.svg"
-                      alt="Фотография Уэйна Гретцки"
-                      class="next-match-icon-club"
+                      class="match-data"
+                      data-key="awayTeamLogo"
+                      src="./image/team-logo/washington-capitals.svg"
+                      alt=""
+                      width="40px"
+                      height="40px"
                     />
-                    <p class="team-text">Юта</p>
+                    <p class="match-data team-text" data-key="awayTeam">
+                      Вашингтон Кэпиталз
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="popup__statistics">
               <div class="table">
                 <div class="table-header table-header-games">Матчи</div>
