@@ -113,7 +113,6 @@
   padding-right: 20px;
 }
 .popup__body__img {
-  height: 100%;
   background-color: #959595;
   object-fit: cover; /* Изображение заполняет контейнер, сохраняя пропорции, может быть обрезано */
   object-position: top center;
