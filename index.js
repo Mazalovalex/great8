@@ -248,11 +248,9 @@ function toggleVideo(data) {
       console.log("Видео уже имеет src, не меняем");
     }
   } else {
-    console.log("Видео отображается, скрываем...");
     videoWrapper.style.display = "none"; // Скрываем видео
     videoIframe.src = ""; // Останавливаем видео, очищая src
-    showVideoBtn.textContent = "Смотреть гол Овечкина";
-    console.log("Текст на кнопке изменен на 'Смотреть гол Овечкина'");
+    showVideoBtn.textContent = "Смотреть гол";
   }
 }
 

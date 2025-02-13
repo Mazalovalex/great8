@@ -86,7 +86,7 @@
 .popup__body-player-info {
   display: flex;
   gap: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .popup__body-player-title-img {
