@@ -1,0 +1,264 @@
+{
+  "calendar": [
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "23 Фев. 2025",
+      "time": "21:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/edmonton-oilers.svg",
+      "awayTeamLogoAlt": "Логотип Эдмонтон Ойлерз",
+      "awayTeam": "Эдмонтон Ойлерз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "26 Фев. 2025",
+      "time": "03:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/calgary-flames.svg",
+      "awayTeamLogoAlt": "Логотип Калгари Флэймз",
+      "awayTeam": "Калгари Флэймз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "28 Фев. 2025",
+      "time": "03:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/st-louis-blues.svg",
+      "awayTeamLogoAlt": "Логотип Сент-Луис Блюз",
+      "awayTeam": "Сент-Луис Блюз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "01 Мар. 2025",
+      "time": "20:30(МСК)",
+      "awayTeamLogo": "./image/team-logo/tampa-bay-lightning.svg",
+      "awayTeamLogoAlt": "Логотип Тампа-Бэй Лайтнинг",
+      "awayTeam": "Тампа-Бэй Лайтнинг"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "04 Мар. 2025",
+      "time": "02:30(МСК)",
+      "awayTeamLogo": "./image/team-logo/ottawa-senators.svg",
+      "awayTeamLogoAlt": "Логотип Оттава Сенаторз",
+      "awayTeam": "Оттава Сенаторз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/new-york-rangers.svg",
+      "homeTeamLogoAlt": "Логотип Нью-Йорк Рейнджерс",
+      "homeTeam": "Нью-Йорк Рейнджерс",
+      "date": "06 Мар. 2025",
+      "time": "03:30(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "08 Мар. 2025",
+      "time": "03:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/detroit-red-wings.svg",
+      "awayTeamLogoAlt": "Логотип Детройт Ред Уингз",
+      "awayTeam": "Детройт Ред Уингз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "09 Мар. 2025",
+      "time": "22:30(МСК)",
+      "awayTeamLogo": "./image/team-logo/seattle-kraken.svg",
+      "awayTeamLogoAlt": "Логотип Сиэтл Кракен",
+      "awayTeam": "Сиэтл Кракен"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/anaheim-ducks.svg",
+      "homeTeamLogoAlt": "Логотип Анахайм Дакс",
+      "homeTeam": "Анахайм Дакс",
+      "date": "12 Мар. 2025",
+      "time": "05:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/los-angeles-kings.svg",
+      "homeTeamLogoAlt": "Логотип Лос-Анджелес Кингз",
+      "homeTeam": "Лос-Анджелес Кингз",
+      "date": "14 Мар. 2025",
+      "time": "05:30(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/san-jose-sharks.svg",
+      "homeTeamLogoAlt": "Логотип Сан-Хосе Шаркс",
+      "homeTeam": "Сан-Хосе Шаркс",
+      "date": "16 Мар. 2025",
+      "time": "00:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "19 Мар. 2025",
+      "time": "02:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/detroit-red-wings.svg",
+      "awayTeamLogoAlt": "Логотип Детройт Ред Уингз",
+      "awayTeam": "Детройт Ред Уингз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "21 Мар. 2025",
+      "time": "02:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/philadelphia-flyers.svg",
+      "awayTeamLogoAlt": "Логотип Филадельфия Флайерз",
+      "awayTeam": "Филадельфия Флайерз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "23 Мар. 2025",
+      "time": "00:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/florida-panthers.svg",
+      "awayTeamLogoAlt": "Логотип Флорида Пантерз",
+      "awayTeam": "Флорида Пантерз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/winnipeg-jets.svg",
+      "homeTeamLogoAlt": "Логотип Виннипег Джетс",
+      "homeTeam": "Виннипег Джетс",
+      "date": "26 Мар. 2025",
+      "time": "03:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/minnesota-wild.svg",
+      "homeTeamLogoAlt": "Логотип Миннесота Уайлд",
+      "homeTeam": "Миннесота Уайлд",
+      "date": "28 Мар. 2025",
+      "time": "03:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "30 Мар. 2025",
+      "time": "22:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/buffalo-sabres.svg",
+      "awayTeamLogoAlt": "Логотип Баффало Сэйбрз",
+      "awayTeam": "Баффало Сэйбрз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/boston-bruins.svg",
+      "homeTeamLogoAlt": "Логотип Бостон Брюинз",
+      "homeTeam": "Бостон Брюинз",
+      "date": "02 Апр. 2025",
+      "time": "02:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/carolina-hurricanes.svg",
+      "homeTeamLogoAlt": "Логотип Каролина Харрикейнз",
+      "homeTeam": "Каролина Харрикейнз",
+      "date": "03 Апр. 2025",
+      "time": "02:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "05 Апр. 2025",
+      "time": "02:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/chicago-blackhawks.svg",
+      "awayTeamLogoAlt": "Логотип Чикаго Блэкхоукс",
+      "awayTeam": "Чикаго Блэкхоукс"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/new-york-islanders.svg",
+      "homeTeamLogoAlt": "Логотип Нью-Йорк Айлендерс",
+      "homeTeam": "Нью-Йорк Айлендерс",
+      "date": "06 Апр. 2025",
+      "time": "19:30(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "11 Апр. 2025",
+      "time": "02:30(МСК)",
+      "awayTeamLogo": "./image/team-logo/carolina-hurricanes.svg",
+      "awayTeamLogoAlt": "Логотип Каролина Харрикейнз",
+      "awayTeam": "Каролина Харрикейнз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/columbus-blue-jackets.svg",
+      "homeTeamLogoAlt": "Логотип Коламбус Блю Джекетс",
+      "homeTeam": "Коламбус Блю Джекетс",
+      "date": "13 Апр. 2025",
+      "time": "02:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "homeTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "homeTeam": "Вашингтон Кэпиталз",
+      "date": "14 Апр. 2025",
+      "time": "01:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/columbus-blue-jackets.svg",
+      "awayTeamLogoAlt": "Логотип Коламбус Блю Джекетс",
+      "awayTeam": "Коламбус Блю Джекетс"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/new-york-islanders.svg",
+      "homeTeamLogoAlt": "Логотип Нью-Йорк Айлендерс",
+      "homeTeam": "Нью-Йорк Айлендерс",
+      "date": "16 Апр. 2025",
+      "time": "03:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    },
+    {
+      "homeTeamLogo": "./image/team-logo/pittsburgh-penguins.svg",
+      "homeTeamLogoAlt": "Логотип Питтсбург Пингвинз",
+      "homeTeam": "Питтсбург Пингвинз",
+      "date": "18 Апр. 2025",
+      "time": "02:00(МСК)",
+      "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
+      "awayTeam": "Вашингтон Кэпиталз"
+    }
+  ]
+}

@@ -2,10 +2,12 @@
   "calendar": [
     {
       "homeTeamLogo": "./image/team-logo/pittsburgh-penguins.svg",
+      "homeTeamLogoAlt": "Логотип Питтсбург Пингвинз",
       "homeTeam": "Питтсбург Пингвинз",
       "date": "22 Фев. 2025",
       "time": "23:00(МСК)",
       "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
+      "awayTeamLogoAlt": "Логотип Вашингтон Кэпиталз",
       "awayTeam": "Вашингтон Кэпиталз"
     }
   ]

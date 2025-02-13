@@ -1,38 +1,38 @@
-// Загружаем JSON-файл Календарь
-fetch(
-  "https://mazalovalex.github.io/great8/model/popup-next-match-calendar.json"
-)
-  .then(function (resp) {
+async function loadCalendar() {
+  try {
+    // Загружаем JSON-файл
+    const resp = await fetch(
+      "http://127.0.0.1:5500/model/popup-next-match-calendar.json"
+    );
     if (!resp.ok) {
       throw new Error(
-        "Ошибка сети: ответ сервера не успешен (" + resp.statusText + ")"
+        `Ошибка сети: ответ сервера не успешен (${resp.statusText})`
       );
     }
-    return resp.json();
-  })
-  .then(function (data) {
+    const data = await resp.json();
     console.log("Данные загружены");
-    // Сохраняем в константу
     const dataCalendar = data;
 
-    // === СЕЛЕКТОРЫ ДЛЯ МАТЧА ===
+    // Селекторы для элементов на странице
     const matchSelectors = {
       homeTeamLogo: ".home-team img",
+      homeTeamLogoAlt: ".home-team img",
       homeTeam: ".home-team .team-text",
       date: ".time-games-list li:nth-child(1)",
       time: ".time-games-list li:nth-child(2)",
       awayTeamLogo: ".away-team img",
+      awayTeamLogoAlt: ".away-team img",
       awayTeam: ".away-team .team-text",
     };
 
-    // === УНИВЕРСАЛЬНАЯ ФУНКЦИЯ ===
+    // Функция для заполнения данных
     function fillData(selectors, source) {
       Object.entries(selectors).forEach(function ([key, selector]) {
         const element = document.querySelector(selector);
         if (element) {
           if (element.tagName === "IMG") {
-            element.src = source[key] || "";
-            element.alt = `${source[key.replace("Logo", "")] || "Логотип"}`;
+            element.src = source[key.replace("Alt", "")] || "";
+            element.alt = source[key] || "Логотип команды";
           } else {
             element.textContent = source[key] || "";
           }
@@ -40,9 +40,12 @@ fetch(
       });
     }
 
-    // === ВЫЗОВ ===
+    // Заполняем данные на странице
     fillData(matchSelectors, dataCalendar.calendar[0]);
-  })
-  .catch(function (error) {
+  } catch (error) {
     console.error("Ошибка загрузки JSON:", error);
-  });
+  }
+}
+
+// Запускаем загрузку календаря
+loadCalendar();
