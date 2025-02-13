@@ -2,7 +2,7 @@ async function loadCalendar() {
   try {
     // Загружаем JSON-файл
     const resp = await fetch(
-      "http://127.0.0.1:5500/model/popup-next-match-calendar.json"
+      "https://mazalovalex.github.io/great8/model/popup-next-match-calendar.json"
     );
     if (!resp.ok) {
       throw new Error(
