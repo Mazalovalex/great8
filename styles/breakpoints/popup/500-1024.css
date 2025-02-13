@@ -1,17 +1,12 @@
 @media (max-width: 1024px) {
   .popup__content {
-    border-radius: 10px;
-    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    position: relative;
     margin: 0 auto;
     padding: 75px 15px 15px 15px;
-    overflow: visible;
     border-radius: 0;
-    overflow-y: auto; /* Включаем вертикальный скролл */
-    overflow-x: hidden; /* Убираем горизонтальный скролл */
   }
+
   .popup_content-section {
     display: flex;
     flex-direction: column;
@@ -23,8 +18,8 @@
   }
 
   .popup__body-player {
-    width: 100%;
     display: block;
+    width: 100%;
     height: 145px;
     background-image: none;
     background-repeat: no-repeat;
@@ -35,8 +30,8 @@
   }
 
   .popup__body {
-    background: transparent; /* Убираем фон */
-    backdrop-filter: none; /* Убираем размытие */
+    background: transparent;
+    backdrop-filter: none;
     padding: 0px;
     margin-bottom: 0px;
     order: -1;
@@ -79,7 +74,6 @@
     height: 30px;
     color: rgb(0, 0, 0);
     font-weight: 400;
-
     background-color: white;
     border: none;
   }
@@ -97,6 +91,7 @@
     width: 100%;
     height: max-content;
   }
+
   .team-info {
     padding: 0px 0px 20px 0px;
     gap: 0;
