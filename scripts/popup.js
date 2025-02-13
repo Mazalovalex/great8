@@ -58,6 +58,7 @@ fetch("https://mazalovalex.github.io/great8/model/popup-player-info.json")
 
         factListItems(".facts-item", playerData.facts);
 
+				
         function fillListItems(selector, dataArray) {
           const listItems = document.querySelectorAll(selector);
           listItems.forEach((li, index) => {
@@ -65,10 +66,12 @@ fetch("https://mazalovalex.github.io/great8/model/popup-player-info.json")
           });
         }
 
-        console.log(document.querySelectorAll(".match-data"));
+				console.log(document.querySelectorAll(".match-data"));
+				
 
         // Заполняем факты и рекорды игрока
         fillListItems(".popup__history-text", playerData.popupHistoryText);
+
 
         // === ФОТО ЖУРНАЛА ===
         const pictureImagesAll = document.querySelectorAll(".picture__img");

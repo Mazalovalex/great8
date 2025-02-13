@@ -4,8 +4,7 @@
       "homeTeamLogo": "./image/team-logo/pittsburgh-penguins.svg",
       "homeTeam": "Питтсбург Пингвинз",
       "date": "22 Фев. 2025",
-      "time": "23:00 MSK",
-      "venue": "PPG Paints Arena",
+      "time": "23:00(МСК)",
       "awayTeamLogo": "./image/team-logo/washington-capitals.svg",
       "awayTeam": "Вашингтон Кэпиталз"
     }
